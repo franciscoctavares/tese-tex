@@ -75,4 +75,5 @@
 \contentsline {paragraph}{}{18}{paragraph*.82}%
 \contentsline {subsection}{\numberline {2.3.2}Statement of contributions}{18}{subsection.2.3.2}%
 \contentsline {paragraph}{}{18}{paragraph*.83}%
-\contentsline {chapter}{\numberline {A}Sample Appendix}{19}{appendix.A}%
+\contentsline {chapter}{\numberline {3}Requirements}{19}{chapter.3}%
+\contentsline {chapter}{\numberline {A}Sample Appendix}{21}{appendix.A}%

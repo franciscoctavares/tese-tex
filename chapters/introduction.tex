@@ -3,8 +3,6 @@
 \par
 \ac{SLAM} is one of the most studied topics in robotics. Its purpose is to simultaneously estimate the robot's position and and map the robot's environment. SLAM methods often integrate data from devices like LIDAR, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced aproaches, such as Visual and LIDAR SLAM. These methods are crucial for applications in robotics, augmented reality, and autonomous navigation.
 \par
-
-ewujghewghewbejwvbwvbejwvbe  bwjddbwbdwjbd
 The effectiveness of a SLAM method is usually evaluated using the Absolute Pose Error(APE) and the Relative Pose Error(RPE), meaning, the Absolute difference between the estimated pose and the ground truth and the difference between consecutive estimated poses and the respective ground truth, or the trajectory drift. SLAM's efficacy is dependent on various factors, such as sensor quality, available computational resources, loop closure and the algorithm type. The algorithm type is particularly important because different scenarios demand different types of SLAM methods. On the other hand, different SLAM methods have different number of hyperparameters, impacting the size of the parameter space and the difficulty of arriving at the optimal hyperparameter configuration.
 \par
 One of the biggest hurdles in SLAM research is determining the best hyperparameter configuration for a given dataset. A tool like RUSTLE streamlines the process, allowing different SLAM methods to be run asynchronously, while giving performance reports, allowing for the manual tuning of SLAM's hyperparameters.
