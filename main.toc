@@ -1,0 +1,78 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Acknowledgements}{iii}{chapter*.1}%
+\contentsline {chapter}{Resumo}{v}{chapter*.2}%
+\contentsline {chapter}{Abstract}{vii}{chapter*.3}%
+\contentsline {chapter}{List of Acronyms}{xiii}{chapter*.8}%
+\contentsline {chapter}{List of Figures}{xv}{chapter*.9}%
+\contentsline {chapter}{List of Tables}{xvii}{chapter*.11}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Context and Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Main goals}{2}{section.1.2}%
+\contentsline {paragraph}{}{2}{paragraph*.12}%
+\contentsline {section}{\numberline {1.3}Document overview}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Background and Related Work}{3}{chapter.2}%
+\contentsline {paragraph}{}{3}{paragraph*.14}%
+\contentsline {section}{\numberline {2.1}\ac {SLAM}}{3}{section.2.1}%
+\contentsline {paragraph}{}{3}{paragraph*.15}%
+\contentsline {paragraph}{}{3}{paragraph*.16}%
+\contentsline {paragraph}{}{3}{paragraph*.17}%
+\contentsline {subsection}{\numberline {2.1.1}Types of SLAM solutions}{4}{subsection.2.1.1}%
+\contentsline {paragraph}{}{4}{paragraph*.18}%
+\contentsline {subsubsection}{Visual SLAM}{4}{subsubsection*.19}%
+\contentsline {paragraph}{}{4}{paragraph*.20}%
+\contentsline {paragraph}{}{4}{paragraph*.22}%
+\contentsline {paragraph}{}{5}{paragraph*.23}%
+\contentsline {subsubsection}{LiDAR SLAM}{5}{subsubsection*.24}%
+\contentsline {paragraph}{}{5}{paragraph*.25}%
+\contentsline {paragraph}{}{5}{paragraph*.27}%
+\contentsline {subsubsection}{Radar SLAM}{6}{subsubsection*.30}%
+\contentsline {paragraph}{}{6}{paragraph*.31}%
+\contentsline {subsubsection}{Multi sensor SLAM}{6}{subsubsection*.33}%
+\contentsline {paragraph}{}{6}{paragraph*.34}%
+\contentsline {paragraph}{}{6}{paragraph*.36}%
+\contentsline {subsection}{\numberline {2.1.2}Evaluation of SLAM}{7}{subsection.2.1.2}%
+\contentsline {paragraph}{}{7}{paragraph*.37}%
+\contentsline {section}{\numberline {2.2}Hyperparameter optimization techniques}{8}{section.2.2}%
+\contentsline {paragraph}{}{8}{paragraph*.38}%
+\contentsline {subsection}{\numberline {2.2.1}Search based approaches}{8}{subsection.2.2.1}%
+\contentsline {paragraph}{}{8}{paragraph*.39}%
+\contentsline {subsubsection}{Grid Search}{9}{subsubsection*.40}%
+\contentsline {paragraph}{}{9}{paragraph*.41}%
+\contentsline {subsubsection}{Random Search}{9}{subsubsection*.43}%
+\contentsline {paragraph}{}{9}{paragraph*.44}%
+\contentsline {subsection}{\numberline {2.2.2}Model based approaches}{10}{subsection.2.2.2}%
+\contentsline {paragraph}{}{10}{paragraph*.46}%
+\contentsline {subsubsection}{Bayesian Optimization}{10}{subsubsection*.47}%
+\contentsline {paragraph}{}{10}{paragraph*.48}%
+\contentsline {paragraph}{}{10}{paragraph*.51}%
+\contentsline {paragraph}{}{11}{paragraph*.52}%
+\contentsline {paragraph}{}{11}{paragraph*.53}%
+\contentsline {subsection}{\numberline {2.2.3}Population based Approaches}{11}{subsection.2.2.3}%
+\contentsline {paragraph}{}{11}{paragraph*.54}%
+\contentsline {paragraph}{}{12}{paragraph*.55}%
+\contentsline {subsubsection}{Simulated Annealing}{12}{subsubsection*.56}%
+\contentsline {paragraph}{}{12}{paragraph*.57}%
+\contentsline {paragraph}{}{12}{paragraph*.59}%
+\contentsline {paragraph}{}{12}{paragraph*.60}%
+\contentsline {paragraph}{}{12}{paragraph*.61}%
+\contentsline {subsubsection}{Successive Halving}{12}{subsubsection*.63}%
+\contentsline {paragraph}{}{12}{paragraph*.64}%
+\contentsline {paragraph}{}{13}{paragraph*.66}%
+\contentsline {subsubsection}{Hyperband}{14}{subsubsection*.68}%
+\contentsline {paragraph}{}{14}{paragraph*.69}%
+\contentsline {paragraph}{}{14}{paragraph*.70}%
+\contentsline {subsection}{\numberline {2.2.4}\ac {HPT} in \ac {SLAM}}{15}{subsection.2.2.4}%
+\contentsline {paragraph}{}{15}{paragraph*.72}%
+\contentsline {paragraph}{}{15}{paragraph*.73}%
+\contentsline {paragraph}{}{15}{paragraph*.74}%
+\contentsline {section}{\numberline {2.3}Related Work}{15}{section.2.3}%
+\contentsline {paragraph}{}{15}{paragraph*.75}%
+\contentsline {paragraph}{}{15}{paragraph*.76}%
+\contentsline {paragraph}{}{15}{paragraph*.77}%
+\contentsline {paragraph}{}{16}{paragraph*.78}%
+\contentsline {paragraph}{}{16}{paragraph*.79}%
+\contentsline {subsection}{\numberline {2.3.1}Literature gaps}{18}{subsection.2.3.1}%
+\contentsline {paragraph}{}{18}{paragraph*.82}%
+\contentsline {subsection}{\numberline {2.3.2}Statement of contributions}{18}{subsection.2.3.2}%
+\contentsline {paragraph}{}{18}{paragraph*.83}%
+\contentsline {chapter}{\numberline {A}Sample Appendix}{19}{appendix.A}%

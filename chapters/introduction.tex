@@ -1,0 +1,22 @@
+\section{Context and Motivation}
+
+\par
+\ac{SLAM} is one of the most studied topics in robotics. Its purpose is to simultaneously estimate the robot's position and and map the robot's environment. SLAM methods often integrate data from devices like LIDAR, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced aproaches, such as Visual and LIDAR SLAM. These methods are crucial for applications in robotics, augmented reality, and autonomous navigation.
+\par
+
+ewujghewghewbejwvbwvbejwvbe  bwjddbwbdwjbd
+The effectiveness of a SLAM method is usually evaluated using the Absolute Pose Error(APE) and the Relative Pose Error(RPE), meaning, the Absolute difference between the estimated pose and the ground truth and the difference between consecutive estimated poses and the respective ground truth, or the trajectory drift. SLAM's efficacy is dependent on various factors, such as sensor quality, available computational resources, loop closure and the algorithm type. The algorithm type is particularly important because different scenarios demand different types of SLAM methods. On the other hand, different SLAM methods have different number of hyperparameters, impacting the size of the parameter space and the difficulty of arriving at the optimal hyperparameter configuration.
+\par
+One of the biggest hurdles in SLAM research is determining the best hyperparameter configuration for a given dataset. A tool like RUSTLE streamlines the process, allowing different SLAM methods to be run asynchronously, while giving performance reports, allowing for the manual tuning of SLAM's hyperparameters.
+\par
+There is, however, a missing and crutial component from frameworks like RUSTLE: in the literature, SLAM methods are usually not optimally tuned, or the comparisons are between methods that are almost optimally tuned and methods that are tuned just enough to give sufficiently satisfactory results, and so any comparisons cannot be considered fair and conclusive. Applying hyperparameter optimization algorithms and automating the tuning process would not only relieve the user of the laborious process of manually searching the parameter space for an optimal configuration, but also allow for a more fair comparison between SLAM methods.
+
+\section{Main goals}
+\paragraph{}The main goals of this thesis are:
+\begin{itemize}
+    \item Develop an automatic \ac{HPT} framework within \ac{RUSTLE} to better optimize and compare the performance of various \ac{SLAM} solutions.
+    \item Get proficient at Rust programming, which not only will help with the development of the previously mentioned framework, but could also be of use in future works.
+    \item Evaluate the efficiency of the developed optimization algorithms and compare them to each other.
+    \item Summarize the developed work and identify lessons learned and potential future improvements.
+\end{itemize}
+\section{Document overview}
