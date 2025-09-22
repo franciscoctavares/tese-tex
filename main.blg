@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+Database file #1: bibliography/references.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "ExampleArticle"
+Warning--empty journal in liu2024voxelslamcompleteaccurateversatile
+Warning--empty journal in liu2023lidarinertialvisualslamloopdetection
+Warning--empty journal in zheng2020feature
+Warning--empty journal in koide2021automatic
+Warning--empty journal in chen2018visual
+Warning--empty journal in putra2019parameter
+You've used 23 entries,
+            1876 wiz_defined-function locations,
+            611 strings with 7886 characters,
+and the built_in function-call counts, 6417 in all, are:
+= -- 646
+> -- 231
+< -- 0
++ -- 87
+- -- 64
+* -- 426
+:= -- 883
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 365
+empty$ -- 594
+format.name$ -- 64
+if$ -- 1579
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 23
+newline$ -- 72
+num.names$ -- 23
+pop$ -- 82
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 260
+stack$ -- 0
+substring$ -- 422
+swap$ -- 163
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 61
+width$ -- 25
+write$ -- 219
+(There were 8 warnings)

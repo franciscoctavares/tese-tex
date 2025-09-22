@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{taheri2021slam}
+H.~Taheri and Z.~C. Xia, ``Slam; definition and evolution,'' {\em Engineering
+  Applications of Artificial Intelligence}, vol.~97, p.~104032, 2021.
+
+\bibitem{chen2018review}
+Y.~Chen, Y.~Zhou, Q.~Lv, and K.~K. Deveerasetty, ``A review of v-slam,'' in
+  {\em 2018 IEEE International Conference on Information and Automation
+  (ICIA)}, pp.~603--608, IEEE, 2018.
+
+\bibitem{lidar_sota}
+X.~Yue, Y.~Zhang, J.~Chen, J.~Chen, X.~Zhou, and M.~He, ``Lidar-based slam for
+  robotic mapping: state of the art and new frontiers,'' {\em Industrial Robot:
+  the international journal of robotics research and application}, vol.~51,
+  no.~2, pp.~196--205, 2024.
+
+\bibitem{hong2021radar}
+Z.~Hong, Y.~Petillot, A.~Wallace, and S.~Wang, ``Radar slam: A robust slam
+  system for all weather conditions,'' {\em arXiv preprint arXiv:2104.05347},
+  2021.
+
+\bibitem{radar_slam}
+M.~Holder, S.~Hellwig, and H.~Winner, ``Real-time pose graph slam based on
+  radar,'' in {\em 2019 IEEE Intelligent Vehicles Symposium (IV)},
+  pp.~1145--1151, IEEE, 2019.
+
+\bibitem{visual_inertial}
+M.~Servières, V.~Renaudin, A.~Dupuis, and N.~Antigny, ``Visual and
+  visual-inertial slam: State of the art, classification, and experimental
+  benchmarking,'' {\em Journal of Sensors}, vol.~2021, no.~1, p.~2054828, 2021.
+
+\bibitem{liu2024voxelslamcompleteaccurateversatile}
+Z.~Liu, H.~Li, C.~Yuan, X.~Liu, J.~Lin, R.~Li, C.~Zheng, B.~Zhou, W.~Liu, and
+  F.~Zhang, ``Voxel-slam: A complete, accurate, and versatile lidar-inertial
+  slam system,'' 2024.
+
+\bibitem{liu2023lidarinertialvisualslamloopdetection}
+K.~Liu, ``A lidar-inertial-visual slam system with loop detection,'' 2023.
+
+\bibitem{yang2020hyperparameter}
+L.~Yang and A.~Shami, ``On hyperparameter optimization of machine learning
+  algorithms: Theory and practice,'' {\em Neurocomputing}, vol.~415,
+  pp.~295--316, 2020.
+
+\bibitem{bissuel2020hyper}
+A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' {\em
+  Criteo tech blog, Medium. Dispon{\'\i}vel em: https://medium.
+  com/criteo-labs/hyper-parameter-optimizationalgorithms-2fe447525903. Acedido
+  em}, 2020.
+
+\bibitem{bergstra2012random}
+J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
+  {\em The journal of machine learning research}, vol.~13, no.~1, pp.~281--305,
+  2012.
+
+\bibitem{mockus1998application}
+J.~Mockus, ``The application of bayesian methods for seeking the extremum,''
+  {\em Towards global optimization}, vol.~2, p.~117, 1998.
+
+\bibitem{elshawi2019automated}
+R.~Elshawi, M.~Maher, and S.~Sakr, ``Automated machine learning:
+  State-of-the-art and open challenges,'' {\em arXiv preprint
+  arXiv:1906.02287}, 2019.
+
+\bibitem{kostusiak2019efficiency}
+A.~Kostusiak and P.~Skrzypczy{\'n}ski, ``On the efficiency of population-based
+  optimization in finding best parameters for rgb-d visual odometry,'' {\em
+  Journal of Automation Mobile Robotics and Intelligent Systems}, vol.~13,
+  2019.
+
+\bibitem{rutenbar1989simulated}
+R.~A. Rutenbar, ``Simulated annealing algorithms: An overview,'' {\em IEEE
+  Circuits and Devices magazine}, vol.~5, no.~1, pp.~19--26, 1989.
+
+\bibitem{ghasemalizadeh2016review}
+O.~Ghasemalizadeh, S.~Khaleghian, and S.~Taheri, ``A review of optimization
+  techniques in artificial networks,'' {\em International Journal of Advanced
+  Research}, vol.~4, no.~9, pp.~1668--86, 2016.
+
+\bibitem{soper2021greed}
+D.~S. Soper, ``Greed is good: Rapid hyperparameter optimization and model
+  selection using greedy k-fold cross validation,'' {\em Electronics}, vol.~10,
+  no.~16, p.~1973, 2021.
+
+\bibitem{huang2019survey}
+C.~Huang, Y.~Li, and X.~Yao, ``A survey of automatic parameter tuning methods
+  for metaheuristics,'' {\em IEEE transactions on evolutionary computation},
+  vol.~24, no.~2, pp.~201--216, 2019.
+
+\bibitem{falkner2018bohb}
+S.~Falkner, A.~Klein, and F.~Hutter, ``Bohb: Robust and efficient
+  hyperparameter optimization at scale,'' in {\em International conference on
+  machine learning}, pp.~1437--1446, PMLR, 2018.
+
+\bibitem{zheng2020feature}
+Z.~Zheng, ``Feature based monocular visual odometry for autonomous driving and
+  hyperparameter tuning to improve trajectory estimation,'' vol.~1453, no.~1,
+  p.~012067, 2020.
+
+\bibitem{koide2021automatic}
+K.~Koide, M.~Yokozuka, S.~Oishi, and A.~Banno, ``Automatic hyper-parameter
+  tuning for black-box lidar odometry,'' pp.~5069--5074, 2021.
+
+\bibitem{chen2018visual}
+Z.~Chen, ``Visual-inertial slam extrinsic parameter calibration based on
+  bayesian optimization,'' 2018.
+
+\bibitem{putra2019parameter}
+I.~A. Putra and P.~Prajitno, ``Parameter tuning of g-mapping slam (simultaneous
+  localization and mapping) on mobile robot with laser-range finder 360
+  sensor,'' pp.~148--153, 2019.
+
+\end{thebibliography}

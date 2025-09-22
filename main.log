@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  19 SEP 2025 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  22 SEP 2025 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1223,6 +1223,14 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip83
 \@temptokenb=\toks54
 )
+(C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natb
+ib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip84
+\bibsep=\skip85
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count386
+)
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
@@ -1253,9 +1261,9 @@ esc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
-\c@svg@param@lastpage=\count386
+\c@svg@param@lastpage=\count387
 \svg@box=\box90
-\c@svg@param@currpage=\count387
+\c@svg@param@currpage=\count388
 )
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/transparent
 \transparent.sty
@@ -1286,7 +1294,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
-2.
+4.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1321,38 +1329,38 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/context/base/mkii
 \supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count388
+\scratchcounter=\count389
 \scratchdimen=\dimen319
 \scratchbox=\box91
-\nofMPsegments=\count389
-\nofMParguments=\count390
+\nofMPsegments=\count390
+\nofMParguments=\count391
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count391
+\MPscratchCnt=\count392
 \MPscratchDim=\dimen320
-\MPnumerator=\count392
-\makeMPintoPDFobject=\count393
+\MPnumerator=\count393
+\makeMPintoPDFobject=\count394
 \everyMPtoPDFconversion=\toks56
 )
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pk
@@ -1404,20 +1412,20 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 182.
+Package hyperref Info: Link coloring ON on input line 184.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@lstlisting=\count394
+\c@lstlisting=\count395
 
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=138, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=170, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf>
-Package pdftex.def Info: images/cover.pdf  used on input line 188.
+Package pdftex.def Info: images/cover.pdf  used on input line 190.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
@@ -1427,28 +1435,28 @@ rsion <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=140, page=1, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=172, page=1, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
-Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page1 used on input line 190.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
-Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page1 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
-Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page1 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
-Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page1 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
-Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page1 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 [1
 
@@ -1458,25 +1466,25 @@ Package pdftex.def Info: images/cover.pdf , page1 used on input line 188.
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=171, page=2, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=203, page=2, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 2>
-Package pdftex.def Info: images/cover.pdf , page2 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page2 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 2>
-Package pdftex.def Info: images/cover.pdf , page2 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page2 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 2>
-Package pdftex.def Info: images/cover.pdf , page2 used on input line 188.
+Package pdftex.def Info: images/cover.pdf , page2 used on input line 190.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 [2
 
  <./images/cover.pdf>] (title_page.tex
-<images/UC_logos/UC_V_FundoClaro-negro.png, id=177, 1672.2475pt x 1676.2625pt>
+<images/UC_logos/UC_V_FundoClaro-negro.png, id=209, 1672.2475pt x 1676.2625pt>
 File: images/UC_logos/UC_V_FundoClaro-negro.png Graphic file (type png)
 <use images/UC_logos/UC_V_FundoClaro-negro.png>
 Package pdftex.def Info: images/UC_logos/UC_V_FundoClaro-negro.png  used on inp
@@ -1503,8 +1511,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
                    \relax 
 l.37 \end{titlepage}
                      [2])
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-98.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
+00.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.f
 d
@@ -1531,39 +1539,39 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-22.
+24.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.f
 d
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-22.
+24.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.f
 d
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-222.
+224.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.
 fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-222.
+224.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.
 fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 222.
+(Font)              <10> on input line 224.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 222.
+(Font)              <7> on input line 224.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 222.
+(Font)              <5> on input line 224.
 
 
 [9]
@@ -1584,7 +1592,11 @@ Package acronym Info: Label `acro:HPT' newly defined as it shall be overridden
 although it is yet undefined on input line 64.
 
 
-[11])
+[11]
+Package acronym Info: Label `acro:RUSTLE' newly defined as it shall be overridd
+en
+although it is yet undefined on input line 80.
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1659,11 +1671,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.f
 d
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package acronym Info: Label `acro:RUSTLE' newly defined as it shall be overridd
-en
-although it is yet undefined on input line 15.
-)
+))
 
 [2{C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
 lm-ts1.enc}]
@@ -1674,20 +1682,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ac' on input line 3.
 
 
-LaTeX Warning: Citation `taheri2021slam' on page 3 undefined on input line 5.
-
-
-LaTeX Warning: Citation `taheri2021slam' on page 3 undefined on input line 6.
-
-
 
 [3
 
 ]
-
-LaTeX Warning: Citation `chen2018review' on page 4 undefined on input line 21.
-
-<images/VSLAM.png, id=385, 813.0375pt x 315.1775pt>
+<images/VSLAM.png, id=425, 813.0375pt x 315.1775pt>
 File: images/VSLAM.png Graphic file (type png)
 <use images/VSLAM.png>
 Package pdftex.def Info: images/VSLAM.png  used on input line 24.
@@ -1695,37 +1694,22 @@ Package pdftex.def Info: images/VSLAM.png  used on input line 24.
 
 
 [4 <./images/VSLAM.png>]
-
-LaTeX Warning: Citation `lidar_sota' on page 5 undefined on input line 57.
-
-<images/lidar_SLAM.jpg, id=396, 688.5725pt x 387.4475pt>
+<images/lidar_SLAM.jpg, id=437, 688.5725pt x 387.4475pt>
 File: images/lidar_SLAM.jpg Graphic file (type jpg)
 <use images/lidar_SLAM.jpg>
 Package pdftex.def Info: images/lidar_SLAM.jpg  used on input line 60.
 (pdftex.def)             Requested size: 341.43307pt x 192.11522pt.
-
-LaTeX Warning: Citation `lidar_sota' on page 5 undefined on input line 64.
-
 Package acronym Info: Label `acro:ICP' newly defined as it shall be overridden
 although it is yet undefined on input line 64.
 Package acronym Info: Label `acro:NDT' newly defined as it shall be overridden
 although it is yet undefined on input line 64.
 
-LaTeX Warning: Citation `lidar_sota' on page 5 undefined on input line 64.
-
-
 
 [5 <./images/lidar_SLAM.jpg>]
-
-LaTeX Warning: Citation `hong2021radar' on page 6 undefined on input line 67.
-
-
-LaTeX Warning: Citation `radar_slam' on page 6 undefined on input line 67.
-
 Package svg Info: Last page of `./svg-inkscape/radar_slam_svg-tex.pdf' is 1 on 
 input line 71.
-(svg-inkscape/radar_slam_svg-tex.pdf_tex
-<./svg-inkscape/radar_slam_svg-tex.pdf, id=410, page=1, 508.95232pt x 278.66824
+ (svg-inkscape/radar_slam_svg-tex.pdf_tex
+<./svg-inkscape/radar_slam_svg-tex.pdf, id=455, page=1, 508.95232pt x 278.66824
 pt>
 File: ./svg-inkscape/radar_slam_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/radar_slam_svg-tex.pdf, page 1>
@@ -1737,7 +1721,7 @@ Package svg Info: Last page of `./svg-inkscape/multisensor_slam_svg-tex.pdf' is
  1 on input line 81.
 
 (svg-inkscape/multisensor_slam_svg-tex.pdf_tex
-<./svg-inkscape/multisensor_slam_svg-tex.pdf, id=414, page=1, 1047.915pt x 498.
+<./svg-inkscape/multisensor_slam_svg-tex.pdf, id=459, page=1, 1047.915pt x 498.
 86375pt>
 File: ./svg-inkscape/multisensor_slam_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/multisensor_slam_svg-tex.pdf, page 1>
@@ -1749,21 +1733,8 @@ ed on input line 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `visual_inertial' on page 6 undefined on input line 88.
-
-
-
-LaTeX Warning: Citation `liu2024voxelslamcompleteaccurateversatile' on page 6 u
-ndefined on input line 89.
-
-
 
 [6 <./svg-inkscape/radar_slam_svg-tex.pdf>]
-
-LaTeX Warning: Citation `liu2023lidarinertialvisualslamloopdetection' on page 7
- undefined on input line 90.
-
-
 
 [7{C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
 lm-mathit.enc}{C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/e
@@ -1772,24 +1743,11 @@ nc/dvips/lm/lm-rm.enc}{C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX
 grams/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./svg-inkscape/multisensor_slam
 _svg-tex.pdf>]
 
-LaTeX Warning: Citation `yang2020hyperparameter' on page 8 undefined on input l
-ine 119.
-
-
-LaTeX Warning: Citation `yang2020hyperparameter' on page 8 undefined on input l
-ine 119.
-
-
-LaTeX Warning: Citation `yang2020hyperparameter' on page 8 undefined on input l
-ine 119.
-
-
-
 [8]
 Package svg Info: Last page of `./svg-inkscape/grid_search_svg-tex.pdf' is 1 on
  input line 132.
  (svg-inkscape/grid_search_svg-tex.pdf_tex
-<./svg-inkscape/grid_search_svg-tex.pdf, id=461, page=1, 189.70876pt x 175.8570
+<./svg-inkscape/grid_search_svg-tex.pdf, id=514, page=1, 189.70876pt x 175.8570
 1pt>
 File: ./svg-inkscape/grid_search_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/grid_search_svg-tex.pdf, page 1>
@@ -1798,25 +1756,12 @@ Package pdftex.def Info: ./svg-inkscape/grid_search_svg-tex.pdf , page1 used on
 (pdftex.def)             Requested size: 227.62206pt x 211.00589pt.
 )
 
-LaTeX Warning: Citation `bissuel2020hyper' on page 9 undefined on input line 13
-8.
-
-
-LaTeX Warning: Citation `bergstra2012random' on page 9 undefined on input line 
-138.
-
-
-LaTeX Warning: Citation `bergstra2012random' on page 9 undefined on input line 
-138.
-
-
-
 [9 <./svg-inkscape/grid_search_svg-tex.pdf>]
 Package svg Info: Last page of `./svg-inkscape/random_search_svg-tex.pdf' is 1 
 on input line 143.
 
 (svg-inkscape/random_search_svg-tex.pdf_tex
-<./svg-inkscape/random_search_svg-tex.pdf, id=478, page=1, 205.96951pt x 181.87
+<./svg-inkscape/random_search_svg-tex.pdf, id=535, page=1, 205.96951pt x 181.87
 952pt>
 File: ./svg-inkscape/random_search_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/random_search_svg-tex.pdf, page 1>
@@ -1826,15 +1771,10 @@ on input line 56.
 )
 Package acronym Info: Label `acro:BO' newly defined as it shall be overridden
 although it is yet undefined on input line 151.
-
-
-LaTeX Warning: Citation `mockus1998application' on page 10 undefined on input l
-ine 151.
-
 Package svg Info: Last page of `./svg-inkscape/BO_svg-tex.pdf' is 1 on input li
 ne 157.
-(svg-inkscape/BO_svg-tex.pdf_tex
-<./svg-inkscape/BO_svg-tex.pdf, id=481, page=1, 314.37451pt x 76.48575pt>
+ (svg-inkscape/BO_svg-tex.pdf_tex
+<./svg-inkscape/BO_svg-tex.pdf, id=539, page=1, 314.37451pt x 76.48575pt>
 File: ./svg-inkscape/BO_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/BO_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/BO_svg-tex.pdf , page1 used on input li
@@ -1845,54 +1785,16 @@ ne 56.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `elshawi2019automated' on page 10 undefined on input li
-ne 164.
-
-
-LaTeX Warning: Citation `bissuel2020hyper' on page 10 undefined on input line 1
-64.
-
-
 
 [10 <./svg-inkscape/random_search_svg-tex.pdf>]
-
-LaTeX Warning: Citation `elshawi2019automated' on page 11 undefined on input li
-ne 166.
-
-
-LaTeX Warning: Citation `bissuel2020hyper' on page 11 undefined on input line 1
-77.
-
-
-LaTeX Warning: Citation `kostusiak2019efficiency' on page 11 undefined on input
- line 180.
-
-
 
 [11 <./svg-inkscape/BO_svg-tex.pdf>]
 Package acronym Info: Label `acro:SA' newly defined as it shall be overridden
 although it is yet undefined on input line 184.
-
-
-LaTeX Warning: Citation `rutenbar1989simulated' on page 12 undefined on input l
-ine 184.
-
-
-LaTeX Warning: Citation `ghasemalizadeh2016review' on page 12 undefined on inpu
-t line 185.
-
-
-LaTeX Warning: Citation `rutenbar1989simulated' on page 12 undefined on input l
-ine 185.
-
-
-LaTeX Warning: Citation `ghasemalizadeh2016review' on page 12 undefined on inpu
-t line 191.
-
 Package svg Info: Last page of `./svg-inkscape/SA_svg-tex.pdf' is 1 on input li
 ne 196.
-(svg-inkscape/SA_svg-tex.pdf_tex
-<./svg-inkscape/SA_svg-tex.pdf, id=516, page=1, 298.716pt x 239.09326pt>
+ (svg-inkscape/SA_svg-tex.pdf_tex
+<./svg-inkscape/SA_svg-tex.pdf, id=584, page=1, 298.716pt x 239.09326pt>
 File: ./svg-inkscape/SA_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SA_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/SA_svg-tex.pdf , page1 used on input li
@@ -1905,20 +1807,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package acronym Info: Label `acro:SH' newly defined as it shall be overridden
 although it is yet undefined on input line 202.
 
-LaTeX Warning: Citation `soper2021greed' on page 12 undefined on input line 202
-.
-
-
-LaTeX Warning: Citation `huang2019survey' on page 12 undefined on input line 20
-3.
-
-
 
 [12]
 Package svg Info: Last page of `./svg-inkscape/SH_svg-tex.pdf' is 1 on input li
 ne 208.
  (svg-inkscape/SH_svg-tex.pdf_tex
-<./svg-inkscape/SH_svg-tex.pdf, id=534, page=1, 369.17924pt x 233.67299pt>
+<./svg-inkscape/SH_svg-tex.pdf, id=605, page=1, 369.17924pt x 233.67299pt>
 File: ./svg-inkscape/SH_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SH_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/SH_svg-tex.pdf , page1 used on input li
@@ -1932,35 +1826,15 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/SH_svg-tex.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Citation `elshawi2019automated' on page 14 undefined on input li
-ne 216.
+Package natbib Warning: Citation `' on page 14 undefined on input line 216.
 
 
-LaTeX Warning: Citation `' on page 14 undefined on input line 216.
-
-
-LaTeX Warning: Citation `falkner2018bohb' on page 14 undefined on input line 21
-9.
-
-
-LaTeX Warning: Citation `falkner2018bohb' on page 14 undefined on input line 22
-0.
-
-
-LaTeX Warning: Citation `' on page 14 undefined on input line 220.
-
-
-LaTeX Warning: Citation `falkner2018bohb' on page 14 undefined on input line 22
-1.
-
-
-LaTeX Warning: Citation `falkner2018bohb' on page 14 undefined on input line 22
-2.
+Package natbib Warning: Citation `' on page 14 undefined on input line 220.
 
 Package svg Info: Last page of `./svg-inkscape/Hyperband_svg-tex.pdf' is 1 on i
 nput line 230.
 (svg-inkscape/Hyperband_svg-tex.pdf_tex
-<./svg-inkscape/Hyperband_svg-tex.pdf, id=550, page=1, 925.45744pt x 460.72125p
+<./svg-inkscape/Hyperband_svg-tex.pdf, id=625, page=1, 925.45744pt x 460.72125p
 t>
 File: ./svg-inkscape/Hyperband_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Hyperband_svg-tex.pdf, page 1>
@@ -1979,47 +1853,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ac' on input line 237.
 
 
-LaTeX Warning: Citation `ExampleArticle' on page 15 undefined on input line 246
-.
-
-
-LaTeX Warning: Citation `zheng2020feature' on page 15 undefined on input line 2
-47.
+Package natbib Warning: Citation `ExampleArticle' on page 15 undefined on input
+ line 246.
 
 
 
 [15]
 
-LaTeX Warning: Citation `koide2021automatic' on page 16 undefined on input line
- 248.
-
-
-LaTeX Warning: Citation `chen2018visual' on page 16 undefined on input line 248
-.
-
-
-LaTeX Warning: Citation `kostusiak2019efficiency' on page 16 undefined on input
- line 249.
-
-
-
 [16]
-
-LaTeX Warning: Citation `zheng2020feature' on page 17 undefined on input line 2
-57.
-
-
-LaTeX Warning: Citation `putra2019parameter' on page 17 undefined on input line
- 258.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 258--258
 []|\T1/lmr/m/n/10.95 G-mapping
  []
-
-
-LaTeX Warning: Citation `koide2021automatic' on page 17 undefined on input line
- 259.
 
 
 Underfull \hbox (badness 7963) in paragraph at lines 259--259
@@ -2037,10 +1881,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--259
  []
 
 
-LaTeX Warning: Citation `kostusiak2019efficiency' on page 17 undefined on input
- line 260.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\T1/lmr/m/n/10.95 A. Kos-tu-
  []
@@ -2054,10 +1894,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--260
 Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\T1/lmr/m/n/10.95 RGB-D Vi-sual
  []
-
-
-LaTeX Warning: Citation `kostusiak2019efficiency' on page 17 undefined on input
- line 261.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 261--261
@@ -2080,32 +1916,59 @@ although it is yet undefined on input line 261.
 
 [17
 
-]
-
-LaTeX Warning: Citation `kostusiak2019efficiency' on page 18 undefined on input
- line 276.
-
-)
+])
 
 [18
 
 ]
 Chapter 3.
-(chapters/requirements.tex)
-No file main.bbl.
+(chapters/methodology.tex
+<images/moscow.png, id=706, 4834.06pt x 2774.365pt>
+File: images/moscow.png Graphic file (type png)
+<use images/moscow.png>
+Package pdftex.def Info: images/moscow.png  used on input line 4.
+(pdftex.def)             Requested size: 386.96027pt x 222.08073pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ac' on input line 7.
+
+) (main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [19
 
+ <./images/moscow.png>]
+
+[20]
+Underfull \hbox (badness 3240) in paragraph at lines 47--51
+[]\T1/lmr/m/n/10.95 A. Bis-suel, ``Hyper-parameter op-ti-miza-tion al-go-rithms
+: a short re-view,'' \T1/lmr/m/it/10.95 Criteo
+ []
+
+
+
+[21
+
 ]
 
-[20
+[22])
+
+[23]
+
+[24
 
 ]
 Appendix A.
 (appendix/sample.tex)
 
-[21] (main.aux)
+Package natbib Warning: There were undefined citations.
+
+
+
+[25] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -2117,123 +1980,37 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 4AC07B0327696166C045076007B4C3DF;3838
-(rerunfilecheck)             After:  93D56665129352EEA8E4D668D3404579;3839.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 22AD681EA5EF553D6B35F0D0F64F1E8F;4892.
  ) 
 Here is how much of TeX's memory you used:
- 35136 strings out of 468133
- 714349 string characters out of 5424868
- 1244279 words of memory out of 5000000
- 62850 multiletter control sequences out of 15000+600000
+ 35575 strings out of 468133
+ 721266 string characters out of 5424868
+ 1251784 words of memory out of 5000000
+ 63264 multiletter control sequences out of 15000+600000
  700604 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,17n,121p,1073b,719s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.70} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.66} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.61} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.49} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.41} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.34} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.31} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.12} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.27} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.9} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.11} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.71} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.64} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.57} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.48} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter*.7} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter*.6} has been referenced but does not exist,
- replaced by a fixed one
-
-<C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmbx10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmbx12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Francisco Tavares/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Francisco Tavares/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Francisco 
-Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users
-/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pf
-b><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmr6.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr8.pfb><C:/Users/Francisco Tavares/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Francisco Tavares/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisco 
-Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/User
-s/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.p
-fb>
-Output written on main.pdf (41 pages, 3394537 bytes).
+ 117i,17n,121p,1073b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmbx10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmbx12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Francisco Tavares/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Francisco Tavares/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Francisc
+o Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Use
+rs/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.
+pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmr12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr6.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Francisco Tavares/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Francisco Tavares/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisc
+o Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Us
+ers/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
+.pfb>
+Output written on main.pdf (45 pages, 3716844 bytes).
 PDF statistics:
- 737 PDF objects out of 1000 (max. 8388607)
- 185 named destinations out of 1000 (max. 500000)
- 464 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 855 PDF objects out of 1000 (max. 8388607)
+ 203 named destinations out of 1000 (max. 500000)
+ 533 words of extra memory for PDF output out of 10000 (max. 10000000)
 
