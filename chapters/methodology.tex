@@ -6,7 +6,11 @@
 
 \section{\ac{RUSTLE}}
 
-\paragraph{}\ac{RUSTLE} is a command line application, written in Rust, which facilitates the process of running localization experiments. On a high level, it allows to run different SLAM algorithms on different datasets, with user defined hyperparameters.
+\paragraph{}\ac{RUSTLE} is a command line application, written in Rust, which is designed to simplify the evaluation of SLAM algorithms in mobile robotics.
+Its main objective is to provide a simple, stream-lined and reproducible way to run and compare SLAM algorithms. It tracks not only trajectory accuracy(APE or RPE), but also runtime, CPU load and memory usage, offering a more complete assessment of the algorithm's performance.
+
+\paragraph{}At its core, RUSTLE takes three main inputs: a dataset in rosbag format, the SLAM algorithm's parameters in yaml format, and the algorithms themselves as docker images. The reason for using Docker is for reliably reproducing the algorithms across many different platforms and environments.
+
 
 \section{Grid Search}
 
