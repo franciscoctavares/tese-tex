@@ -80,11 +80,12 @@
 \contentsline {section}{\numberline {3.1}\ac {RUSTLE}}{19}{section.3.1}%
 \contentsline {paragraph}{}{19}{paragraph*.86}%
 \contentsline {paragraph}{}{19}{paragraph*.87}%
+\contentsline {paragraph}{}{20}{paragraph*.88}%
 \contentsline {section}{\numberline {3.2}Grid Search}{20}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Random Search}{20}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Simulated Annealing}{20}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Testing}{20}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Algorithms}{20}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Datasets}{20}{subsection.3.5.2}%
-\contentsline {chapter}{Bibliography}{21}{chapter*.88}%
+\contentsline {chapter}{Bibliography}{21}{chapter*.89}%
 \contentsline {chapter}{\numberline {A}Sample Appendix}{25}{appendix.A}%

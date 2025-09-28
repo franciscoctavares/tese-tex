@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1758635211.12351 "main.aux" "main.bbl" "main" 1758636034.8833 0
+["bibtex main"] 1758636084.37118 "main.aux" "main.bbl" "main" 1758639550.52526 0
   "./bibliography/references.bib" 1758230432 7211 6715c31968dfd1905cb4b8fe55ea55c2 ""
   "C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1758636033 18431 6b782a0148b7ccb9bf25e1877dd78fb1 "pdflatex"
+  "main.aux" 1758639549 18520 58e843d685641fd7dbc87de73e7af75f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1758636030.03104 "c:/Users/Francisco Tavares/Desktop/tese-tex/main.tex" "main.pdf" "main" 1758636034.88453 0
+["pdflatex"] 1758639547.1102 "c:/Users/Francisco Tavares/Desktop/tese-tex/main.tex" "main.pdf" "main" 1758639550.52603 0
   "C:/Users/Francisco Tavares/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758634878 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Francisco Tavares/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758279849 13263187 d404db4c291b357bb3240e0ea7ecf501 ""
   "C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -278,7 +278,7 @@
   "chapters/abstract.tex" 1758230432 10 9ad2dd82b91609b07ce75654ddd85200 ""
   "chapters/background.tex" 1758538428 31506 6a501ee28677958e5f34bf446267b21c ""
   "chapters/introduction.tex" 1758295996 2906 aa5856ead7a1010feb00f5ad665ce56f ""
-  "chapters/methodology.tex" 1758636028 1304 23b878a37efe64d5cd531773769fe6b4 ""
+  "chapters/methodology.tex" 1758639546 1849 ee985350a23d4db5cba30dff414ce6b8 ""
   "chapters/resumo.tex" 1758230432 10 9ad2dd82b91609b07ce75654ddd85200 ""
   "images/BO.svg" 1758230433 49063 05a77e9d345279cae12a722efc503e49 ""
   "images/Hyperband.svg" 1758230432 407725 feb23e8a74aab7ec943dc12d109445ef ""
@@ -294,13 +294,13 @@
   "images/radar_slam.svg" 1758230433 1544019 2209c24bdc69ce67100660ac96ec1d5a ""
   "images/random_search.svg" 1758230433 30565 5cc4861a9233c6651951003a693b01be ""
   "list_acronyms.tex" 1758230432 611 63ccb9f4ace00c2544d78f3af238283a ""
-  "main.aux" 1758636033 18431 6b782a0148b7ccb9bf25e1877dd78fb1 "pdflatex"
-  "main.bbl" 1758635211 4890 a3e47b0c8f98656356c7844cd09ab510 "bibtex main"
-  "main.lof" 1758636033 1402 1d9e933f0289a49f4304ab11222a6b99 "pdflatex"
-  "main.lot" 1758636033 235 7782457923b406cd0698a4960f6766f2 "pdflatex"
-  "main.out" 1758636033 4892 e8db0d6704f326035e5d57bdbb2b1003 "pdflatex"
+  "main.aux" 1758639549 18520 58e843d685641fd7dbc87de73e7af75f "pdflatex"
+  "main.bbl" 1758636084 4890 a3e47b0c8f98656356c7844cd09ab510 "bibtex main"
+  "main.lof" 1758639549 1402 1d9e933f0289a49f4304ab11222a6b99 "pdflatex"
+  "main.lot" 1758639549 235 7782457923b406cd0698a4960f6766f2 "pdflatex"
+  "main.out" 1758639549 4892 c36c6725e6e69d45faf6cc715fa9e236 "pdflatex"
   "main.tex" 1758552178 8394 a42d09971f8a8e2177714152b59bec17 ""
-  "main.toc" 1758636033 5387 3826cd2e5abd1c4ca07d03ee28706f42 "pdflatex"
+  "main.toc" 1758639549 5435 fc5b7aa5cc68ca24cc8ba10d068a9da9 "pdflatex"
   "svg-inkscape/BO_svg-tex.pdf" 1758279152 28129 a0e50ab560a6c22b3f9a87a6a0dce2e2 ""
   "svg-inkscape/BO_svg-tex.pdf_tex" 1758279152 2071 00a59dd91fd5dddfaf9ccef1c50ee525 ""
   "svg-inkscape/Hyperband_svg-tex.pdf" 1758279156 178858 090fe5a15df6a810780d6c4d5c5c17a7 ""
