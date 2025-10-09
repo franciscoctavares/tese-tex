@@ -81,11 +81,15 @@
 \contentsline {paragraph}{}{19}{paragraph*.86}%
 \contentsline {paragraph}{}{19}{paragraph*.87}%
 \contentsline {paragraph}{}{20}{paragraph*.88}%
-\contentsline {section}{\numberline {3.2}Grid Search}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Random Search}{20}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Simulated Annealing}{20}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Testing}{20}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Algorithms}{20}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Datasets}{20}{subsection.3.5.2}%
-\contentsline {chapter}{Bibliography}{21}{chapter*.89}%
-\contentsline {chapter}{\numberline {A}Sample Appendix}{25}{appendix.A}%
+\contentsline {paragraph}{}{20}{paragraph*.89}%
+\contentsline {section}{\numberline {3.2}Development}{20}{section.3.2}%
+\contentsline {paragraph}{}{20}{paragraph*.90}%
+\contentsline {section}{\numberline {3.3}Functional requirements}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Non Functional requirements}{21}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Simulated Annealing}{21}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Testing}{21}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Metrics}{21}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Algorithms}{21}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Datasets}{21}{subsection.3.6.3}%
+\contentsline {chapter}{Bibliography}{23}{chapter*.91}%
+\contentsline {chapter}{\numberline {A}Sample Appendix}{27}{appendix.A}%
