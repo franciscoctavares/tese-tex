@@ -28,12 +28,17 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	\item a budget parameter(B) should be either a maximum number of configurations to run or maximum alloted time. These should be represented by the keys \textbf{max\_iter} and \textbf{max\_time} in the configuration file.
 	\item tuning a SLAM algorithm's parameters is classified as a test, for easier integration in the existing RUSTLE's architecture.
 	\item when running a tuning test, all tested parameter combinations should have their respective metrics stored together, for later processing
-	\item when running a tuning test, all tuning settings
+	\item when running a tuning test, all tuning settings should be stored as well, for later processing and examination
+	\item for overall testing and comparison of different tuning strategies, there should be a command to run a set of tuning algorithms and produce appropriate metrics which later could be displayed as a table or graph.
+	\item The tuning module should run different configurations concurrently, when possible.
 \end{itemize}
 
 \section{Non Functional requirements}
 
-\section{Simulated Annealing}
+\begin{itemize}
+	\item The tuning module should be future proof, allowing for the easy addition of other tuning algorithms into the software.
+	\item 
+\end{itemize}
 
 \section{Testing}
 
