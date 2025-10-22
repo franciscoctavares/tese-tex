@@ -14,14 +14,14 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}Algorithm executions are run as tests. Each test's configuration is passes as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test one wants to execute.
 
-\paragraph{}As for language choice, Rust was chosen mostly due to simplicity of development and the ease with which one can write highly performant code. Other languages, such as c++ and python, also have libraries for working with Docker and ROS, as well as libraries for database hosting. The difference with Rust in this regard is that to use these libraries it is only needed to include them as dependencies, and use them in the codebase, as the download, compilation and linking of these libraries is all automatically handled by Rust's build tool, cargo. As for performance, Rust is known for its compile-time enforced memory safety(at the cost of some control over memory), as well as built in type system guarantees, which prevent common multithreaded issues like data races.
+\paragraph{}As for language choice, Rust was chosen mostly due to simplicity of development and the ease with which one can write highly performant code. Other languages, such as c++ and python, also have libraries for working with Docker and ROS, as well as libraries for database hosting. The difference with Rust in this regard is that to use these libraries it is only needed to include them as dependencies, and use them in the codebase, as the download, compilation and linking of these libraries is all automatically handled by Rust's build tool, cargo. As for performance, Rust is known for its compile-time enforced memory safety(at the cost of some control over memory), as well as built in type system guarantees, which prevent common concurrency issues like data races.
 
 \section{Development}
 \paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller "implementable" sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test each sub-feature.
 
 \section{Functional requirements}
 
-\paragraph{}The system must allow users to define all relevant settings for the tuning process using a YAML configuration file. This configuration file will serve as the main interface for specifying the tuning method, SLAM algorithm, and dataset to be used. In addition, it will enable the user to indicate which parameters are to be optimized, with one or more values per parameter. Additionaly, the code must ensure type safety, meaning, for example, that a parameter which is supposed to be a String cannot have a u64 passed as a value.
+\paragraph{}The system must allow users to define all relevant settings for the tuning process using a YAML configuration file. This configuration file will serve as the main interface for specifying the tuning method, SLAM algorithm, and dataset to be used. In addition, it will enable the user to indicate which parameters are to be optimized, with one or more values per parameter. Additionaly, the code must ensure type safety, meaning, for example, that a parameter which is supposed to be a String cannot have a u64 passed as a value. Also, the user must have the option of specifying only the parameters he wants to optimize. 
 
 \paragraph{}For grid and random search tuning methods, the configuration file must support flexible representations of parameter values. Each tunable parameter can be defined as a single value, representing a fixed setting, or as an array containing multiple candidate values to be tested. For numerical parameters(integers and floats), a third specification pattern must be supported: a linearly spaced vector. This vector will be described by a three-element array in the form \textbf{[start, step, number\_of\_elements]}, which the system will interpret to automatically generate a sequence of values. This feature will simplify the definition of evenly spaced search spaces for numerical parameters and ensures consistency across different tuning runs. It also makes it significantly less cumbersome to define large sequences of values.
 
@@ -61,6 +61,12 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \subsection{Metrics}
 
+\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
+
 \subsection{Algorithms}
 
+\paragraph{}Write something about the algorithms tested(point-lio, ig-lio, etc), but emphasize the tuning algorithms apply to any SLAM method.
+
 \subsection{Datasets}
+
+\paragraph{}Mention the datasets used during development, but stress that, as in the SLAM methods used, the tuning algorithms generalize to any dataset.

@@ -96,7 +96,10 @@
 \contentsline {section}{\numberline {3.4}Non Functional requirements}{22}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Testing}{22}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Metrics}{22}{subsection.3.5.1}%
+\contentsline {paragraph}{}{22}{paragraph*.99}%
 \contentsline {subsection}{\numberline {3.5.2}Algorithms}{22}{subsection.3.5.2}%
+\contentsline {paragraph}{}{22}{paragraph*.100}%
 \contentsline {subsection}{\numberline {3.5.3}Datasets}{22}{subsection.3.5.3}%
-\contentsline {chapter}{Bibliography}{23}{chapter*.99}%
+\contentsline {paragraph}{}{22}{paragraph*.101}%
+\contentsline {chapter}{Bibliography}{23}{chapter*.102}%
 \contentsline {chapter}{\numberline {A}Sample Appendix}{27}{appendix.A}%

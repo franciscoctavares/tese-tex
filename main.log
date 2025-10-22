@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  21 OCT 2025 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  22 OCT 2025 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1939,9 +1939,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  <./images/moscow.png>]
 
-[20]) (main.bbl
+[20]
 
-[21]
+[21]) (main.bbl
 
 [22]
 Underfull \hbox (badness 3240) in paragraph at lines 47--51
@@ -1982,11 +1982,11 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A47E3DDD780E01BB1B77604BD89FA629;5111.
+(rerunfilecheck)             Checksum: 624AF12060A2944EB62694AFCA0B0D69;5112.
  ) 
 Here is how much of TeX's memory you used:
- 35591 strings out of 468133
- 721470 string characters out of 5424868
+ 35594 strings out of 468133
+ 721513 string characters out of 5424868
  1251784 words of memory out of 5000000
  63265 multiletter control sequences out of 15000+600000
  700604 words of font info for 80 fonts, out of 8000000 for 9000
@@ -2009,9 +2009,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisc
 o Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Us
 ers/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
 .pfb>
-Output written on main.pdf (47 pages, 3725558 bytes).
+Output written on main.pdf (47 pages, 3726260 bytes).
 PDF statistics:
- 886 PDF objects out of 1000 (max. 8388607)
- 218 named destinations out of 1000 (max. 500000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
  541 words of extra memory for PDF output out of 10000 (max. 10000000)
 
