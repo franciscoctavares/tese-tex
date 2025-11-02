@@ -1,13 +1,100 @@
 \begin{thebibliography}{10}
 
+\bibitem{danicasado2021}
+D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam,''
+  2021.
+
+\bibitem{multi_sensor_slam_arm_robot}
+R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
+  mobile industrial robot system for automated intelligent manufacturing
+  applications,'' pp.~1673--1678, 2020.
+
+\bibitem{castillo2022hyperparameter}
+E.~I.~M. Castillo, {\em Hyperparameter Optimization for SLAM: An Approach for
+  Enhancing ORB-SLAM2's Performance}.
+\newblock PhD thesis, University of Alberta, 2022.
+
+\bibitem{li2018hyperband}
+L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
+  A novel bandit-based approach to hyperparameter optimization,'' {\em Journal
+  of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
+
+\bibitem{becnkis2024survey}
+R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
+  A.~Anc{\=a}ns, and A.~Ipatovs, ``A survey and practical application of slam
+  algorithms,'' pp.~1--10, 2024.
+
+\bibitem{lajoie2022towards}
+P.-Y. Lajoie, B.~Ramtoula, F.~Wu, and G.~Beltrame, ``Towards collaborative
+  simultaneous localization and mapping: a survey of the current research
+  landscape,'' {\em Field Robotics}, vol.~2, pp.~971--1000, 2022.
+
 \bibitem{taheri2021slam}
 H.~Taheri and Z.~C. Xia, ``Slam; definition and evolution,'' {\em Engineering
   Applications of Artificial Intelligence}, vol.~97, p.~104032, 2021.
+
+\bibitem{macario2022comprehensive}
+A.~Macario~Barros, M.~Michel, Y.~Moline, G.~Corre, and F.~Carrel, ``A
+  comprehensive survey of visual slam algorithms,'' {\em Robotics}, vol.~11,
+  no.~1, p.~24, 2022.
+
+\bibitem{harris1988combined}
+C.~Harris, M.~Stephens, {\em et~al.}, ``A combined corner and edge detector,''
+  vol.~15, no.~50, pp.~10--5244, 1988.
+
+\bibitem{lindeberg1998feature}
+T.~Lindeberg, ``Feature detection with automatic scale selection,'' {\em
+  International journal of computer vision}, vol.~30, no.~2, pp.~79--116, 1998.
+
+\bibitem{lowe2004distinctive}
+D.~G. Lowe, ``Distinctive image features from scale-invariant keypoints,'' {\em
+  International journal of computer vision}, vol.~60, no.~2, pp.~91--110, 2004.
+
+\bibitem{liao2024local}
+Y.~Liao, Y.~Di, K.~Zhu, H.~Zhou, M.~Lu, Y.~Zhang, Q.~Duan, and J.~Liu, ``Local
+  feature matching from detector-based to detector-free: a survey,'' {\em
+  Applied Intelligence}, vol.~54, no.~5, pp.~3954--3989, 2024.
+
+\bibitem{image_feature_matching}
+A.~Jakubović and J.~Velagić, ``Image feature matching and object detection
+  using brute-force matchers,'' pp.~83--86, 2018.
+
+\bibitem{chen2018submap}
+W.~Chen, L.~Zhu, Y.~Guan, C.~R. Kube, and H.~Zhang, ``Submap-based pose-graph
+  visual slam: A robust visual exploration and localization system,'' in {\em
+  2018 IEEE/RSJ International Conference on Intelligent Robots and Systems
+  (IROS)}, pp.~6851--6856, IEEE, 2018.
+
+\bibitem{picard2023surveyrealtime3dscene}
+Q.~Picard, S.~Chevobbe, M.~Darouich, and J.-Y. Didier, ``A survey on real-time
+  3d scene reconstruction with slam methods in embedded systems,'' 2023.
+
+\bibitem{li20213dpointcloudreconstruction}
+Z.~Li, F.~Ye, and X.~Guan, ``3d point cloud reconstruction and slam as an
+  input,'' 2021.
 
 \bibitem{chen2018review}
 Y.~Chen, Y.~Zhou, Q.~Lv, and K.~K. Deveerasetty, ``A review of v-slam,'' in
   {\em 2018 IEEE International Conference on Information and Automation
   (ICIA)}, pp.~603--608, IEEE, 2018.
+
+\bibitem{fontan2024anyfeature}
+A.~Fontan, J.~Civera, and M.~Milford, ``Anyfeature-vslam: Automating the usage
+  of any chosen feature into visual slam,'' vol.~2, 2024.
+
+\bibitem{lindeberg2014scale}
+T.~Lindeberg, ``" scale selection", computer vision: A reference guide,(k.
+  ikeuchi, editor),'' 2014.
+
+\bibitem{raguram2008comparative}
+R.~Raguram, J.-M. Frahm, and M.~Pollefeys, ``A comparative analysis of ransac
+  techniques leading to adaptive real-time random sample consensus,''
+  pp.~500--513, 2008.
+
+\bibitem{yan2019illumination}
+D.~Yan, W.~Tuo, W.~Wang, and S.~Li, ``Illumination robust loop closure
+  detection with the constraint of pose,'' {\em arXiv preprint
+  arXiv:1912.12367}, 2019.
 
 \bibitem{lidar_sota}
 X.~Yue, Y.~Zhang, J.~Chen, J.~Chen, X.~Zhou, and M.~He, ``Lidar-based slam for
@@ -15,15 +102,25 @@ X.~Yue, Y.~Zhang, J.~Chen, J.~Chen, X.~Zhou, and M.~He, ``Lidar-based slam for
   the international journal of robotics research and application}, vol.~51,
   no.~2, pp.~196--205, 2024.
 
-\bibitem{hong2021radar}
-Z.~Hong, Y.~Petillot, A.~Wallace, and S.~Wang, ``Radar slam: A robust slam
-  system for all weather conditions,'' {\em arXiv preprint arXiv:2104.05347},
-  2021.
+\bibitem{zhu2025research}
+D.~Zhu, Q.~Wang, F.~Wang, and X.~Gong, ``Research on 3d lidar outdoor slam
+  algorithm based on lidar/imu tight coupling,'' {\em Scientific Reports},
+  vol.~15, no.~1, p.~11175, 2025.
 
-\bibitem{radar_slam}
-M.~Holder, S.~Hellwig, and H.~Winner, ``Real-time pose graph slam based on
-  radar,'' in {\em 2019 IEEE Intelligent Vehicles Symposium (IV)},
-  pp.~1145--1151, IEEE, 2019.
+\bibitem{jorge2024impact}
+J.~Jorge, T.~Barros, C.~Premebida, M.~Aleksandrov, D.~Goehring, and U.~Nunes,
+  ``Impact of 3d lidar resolution in graph-based slam approaches: A comparative
+  study,'' pp.~1--6, 2024.
+
+\bibitem{wang2023comparative}
+H.~Wang, Y.~Yin, and Q.~Jing, ``Comparative analysis of 3d lidar scan-matching
+  methods for state estimation of autonomous surface vessel,'' {\em Journal of
+  Marine Science and Engineering}, vol.~11, no.~4, p.~840, 2023.
+
+\bibitem{stathoulopoulos2024sample}
+N.~Stathoulopoulos, V.~Sumathy, C.~Kanellakis, and G.~Nikolakopoulos, ``Why
+  sample space matters: Keyframe sampling optimization for lidar-based place
+  recognition,'' {\em arXiv preprint arXiv:2410.02643}, 2024.
 
 \bibitem{visual_inertial}
 M.~Servières, V.~Renaudin, A.~Dupuis, and N.~Antigny, ``Visual and
@@ -38,10 +135,30 @@ Z.~Liu, H.~Li, C.~Yuan, X.~Liu, J.~Lin, R.~Li, C.~Zheng, B.~Zhou, W.~Liu, and
 \bibitem{liu2023lidarinertialvisualslamloopdetection}
 K.~Liu, ``A lidar-inertial-visual slam system with loop detection,'' 2023.
 
+\bibitem{kitti_dataset}
+A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``Vision meets robotics: The
+  kitti dataset,'' {\em The international journal of robotics research},
+  vol.~32, no.~11, pp.~1231--1237, 2013.
+
+\bibitem{grupp2017evo}
+M.~Grupp, ``evo: Python package for the evaluation of odometry and slam..''
+  \url{https://github.com/MichaelGrupp/evo}, 2017.
+
 \bibitem{yang2020hyperparameter}
 L.~Yang and A.~Shami, ``On hyperparameter optimization of machine learning
   algorithms: Theory and practice,'' {\em Neurocomputing}, vol.~415,
   pp.~295--316, 2020.
+
+\bibitem{bergstra2012random}
+J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
+  {\em The journal of machine learning research}, vol.~13, no.~1, pp.~281--305,
+  2012.
+
+\bibitem{bischl2021hyperparameter}
+B.~Bischl, M.~Binder, M.~Lang, T.~Pielok, J.~Richter, S.~Coors, J.~Thomas,
+  T.~Ullmann, M.~Becker, A.-L. Boulesteix, {\em et~al.}, ``Hyperparameter
+  optimization: Foundations, algorithms, best practices and open challenges.
+  arxiv,'' {\em arXiv preprint arXiv:2107.05847}, 2021.
 
 \bibitem{bissuel2020hyper}
 A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' {\em
@@ -49,10 +166,11 @@ A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' {\em
   com/criteo-labs/hyper-parameter-optimizationalgorithms-2fe447525903. Acedido
   em}, 2020.
 
-\bibitem{bergstra2012random}
-J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
-  {\em The journal of machine learning research}, vol.~13, no.~1, pp.~281--305,
-  2012.
+\bibitem{morales2023survey}
+A.~Morales-Hern{\'a}ndez, I.~Van~Nieuwenhuyse, and S.~Rojas~Gonzalez, ``A
+  survey on multi-objective hyperparameter optimization algorithms for machine
+  learning,'' {\em Artificial Intelligence Review}, vol.~56, no.~8,
+  pp.~8043--8093, 2023.
 
 \bibitem{mockus1998application}
 J.~Mockus, ``The application of bayesian methods for seeking the extremum,''
@@ -93,6 +211,11 @@ S.~Falkner, A.~Klein, and F.~Hutter, ``Bohb: Robust and efficient
   hyperparameter optimization at scale,'' in {\em International conference on
   machine learning}, pp.~1437--1446, PMLR, 2018.
 
+\bibitem{putra2019parameter}
+I.~A. Putra and P.~Prajitno, ``Parameter tuning of g-mapping slam (simultaneous
+  localization and mapping) on mobile robot with laser-range finder 360
+  sensor,'' pp.~148--153, 2019.
+
 \bibitem{zheng2020feature}
 Z.~Zheng, ``Feature based monocular visual odometry for autonomous driving and
   hyperparameter tuning to improve trajectory estimation,'' vol.~1453, no.~1,
@@ -106,9 +229,10 @@ K.~Koide, M.~Yokozuka, S.~Oishi, and A.~Banno, ``Automatic hyper-parameter
 Z.~Chen, ``Visual-inertial slam extrinsic parameter calibration based on
   bayesian optimization,'' 2018.
 
-\bibitem{putra2019parameter}
-I.~A. Putra and P.~Prajitno, ``Parameter tuning of g-mapping slam (simultaneous
-  localization and mapping) on mobile robot with laser-range finder 360
-  sensor,'' pp.~148--153, 2019.
+\bibitem{bodin2018slambench2multiobjectiveheadtoheadbenchmarking}
+B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
+  M.~Luján, S.~Furber, A.~J. Davison, P.~H.~J. Kelly, and M.~O'Boyle,
+  ``Slambench2: Multi-objective head-to-head benchmarking for visual slam,''
+  2018.
 
 \end{thebibliography}

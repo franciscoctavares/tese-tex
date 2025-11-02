@@ -1,15 +1,15 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Visual SLAM}}{4}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces LiDAR SLAM point cloud example}}{5}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Multi sensor SLAM system based on radar}}{6}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi sensor SLAM system for an industrial robot}}{7}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search}}{9}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search}}{10}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm.}}{11}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm}}{13}{figure.caption.62}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm}}{13}{figure.caption.67}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way}}{14}{figure.caption.71}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system.}}{3}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM\cite {danicasado2021}.}}{5}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example.}}{7}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi sensor SLAM system for an industrial robot\cite {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search \cite {castillo2022hyperparameter}.}}{11}{figure.caption.69}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search \cite {castillo2022hyperparameter}.}}{12}{figure.caption.72}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm.}}{12}{figure.caption.77}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm.}}{14}{figure.caption.89}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm.}}{15}{figure.caption.94}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way \cite {li2018hyperband}.}}{16}{figure.caption.98}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
