@@ -1,4 +1,4 @@
-\paragraph{}This chapter will explain the methodology and requirements for the \ac{SLAM} tuning module, developed for \ac{RUSTLE}. For each implemented tuning technique, a high level overview of its architecture is provided. Test settings, including test algorithms and dataset choices, are also justified.
+\paragraph{}This chapter will explain the methodology and requirements for the \ac{SLAM} tuning module, developed for \ac{RUSTLE}. For each implemented tuning algorithm, a high level overview of its architecture is provided. Test settings, including test algorithms and dataset choices, are also justified.
 
 \begin{figure}[h]
 \includegraphics[width=0.85\linewidth]{images/moscow.png}
@@ -14,9 +14,16 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}Algorithm executions are run as tests. Each test's configuration is passes as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test one wants to execute.
 
-\paragraph{}As for language choice, Rust was chosen mostly due to simplicity of development and the ease with which one can write highly performant code. Other languages, such as c++ and python, also have libraries for working with Docker and ROS, as well as libraries for database hosting. The difference with Rust in this regard is that to use these libraries it is only needed to include them as dependencies, and use them in the codebase, as the download, compilation and linking of these libraries is all automatically handled by Rust's build tool, cargo. As for performance, Rust is known for its compile-time enforced memory safety(at the cost of some control over memory), as well as built in type system guarantees, which prevent common concurrency issues like data races.
+%\paragraph{}As for language choice, Rust was chosen mostly due to simplicity of development and the ease with which one can write highly performant code. Other languages, such as c++ and python, also have libraries for working with Docker and ROS, as well as libraries for database hosting. The difference with Rust in this regard is that to use these libraries it is only needed to include them as dependencies, and use them in the codebase, as the download, compilation and linking of these libraries is all automatically handled by Rust's build tool, cargo. As for performance, Rust is known for its compile-time enforced memory safety(at the cost of some control over memory), as well as built in type system guarantees, which prevent common concurrency issues like data races.
 
 \section{Development}
+
+\subsection{Implementation}
+
+\paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
+
+\paragraph{}What i will be doing: explain the features i will be developing, where my code inserts itself inside of RUSTLE, which optimization strategies will be implemented and why, what tests i will do to test the code and to extract results.
+
 \paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller "implementable" sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test each sub-feature.
 
 \section{Functional requirements}
@@ -50,23 +57,19 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	%\item The tuning module should run different configurations concurrently, when possible.
 %\end{itemize}
 
-\section{Non Functional requirements}
-
-%\begin{itemize}
-%	\item The tuning module should be future proof, allowing for the easy addition of other tuning algorithms into the software.
-%	\item 
-%\end{itemize}
-
 \section{Testing}
 
 \subsection{Metrics}
 
-\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
+%\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
+\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
 
 \subsection{Algorithms}
 
-\paragraph{}Write something about the algorithms tested(point-lio, ig-lio, etc), but emphasize the tuning algorithms apply to any SLAM method.
+%\paragraph{}Write something about the algorithms tested(point-lio, ig-lio, etc), but emphasize the tuning algorithms apply to any SLAM method.
+\paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.
 
-\subsection{Datasets}
+\subsection{Dataset}
 
-\paragraph{}Mention the datasets used during development, but stress that, as in the SLAM methods used, the tuning algorithms generalize to any dataset.
+%\paragraph{}Mention the datasets used during development, but stress that, as in the SLAM methods used, the tuning algorithms generalize to any dataset.
+\paragraph{}Something about the 2.5 minute Botanic Garden Dataset(outdoor, unstructured setting, not too long(for tuning experiments)).

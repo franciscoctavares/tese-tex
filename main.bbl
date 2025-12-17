@@ -1,8 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{tareen2019large}
+S.~A.~K. TAREEN, ``Large scale 3d simultaneous localization and mapping
+  (ls-3d-slam) using monocular vision,'' 2019.
+
 \bibitem{danicasado2021}
 D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam,''
   2021.
+
+\bibitem{slam_point_cloud}
+F.~Andert, O.~B{\"o}ttcher, A.~Mushyam, and P.~Schm{\"a}lzle, ``Semantic lidar
+  point cloud mapping and cloud-based slam for autonomous driving,''
+  pp.~853--860, 2025.
 
 \bibitem{multi_sensor_slam_arm_robot}
 R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
@@ -13,6 +22,16 @@ R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
 E.~I.~M. Castillo, {\em Hyperparameter Optimization for SLAM: An Approach for
   Enhancing ORB-SLAM2's Performance}.
 \newblock PhD thesis, University of Alberta, 2022.
+
+\bibitem{brochu2010tutorial}
+E.~Brochu, V.~M. Cora, and N.~De~Freitas, ``A tutorial on bayesian optimization
+  of expensive cost functions, with application to active user modeling and
+  hierarchical reinforcement learning,'' {\em arXiv preprint arXiv:1012.2599},
+  2010.
+
+\bibitem{soper2022hyperparameter}
+D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
+  cross validation,'' {\em Algorithms}, vol.~16, no.~1, p.~17, 2022.
 
 \bibitem{li2018hyperband}
 L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
@@ -180,6 +199,10 @@ J.~Mockus, ``The application of bayesian methods for seeking the extremum,''
 R.~Elshawi, M.~Maher, and S.~Sakr, ``Automated machine learning:
   State-of-the-art and open challenges,'' {\em arXiv preprint
   arXiv:1906.02287}, 2019.
+
+\bibitem{frazier2018tutorial}
+P.~I. Frazier, ``A tutorial on bayesian optimization,'' {\em arXiv preprint
+  arXiv:1807.02811}, 2018.
 
 \bibitem{kostusiak2019efficiency}
 A.~Kostusiak and P.~Skrzypczy{\'n}ski, ``On the efficiency of population-based

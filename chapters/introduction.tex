@@ -1,8 +1,8 @@
 \section{Context and Motivation}
 
-\paragraph{}\ac{SLAM} is one of the most studied topics in robotics\cite{becnkis2024survey, lajoie2022towards}. Its purpose is to simultaneously estimate the robot's position and orientation(pose) and map the robot's environment. \ac{SLAM} methods often integrate data from devices like \ac{LIDAR}, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced aproaches, such as Visual and LIDAR SLAM. These methods are crucial for applications in robotics, such as autonomous navigation.%, augmented reality, and autonomous navigation.
+\paragraph{}\ac{SLAM} is one of the most studied topics in robotics~\cite{becnkis2024survey, lajoie2022towards}. Its purpose is to simultaneously estimate the robot's position and orientation(pose) and map the robot's environment. \ac{SLAM} methods often integrate data from devices like \ac{LIDAR}, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced aproaches, such as Visual and \ac{LIDAR} \ac{SLAM}. These methods are crucial for applications in robotics, such as autonomous navigation.%, augmented reality, and autonomous navigation.
 
-\paragraph{}The accuracy of a \ac{SLAM} method is usually evaluated using the \ac{APE} and the \ac{RPE}. The \ac{APE} refers to the absolute difference between the estimated pose and the ground truth, while the \ac{RPE} refers to the difference between consecutive estimated poses and the respective ground truth consecutive poses. SLAM's efficacy is dependent on various factors, such as sensor quality, available computational resources, loop closure and algorithm type. The algorithm type is particularly important because different scenarios demand different types of SLAM methods. On the other hand, different \ac{SLAM} methods have different number of hyperparameters, impacting the size of the parameter space and the difficulty of arriving at the optimal hyperparameter configuration for a given scenario.
+\paragraph{}The accuracy of a \ac{SLAM} method is usually evaluated using the \ac{APE} and the \ac{RPE}. The \ac{APE} refers to the absolute difference between the estimated pose and the ground truth, while the \ac{RPE} refers to the difference between consecutive estimated poses and the respective ground truth consecutive poses. \ac{SLAM}'s efficacy is dependent on various factors, such as sensor quality, available computational resources, loop closure and algorithm type. The algorithm type is particularly important because different scenarios demand different types of \ac{SLAM} methods. On the other hand, different \ac{SLAM} methods have different number of hyperparameters, impacting the size of the parameter space and the difficulty of arriving at the optimal hyperparameter configuration for a given scenario.
 
 \paragraph{}One of the biggest hurdles in \ac{SLAM} research is determining the best hyperparameter configuration for a given dataset. A tool like \ac{RUSTLE} streamlines the process, allowing different \ac{SLAM} methods to be run asynchronously, while giving performance reports, allowing for the manual tuning of \ac{SLAM}'s hyperparameters.
 
@@ -12,10 +12,9 @@
 \paragraph{}The main goals of this thesis are:
 \begin{itemize}
     \item Develop an automatic \ac{HPT} framework within \ac{RUSTLE} to better optimize and compare the performance of multiple \ac{SLAM} solutions.
-    \item Get proficient at Rust programming, which not only will help with the development of the previously mentioned framework, but could also be of use in future works.
+    %\item Get proficient at Rust programming, which not only will help with the development of the previously mentioned framework, but could also be of use in future works.
     \item Evaluate the efficiency of the developed optimization algorithms and compare them to each other.
     \item Summarize the developed work and identify lessons learned and potential future improvements.
-    
     \item Evaluate the impact(importance) different hyperparameters have on several SLAM methods.
 \end{itemize}
 \section{Document overview}

@@ -7,6 +7,8 @@ Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: bibliography/references.bib
 Warning--entry type for "danicasado2021" isn't style-file defined
 --line 246 of file bibliography/references.bib
+Warning--empty journal in tareen2019large
+Warning--empty journal in slam_point_cloud
 Warning--empty journal in multi_sensor_slam_arm_robot
 Warning--empty journal in becnkis2024survey
 Warning--empty journal in harris1988combined
@@ -23,45 +25,45 @@ Warning--empty journal in putra2019parameter
 Warning--empty journal in zheng2020feature
 Warning--empty journal in koide2021automatic
 Warning--empty journal in chen2018visual
-You've used 49 entries,
+You've used 54 entries,
             1876 wiz_defined-function locations,
-            746 strings with 13303 characters,
-and the built_in function-call counts, 13334 in all, are:
-= -- 1282
-> -- 595
+            767 strings with 14151 characters,
+and the built_in function-call counts, 14299 in all, are:
+= -- 1370
+> -- 632
 < -- 0
-+ -- 219
-- -- 170
-* -- 948
-:= -- 1908
-add.period$ -- 50
-call.type$ -- 49
-change.case$ -- 48
++ -- 234
+- -- 180
+* -- 1011
+:= -- 2054
+add.period$ -- 55
+call.type$ -- 54
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 694
-empty$ -- 1204
-format.name$ -- 170
-if$ -- 3222
+cite$ -- 72
+duplicate$ -- 751
+empty$ -- 1305
+format.name$ -- 180
+if$ -- 3454
 int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 45
-newline$ -- 151
-num.names$ -- 49
-pop$ -- 177
+int.to.str$ -- 54
+missing$ -- 50
+newline$ -- 166
+num.names$ -- 54
+pop$ -- 198
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 478
+skip$ -- 502
 stack$ -- 0
-substring$ -- 823
-swap$ -- 288
+substring$ -- 859
+swap$ -- 303
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 16
-while$ -- 127
-width$ -- 51
-write$ -- 455
-(There were 17 warnings)
+warning$ -- 18
+while$ -- 136
+width$ -- 56
+write$ -- 497
+(There were 19 warnings)

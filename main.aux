@@ -30,6 +30,7 @@
 \newacro{DEA}[\AC@hyperlink{DEA}{DEA}]{Dissertation's Example Acronym}
 \newacro{DoG}[\AC@hyperlink{DoG}{DoG}]{Derivative of Gaussian}
 \newacro{EA}[\AC@hyperlink{EA}{EA}]{Evolutionary Algorithm}
+\newacro{EI}[\AC@hyperlink{EI}{EI}]{Expected Improvement}
 \newacro{HB}[\AC@hyperlink{HB}{HB}]{Hyperband}
 \newacro{HPO}[\AC@hyperlink{HPO}{HPO}]{Hyperparameter Optimization}
 \newacro{HPT}[\AC@hyperlink{HPT}{HPT}]{Hyperparameter Tuning}
@@ -38,7 +39,9 @@
 \newacro{LIDAR}[\AC@hyperlink{LIDAR}{LIDAR}]{Light Detection and Ranging}
 \newacro{LoG}[\AC@hyperlink{LoG}{LoG}]{Laplacian of Gaussian}
 \newacro{NDT}[\AC@hyperlink{NDT}{NDT}]{Normal Distributions Transform}
+\newacro{PI}[\AC@hyperlink{PI}{PI}]{Probability of Improvement}
 \newacro{PSO}[\AC@hyperlink{PSO}{PSO}]{Particle Swarm Optimization}
+\newacro{RANSAC}[\AC@hyperlink{RANSAC}{RANSAC}]{Random Sample Consensus}
 \newacro{RMSE}[\AC@hyperlink{RMSE}{RMSE}]{Root Mean Square Error}
 \newacro{RPE}[\AC@hyperlink{RPE}{RPE}]{Relative Pose Error}
 \newacro{RUSTLE}[\AC@hyperlink{RUSTLE}{RUSTLE}]{Reliable User-friendly and Straightforward Tool for Localization Experiments}
@@ -46,11 +49,16 @@
 \newacro{SH}[\AC@hyperlink{SH}{SH}]{Successive Halving}
 \newacro{SMBO}[\AC@hyperlink{SMBO}{SMBO}]{Sequential Model-Based Optimization}
 \newacro{SLAM}[\AC@hyperlink{SLAM}{SLAM}]{Simultaneous Localization and Mapping}
+\newacro{ULCB}[\AC@hyperlink{ULCB}{ULCB}]{Upper/Lower Confidence Bound}
 \newacro{VO}[\AC@hyperlink{VO}{VO}]{Visual Odometry}
+\citation{tareen2019large}
 \citation{danicasado2021}
+\citation{slam_point_cloud}
 \citation{multi_sensor_slam_arm_robot}
 \citation{castillo2022hyperparameter}
 \citation{castillo2022hyperparameter}
+\citation{brochu2010tutorial}
+\citation{soper2022hyperparameter}
 \citation{li2018hyperband}
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{xv}{chapter*.11}\protected@file@percent }
 \AC@undonewlabel{acro:HB}
@@ -71,6 +79,8 @@
 \AC@undonewlabel{acro:LIDAR}
 \newlabel{acro:LIDAR}{{1.1}{1}{}{section*.16}{}}
 \acronymused{LIDAR}
+\acronymused{LIDAR}
+\acronymused{SLAM}
 \@writefile{toc}{\contentsline {paragraph}{}{1}{paragraph*.17}\protected@file@percent }
 \acronymused{SLAM}
 \AC@undonewlabel{acro:APE}
@@ -81,6 +91,8 @@
 \acronymused{RPE}
 \acronymused{APE}
 \acronymused{RPE}
+\acronymused{SLAM}
+\acronymused{SLAM}
 \acronymused{SLAM}
 \@writefile{toc}{\contentsline {paragraph}{}{1}{paragraph*.20}\protected@file@percent }
 \acronymused{SLAM}
@@ -103,6 +115,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Document overview}{2}{section.1.3}\protected@file@percent }
 \citation{taheri2021slam}
 \citation{taheri2021slam}
+\citation{tareen2019large}
+\citation{tareen2019large}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Background and Related Work}{3}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -116,9 +130,9 @@
 \acronymused{SLAM}
 \@writefile{toc}{\contentsline {paragraph}{}{3}{paragraph*.27}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{3}{paragraph*.28}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system.}}{3}{figure.caption.29}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system~\cite  {tareen2019large}.}}{3}{figure.caption.29}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:enter-label}{{2.1}{3}{Common steps of a generic Visual SLAM system}{figure.caption.29}{}}
+\newlabel{fig:enter-label}{{2.1}{3}{Common steps of a generic Visual SLAM system~\cite {tareen2019large}}{figure.caption.29}{}}
 \citation{macario2022comprehensive}
 \citation{harris1988combined}
 \citation{lindeberg1998feature,lowe2004distinctive}
@@ -163,8 +177,8 @@
 \acronymused{SLAM}
 \acronymused{SLAM}
 \acronymused{SLAM}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM\cite  {danicasado2021}.}}{5}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.2}{5}{Visual SLAM\cite {danicasado2021}}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM~\cite  {danicasado2021}.}}{5}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.2}{5}{Visual SLAM~\cite {danicasado2021}}{figure.caption.41}{}}
 \@writefile{toc}{\contentsline {paragraph}{}{5}{paragraph*.42}\protected@file@percent }
 \acronymused{SLAM}
 \@writefile{toc}{\contentsline {paragraph}{}{5}{paragraph*.43}\protected@file@percent }
@@ -175,11 +189,17 @@
 \citation{yan2019illumination}
 \citation{yan2019illumination}
 \citation{yan2019illumination}
-\citation{lidar_sota}
 \@writefile{toc}{\contentsline {paragraph}{}{6}{paragraph*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{6}{paragraph*.45}\protected@file@percent }
+\AC@undonewlabel{acro:RANSAC}
+\newlabel{acro:RANSAC}{{2.1.1}{6}{}{section*.45}{}}
+\acronymused{RANSAC}
+\acronymused{RANSAC}
 \@writefile{toc}{\contentsline {paragraph}{}{6}{paragraph*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{6}{paragraph*.47}\protected@file@percent }
 \acronymused{SLAM}
+\citation{lidar_sota}
+\citation{slam_point_cloud}
+\citation{slam_point_cloud}
 \citation{zhu2025research}
 \citation{zhu2025research}
 \citation{jorge2024impact}
@@ -187,63 +207,76 @@
 \citation{wang2023comparative}
 \citation{stathoulopoulos2024sample}
 \citation{stathoulopoulos2024sample}
+\acronymused{LIDAR}
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {subsubsection}{\ac {LIDAR} \ac {SLAM}}{7}{subsubsection*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{7}{paragraph*.49}\protected@file@percent }
+\acronymused{LIDAR}
+\acronymused{SLAM}
+\acronymused{LIDAR}
+\acronymused{SLAM}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example\cite  {slam_point_cloud}.}}{7}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.3}{7}{LiDAR SLAM point cloud example\cite {slam_point_cloud}}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{7}{paragraph*.51}\protected@file@percent }
+\acronymused{LIDAR}
+\acronymused{SLAM}
+\acronymused{LIDAR}
+\AC@undonewlabel{acro:ICP}
+\newlabel{acro:ICP}{{2.1.1}{7}{}{section*.52}{}}
+\acronymused{ICP}
+\AC@undonewlabel{acro:NDT}
+\newlabel{acro:NDT}{{2.1.1}{7}{}{section*.53}{}}
+\acronymused{NDT}
 \citation{multi_sensor_slam_arm_robot}
 \citation{multi_sensor_slam_arm_robot}
-\@writefile{toc}{\contentsline {subsubsection}{LiDAR SLAM}{7}{subsubsection*.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{7}{paragraph*.48}\protected@file@percent }
-\acronymused{LIDAR}
-\acronymused{SLAM}
-\acronymused{LIDAR}
-\acronymused{SLAM}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example.}}{7}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.3}{7}{LiDAR SLAM point cloud example}{figure.caption.49}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{7}{paragraph*.50}\protected@file@percent }
-\acronymused{LIDAR}
-\acronymused{SLAM}
-\acronymused{LIDAR}
 \citation{visual_inertial}
 \citation{liu2024voxelslamcompleteaccurateversatile}
 \citation{liu2023lidarinertialvisualslamloopdetection}
-\@writefile{toc}{\contentsline {subsubsection}{Multi sensor SLAM}{8}{subsubsection*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{8}{paragraph*.52}\protected@file@percent }
-\acronymused{SLAM}
-\acronymused{SLAM}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi sensor SLAM system for an industrial robot\cite  {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.53}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.4}{8}{Multi sensor SLAM system for an industrial robot\cite {multi_sensor_slam_arm_robot}}{figure.caption.53}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{8}{paragraph*.54}\protected@file@percent }
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
-\acronymused{SLAM}
+\@writefile{toc}{\contentsline {subsubsection}{Multi sensor SLAM}{8}{subsubsection*.54}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{8}{paragraph*.55}\protected@file@percent }
+\acronymused{SLAM}
+\acronymused{SLAM}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi sensor SLAM system for an industrial robot\cite  {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.4}{8}{Multi sensor SLAM system for an industrial robot\cite {multi_sensor_slam_arm_robot}}{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{8}{paragraph*.57}\protected@file@percent }
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{IMU}
+\acronymused{IMU}
+\acronymused{IMU}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {paragraph}{}{8}{paragraph*.58}\protected@file@percent }
 \acronymused{SLAM}
 \citation{kitti_dataset}
 \citation{grupp2017evo}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Evaluation of SLAM}{9}{subsection.2.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.59}\protected@file@percent }
+\acronymused{SLAM}
 \AC@undonewlabel{acro:ATE}
-\newlabel{acro:ATE}{{2.1.2}{9}{}{section*.57}{}}
+\newlabel{acro:ATE}{{2.1.2}{9}{}{section*.60}{}}
 \acronymused{ATE}
 \acronymused{RPE}
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.58}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.61}\protected@file@percent }
 \acronymused{ATE}
 \acronymused{ATE}
 \AC@undonewlabel{acro:RMSE}
-\newlabel{acro:RMSE}{{2.1.2}{9}{}{section*.59}{}}
+\newlabel{acro:RMSE}{{2.1.2}{9}{}{section*.62}{}}
 \acronymused{RMSE}
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.63}\protected@file@percent }
 \acronymused{RPE}
 \acronymused{ATE}
 \acronymused{RMSE}
 \acronymused{RPE}
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.64}\protected@file@percent }
 \acronymused{SLAM}
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.62}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.63}\protected@file@percent }
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.65}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{9}{paragraph*.66}\protected@file@percent }
 \acronymused{SLAM}
 \citation{yang2020hyperparameter}
 \citation{yang2020hyperparameter}
@@ -252,13 +285,14 @@
 \citation{bischl2021hyperparameter}
 \acronymused{SLAM}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Hyperparameter optimization techniques}{10}{section.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{10}{paragraph*.64}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Search based approaches}{10}{subsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{10}{paragraph*.65}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Grid Search}{10}{subsubsection*.66}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{10}{paragraph*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Search based approaches}{10}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{10}{paragraph*.68}\protected@file@percent }
 \AC@undonewlabel{acro:HPO}
-\newlabel{acro:HPO}{{2.2.1}{10}{}{section*.68}{}}
+\newlabel{acro:HPO}{{2.2.1}{10}{}{section*.69}{}}
+\acronymused{HPO}
+\@writefile{toc}{\contentsline {subsubsection}{Grid Search}{10}{subsubsection*.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{10}{paragraph*.71}\protected@file@percent }
 \acronymused{HPO}
 \newlabel{equation_grid_search}{{2.3}{10}{}{equation.2.3}{}}
 \citation{castillo2022hyperparameter}
@@ -268,127 +302,160 @@
 \citation{bergstra2012random}
 \citation{castillo2022hyperparameter}
 \citation{castillo2022hyperparameter}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search~\cite  {castillo2022hyperparameter}.}}{11}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.5}{11}{Graphical illustration of parameter space exploration in grid search~\cite {castillo2022hyperparameter}}{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Random Search}{11}{subsubsection*.73}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{11}{paragraph*.74}\protected@file@percent }
 \citation{morales2023survey}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search \cite  {castillo2022hyperparameter}.}}{11}{figure.caption.69}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.5}{11}{Graphical illustration of parameter space exploration in grid search \cite {castillo2022hyperparameter}}{figure.caption.69}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Random Search}{11}{subsubsection*.70}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{11}{paragraph*.71}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Model based approaches}{11}{subsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{11}{paragraph*.73}\protected@file@percent }
 \citation{mockus1998application}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search~\cite  {castillo2022hyperparameter}.}}{12}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.6}{12}{Graphical illustration of parameter space exploration in random search~\cite {castillo2022hyperparameter}}{figure.caption.75}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Model based approaches}{12}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{12}{paragraph*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bayesian Optimization}{12}{subsubsection*.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{12}{paragraph*.78}\protected@file@percent }
+\AC@undonewlabel{acro:BO}
+\newlabel{acro:BO}{{2.2.2}{12}{}{section*.79}{}}
+\acronymused{BO}
+\citation{brochu2010tutorial}
+\citation{brochu2010tutorial}
 \citation{elshawi2019automated}
 \citation{bissuel2020hyper}
 \citation{elshawi2019automated}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search \cite  {castillo2022hyperparameter}.}}{12}{figure.caption.72}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.6}{12}{Graphical illustration of parameter space exploration in random search \cite {castillo2022hyperparameter}}{figure.caption.72}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Bayesian Optimization}{12}{subsubsection*.74}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{12}{paragraph*.75}\protected@file@percent }
-\AC@undonewlabel{acro:BO}
-\newlabel{acro:BO}{{2.2.2}{12}{}{section*.76}{}}
+\citation{frazier2018tutorial}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Bayesian Optimization}}{13}{figure.caption.80}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm~\cite  {brochu2010tutorial}.}}{13}{figure.caption.80}\protected@file@percent }
+\newlabel{bo_algo}{{2.7}{13}{The Bayesian Optimization algorithm~\cite {brochu2010tutorial}}{figure.caption.80}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.81}\protected@file@percent }
+\acronymused{RMSE}
+\acronymused{RPE}
+\acronymused{SLAM}
 \acronymused{BO}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm.}}{12}{figure.caption.77}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.7}{12}{The Bayesian Optimization algorithm}{figure.caption.77}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{12}{paragraph*.78}\protected@file@percent }
+\AC@undonewlabel{acro:EI}
+\newlabel{acro:EI}{{2.2.2}{13}{}{section*.82}{}}
+\acronymused{EI}
+\AC@undonewlabel{acro:PI}
+\newlabel{acro:PI}{{2.2.2}{13}{}{section*.83}{}}
+\acronymused{PI}
+\AC@undonewlabel{acro:ULCB}
+\newlabel{acro:ULCB}{{2.2.2}{13}{}{section*.84}{}}
+\acronymused{ULCB}
+\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.85}\protected@file@percent }
+\acronymused{BO}
 \citation{bissuel2020hyper}
 \citation{kostusiak2019efficiency}
 \citation{rutenbar1989simulated}
+\citation{ghasemalizadeh2016review,rutenbar1989simulated}
 \citation{ghasemalizadeh2016review}
 \citation{rutenbar1989simulated}
-\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.79}\protected@file@percent }
-\acronymused{BO}
-\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.80}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Population based Approaches}{13}{subsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.81}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.82}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Simulated Annealing}{13}{subsubsection*.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{13}{paragraph*.84}\protected@file@percent }
+\citation{rutenbar1989simulated}
+\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.86}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Population based Approaches}{14}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.87}\protected@file@percent }
+\acronymused{APE}
+\acronymused{RPE}
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {subsubsection}{Simulated Annealing}{14}{subsubsection*.88}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.89}\protected@file@percent }
 \AC@undonewlabel{acro:SA}
-\newlabel{acro:SA}{{2.2.3}{13}{}{section*.85}{}}
+\newlabel{acro:SA}{{2.2.3}{14}{}{section*.90}{}}
 \acronymused{SA}
+\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.91}\protected@file@percent }
 \citation{ghasemalizadeh2016review}
 \citation{soper2021greed}
 \citation{huang2019survey}
-\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.86}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.87}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.88}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.92}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.93}\protected@file@percent }
 \acronymused{SA}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm.}}{14}{figure.caption.89}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.8}{14}{A graphic representation of the simulated annealing algorithm}{figure.caption.89}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Successive Halving}{14}{subsubsection*.90}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{14}{paragraph*.91}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm.}}{15}{figure.caption.94}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.8}{15}{A graphic representation of the simulated annealing algorithm}{figure.caption.94}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Successive Halving}{15}{subsubsection*.95}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.96}\protected@file@percent }
 \AC@undonewlabel{acro:SH}
-\newlabel{acro:SH}{{2.2.3}{14}{}{section*.92}{}}
+\newlabel{acro:SH}{{2.2.3}{15}{}{section*.97}{}}
 \acronymused{SH}
+\acronymused{SA}
+\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.98}\protected@file@percent }
+\citation{soper2022hyperparameter}
+\citation{soper2022hyperparameter}
 \citation{elshawi2019automated}
 \citation{falkner2018bohb}
 \citation{falkner2018bohb}
 \citation{falkner2018bohb}
 \citation{falkner2018bohb}
-\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.93}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm.}}{15}{figure.caption.94}\protected@file@percent }
-\newlabel{fig:enter-label}{{2.9}{15}{A graphic representation of the Successive Halving algorithm}{figure.caption.94}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Hyperband}{15}{subsubsection*.95}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.96}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{15}{paragraph*.97}\protected@file@percent }
 \citation{li2018hyperband}
 \citation{li2018hyperband}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way \cite  {li2018hyperband}.}}{16}{figure.caption.98}\protected@file@percent }
-\acronymused{HB}
-\newlabel{fig:enter-label}{{2.10}{16}{\ac {HB} algorithm described in a more systematic way \cite {li2018hyperband}}{figure.caption.98}{}}
-\acronymused{HPT}
-\acronymused{SLAM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}\acs {HPT} in \acs {SLAM}}{16}{subsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{16}{paragraph*.99}\protected@file@percent }
-\acronymused{HPT}
-\acronymused{SLAM}
-\@writefile{toc}{\contentsline {paragraph}{}{16}{paragraph*.100}\protected@file@percent }
-\acronymused{SLAM}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm~\cite  {soper2022hyperparameter}.}}{16}{figure.caption.99}\protected@file@percent }
+\newlabel{fig:enter-label}{{2.9}{16}{A graphic representation of the Successive Halving algorithm~\cite {soper2022hyperparameter}}{figure.caption.99}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Hyperband}{16}{subsubsection*.100}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{16}{paragraph*.101}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{16}{paragraph*.102}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way~\cite  {li2018hyperband}.}}{17}{figure.caption.103}\protected@file@percent }
+\acronymused{HB}
+\newlabel{fig:enter-label}{{2.10}{17}{\ac {HB} algorithm described in a more systematic way~\cite {li2018hyperband}}{figure.caption.103}{}}
+\acronymused{HPT}
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}\acs {HPT} in \acs {SLAM}}{17}{subsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.104}\protected@file@percent }
+\acronymused{HPT}
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.105}\protected@file@percent }
+\acronymused{SLAM}
+\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.106}\protected@file@percent }
+\acronymused{SLAM}
 \citation{putra2019parameter}
 \citation{zheng2020feature}
 \citation{koide2021automatic}
 \citation{chen2018visual}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Related Work}{17}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.102}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Related Work}{18}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{18}{paragraph*.107}\protected@file@percent }
 \acronymused{SLAM}
 \acronymused{SLAM}
-\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.103}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.104}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{18}{paragraph*.108}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{18}{paragraph*.109}\protected@file@percent }
 \acronymused{ATE}
-\@writefile{toc}{\contentsline {paragraph}{}{17}{paragraph*.105}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{18}{paragraph*.110}\protected@file@percent }
 \acronymused{BO}
 \AC@undonewlabel{acro:SMBO}
-\newlabel{acro:SMBO}{{2.3}{17}{}{section*.106}{}}
+\newlabel{acro:SMBO}{{2.3}{18}{}{section*.111}{}}
 \acronymused{SMBO}
 \citation{kostusiak2019efficiency}
 \citation{kostusiak2019efficiency}
 \citation{kostusiak2019efficiency}
 \citation{kostusiak2019efficiency}
+\citation{kostusiak2019efficiency}
 \acronymused{BO}
 \acronymused{SLAM}
-\@writefile{toc}{\contentsline {paragraph}{}{18}{paragraph*.107}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{19}{paragraph*.112}\protected@file@percent }
+\acronymused{SLAM}
 \AC@undonewlabel{acro:PSO}
-\newlabel{acro:PSO}{{2.3}{18}{}{section*.108}{}}
+\newlabel{acro:PSO}{{2.3}{19}{}{section*.113}{}}
 \acronymused{PSO}
 \AC@undonewlabel{acro:EA}
-\newlabel{acro:EA}{{2.3}{18}{}{section*.109}{}}
+\newlabel{acro:EA}{{2.3}{19}{}{section*.114}{}}
 \acronymused{EA}
+\acronymused{RANSAC}
 \acronymused{ATE}
 \acronymused{RPE}
+\acronymused{RANSAC}
 \acronymused{PSO}
 \acronymused{EA}
+\acronymused{PSO}
 \citation{zheng2020feature}
 \citation{putra2019parameter}
 \citation{koide2021automatic}
 \citation{kostusiak2019efficiency}
 \citation{kostusiak2019efficiency}
+\acronymused{SLAM}
+\acronymused{SLAM}
+\acronymused{EA}
 \acronymused{PSO}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of HPT methods used in the literature.}}{19}{table.caption.110}\protected@file@percent }
-\newlabel{tab:my-table}{{2.1}{19}{Summary of HPT methods used in the literature}{table.caption.110}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of HPT methods used in literature.}}{20}{table.caption.115}\protected@file@percent }
+\newlabel{tab:my-table}{{2.1}{20}{Summary of HPT methods used in literature}{table.caption.115}{}}
 \citation{kostusiak2019efficiency}
 \citation{bodin2018slambench2multiobjectiveheadtoheadbenchmarking}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Literature gaps}{20}{subsection.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{20}{paragraph*.111}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Literature gaps}{21}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{21}{paragraph*.116}\protected@file@percent }
 \acronymused{HPT}
 \acronymused{BO}
 \acronymused{SLAM}
@@ -400,100 +467,107 @@
 \acronymused{RUSTLE}
 \acronymused{SLAM}
 \acronymused{HPT}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Statement of contributions}{20}{subsection.2.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{20}{paragraph*.112}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Statement of contributions}{21}{subsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{21}{paragraph*.117}\protected@file@percent }
 \acronymused{SLAM}
+\acronymused{RUSTLE}
 \acronymused{SLAM}
-\acronymused{SLAM}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Methodology}{21}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:methodology}{{3}{21}{Methodology}{chapter.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{}{21}{paragraph*.113}\protected@file@percent }
+\newlabel{chap:methodology}{{3}{23}{Methodology}{chapter.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.118}\protected@file@percent }
 \acronymused{SLAM}
 \acronymused{RUSTLE}
 \acronymused{RUSTLE}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}\acs {RUSTLE}}{21}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{21}{paragraph*.115}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}\acs {RUSTLE}}{23}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.120}\protected@file@percent }
 \acronymused{RUSTLE}
-\@writefile{toc}{\contentsline {paragraph}{}{21}{paragraph*.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{22}{paragraph*.117}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{22}{paragraph*.118}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Development}{22}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{22}{paragraph*.119}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Functional requirements}{22}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{22}{paragraph*.120}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.121}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.122}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.123}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.124}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.125}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.126}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{23}{paragraph*.127}\protected@file@percent }
+\citation{bergstra2012random}
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.122}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Development}{24}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Implementation}{24}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.123}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.124}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.125}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Functional requirements}{24}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.126}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.127}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.128}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.129}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.130}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{25}{paragraph*.132}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{bibliography/references.bib}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Non Functional requirements}{24}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Testing}{24}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Metrics}{24}{subsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.128}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Algorithms}{24}{subsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.129}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Datasets}{24}{subsection.3.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{}{24}{paragraph*.130}\protected@file@percent }
-\bibcite{danicasado2021}{{1}{}{{}}{{}}}
-\bibcite{multi_sensor_slam_arm_robot}{{2}{}{{}}{{}}}
-\bibcite{castillo2022hyperparameter}{{3}{}{{}}{{}}}
-\bibcite{li2018hyperband}{{4}{}{{}}{{}}}
-\bibcite{becnkis2024survey}{{5}{}{{}}{{}}}
-\bibcite{lajoie2022towards}{{6}{}{{}}{{}}}
-\bibcite{taheri2021slam}{{7}{}{{}}{{}}}
-\bibcite{macario2022comprehensive}{{8}{}{{}}{{}}}
-\bibcite{harris1988combined}{{9}{}{{}}{{}}}
-\bibcite{lindeberg1998feature}{{10}{}{{}}{{}}}
-\bibcite{lowe2004distinctive}{{11}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}{chapter*.131}\protected@file@percent }
-\bibcite{liao2024local}{{12}{}{{}}{{}}}
-\bibcite{image_feature_matching}{{13}{}{{}}{{}}}
-\bibcite{chen2018submap}{{14}{}{{}}{{}}}
-\bibcite{picard2023surveyrealtime3dscene}{{15}{}{{}}{{}}}
-\bibcite{li20213dpointcloudreconstruction}{{16}{}{{}}{{}}}
-\bibcite{chen2018review}{{17}{}{{}}{{}}}
-\bibcite{fontan2024anyfeature}{{18}{}{{}}{{}}}
-\bibcite{lindeberg2014scale}{{19}{}{{}}{{}}}
-\bibcite{raguram2008comparative}{{20}{}{{}}{{}}}
-\bibcite{yan2019illumination}{{21}{}{{}}{{}}}
-\bibcite{lidar_sota}{{22}{}{{}}{{}}}
-\bibcite{zhu2025research}{{23}{}{{}}{{}}}
-\bibcite{jorge2024impact}{{24}{}{{}}{{}}}
-\bibcite{wang2023comparative}{{25}{}{{}}{{}}}
-\bibcite{stathoulopoulos2024sample}{{26}{}{{}}{{}}}
-\bibcite{visual_inertial}{{27}{}{{}}{{}}}
-\bibcite{liu2024voxelslamcompleteaccurateversatile}{{28}{}{{}}{{}}}
-\bibcite{liu2023lidarinertialvisualslamloopdetection}{{29}{}{{}}{{}}}
-\bibcite{kitti_dataset}{{30}{}{{}}{{}}}
-\bibcite{grupp2017evo}{{31}{}{{}}{{}}}
-\bibcite{yang2020hyperparameter}{{32}{}{{}}{{}}}
-\bibcite{bergstra2012random}{{33}{}{{}}{{}}}
-\bibcite{bischl2021hyperparameter}{{34}{}{{}}{{}}}
-\bibcite{bissuel2020hyper}{{35}{}{{}}{{}}}
-\bibcite{morales2023survey}{{36}{}{{}}{{}}}
-\bibcite{mockus1998application}{{37}{}{{}}{{}}}
-\bibcite{elshawi2019automated}{{38}{}{{}}{{}}}
-\bibcite{kostusiak2019efficiency}{{39}{}{{}}{{}}}
-\bibcite{rutenbar1989simulated}{{40}{}{{}}{{}}}
-\bibcite{ghasemalizadeh2016review}{{41}{}{{}}{{}}}
-\bibcite{soper2021greed}{{42}{}{{}}{{}}}
-\bibcite{huang2019survey}{{43}{}{{}}{{}}}
-\bibcite{falkner2018bohb}{{44}{}{{}}{{}}}
-\bibcite{putra2019parameter}{{45}{}{{}}{{}}}
-\bibcite{zheng2020feature}{{46}{}{{}}{{}}}
-\bibcite{koide2021automatic}{{47}{}{{}}{{}}}
-\bibcite{chen2018visual}{{48}{}{{}}{{}}}
-\bibcite{bodin2018slambench2multiobjectiveheadtoheadbenchmarking}{{49}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{}{26}{paragraph*.133}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Testing}{26}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Metrics}{26}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{26}{paragraph*.134}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Algorithms}{26}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{26}{paragraph*.135}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Dataset}{26}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{}{26}{paragraph*.136}\protected@file@percent }
+\bibcite{tareen2019large}{{1}{}{{}}{{}}}
+\bibcite{danicasado2021}{{2}{}{{}}{{}}}
+\bibcite{slam_point_cloud}{{3}{}{{}}{{}}}
+\bibcite{multi_sensor_slam_arm_robot}{{4}{}{{}}{{}}}
+\bibcite{castillo2022hyperparameter}{{5}{}{{}}{{}}}
+\bibcite{brochu2010tutorial}{{6}{}{{}}{{}}}
+\bibcite{soper2022hyperparameter}{{7}{}{{}}{{}}}
+\bibcite{li2018hyperband}{{8}{}{{}}{{}}}
+\bibcite{becnkis2024survey}{{9}{}{{}}{{}}}
+\bibcite{lajoie2022towards}{{10}{}{{}}{{}}}
+\bibcite{taheri2021slam}{{11}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{27}{chapter*.137}\protected@file@percent }
+\bibcite{macario2022comprehensive}{{12}{}{{}}{{}}}
+\bibcite{harris1988combined}{{13}{}{{}}{{}}}
+\bibcite{lindeberg1998feature}{{14}{}{{}}{{}}}
+\bibcite{lowe2004distinctive}{{15}{}{{}}{{}}}
+\bibcite{liao2024local}{{16}{}{{}}{{}}}
+\bibcite{image_feature_matching}{{17}{}{{}}{{}}}
+\bibcite{chen2018submap}{{18}{}{{}}{{}}}
+\bibcite{picard2023surveyrealtime3dscene}{{19}{}{{}}{{}}}
+\bibcite{li20213dpointcloudreconstruction}{{20}{}{{}}{{}}}
+\bibcite{chen2018review}{{21}{}{{}}{{}}}
+\bibcite{fontan2024anyfeature}{{22}{}{{}}{{}}}
+\bibcite{lindeberg2014scale}{{23}{}{{}}{{}}}
+\bibcite{raguram2008comparative}{{24}{}{{}}{{}}}
+\bibcite{yan2019illumination}{{25}{}{{}}{{}}}
+\bibcite{lidar_sota}{{26}{}{{}}{{}}}
+\bibcite{zhu2025research}{{27}{}{{}}{{}}}
+\bibcite{jorge2024impact}{{28}{}{{}}{{}}}
+\bibcite{wang2023comparative}{{29}{}{{}}{{}}}
+\bibcite{stathoulopoulos2024sample}{{30}{}{{}}{{}}}
+\bibcite{visual_inertial}{{31}{}{{}}{{}}}
+\bibcite{liu2024voxelslamcompleteaccurateversatile}{{32}{}{{}}{{}}}
+\bibcite{liu2023lidarinertialvisualslamloopdetection}{{33}{}{{}}{{}}}
+\bibcite{kitti_dataset}{{34}{}{{}}{{}}}
+\bibcite{grupp2017evo}{{35}{}{{}}{{}}}
+\bibcite{yang2020hyperparameter}{{36}{}{{}}{{}}}
+\bibcite{bergstra2012random}{{37}{}{{}}{{}}}
+\bibcite{bischl2021hyperparameter}{{38}{}{{}}{{}}}
+\bibcite{bissuel2020hyper}{{39}{}{{}}{{}}}
+\bibcite{morales2023survey}{{40}{}{{}}{{}}}
+\bibcite{mockus1998application}{{41}{}{{}}{{}}}
+\bibcite{elshawi2019automated}{{42}{}{{}}{{}}}
+\bibcite{frazier2018tutorial}{{43}{}{{}}{{}}}
+\bibcite{kostusiak2019efficiency}{{44}{}{{}}{{}}}
+\bibcite{rutenbar1989simulated}{{45}{}{{}}{{}}}
+\bibcite{ghasemalizadeh2016review}{{46}{}{{}}{{}}}
+\bibcite{soper2021greed}{{47}{}{{}}{{}}}
+\bibcite{huang2019survey}{{48}{}{{}}{{}}}
+\bibcite{falkner2018bohb}{{49}{}{{}}{{}}}
+\bibcite{putra2019parameter}{{50}{}{{}}{{}}}
+\bibcite{zheng2020feature}{{51}{}{{}}{{}}}
+\bibcite{koide2021automatic}{{52}{}{{}}{{}}}
+\bibcite{chen2018visual}{{53}{}{{}}{{}}}
+\bibcite{bodin2018slambench2multiobjectiveheadtoheadbenchmarking}{{54}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Sample Appendix}{31}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Sample Appendix}{33}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app: sample appendix}{{A}{31}{Sample Appendix}{appendix.A}{}}
+\newlabel{app: sample appendix}{{A}{33}{Sample Appendix}{appendix.A}{}}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
-\gdef \@abspage@last{51}
+\gdef \@abspage@last{53}
