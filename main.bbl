@@ -258,4 +258,7 @@ B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
   ``Slambench2: Multi-objective head-to-head benchmarking for visual slam,''
   2018.
 
+\bibitem{argmin_ref}
+S.~Kroboth, ``{argmin}: Numerical optimization in rust,'' 2024.
+
 \end{thebibliography}

@@ -1,10 +1,12 @@
 \paragraph{}This chapter will explain the methodology and requirements for the \ac{SLAM} tuning module, developed for \ac{RUSTLE}. For each implemented tuning algorithm, a high level overview of its architecture is provided. Test settings, including test algorithms and dataset choices, are also justified.
 
-\begin{figure}[h]
-\includegraphics[width=0.85\linewidth]{images/moscow.png}
-\end{figure}
-
 \section{\acs{RUSTLE}}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=2,width=\linewidth]{images/rustle_diagram.pdf}
+    \caption{\ac{RUSTLE} diagram}
+\end{figure}
 
 \paragraph{}\ac{RUSTLE} is a command line application, written in Rust, which is designed to simplify the evaluation of SLAM algorithms in mobile robotics.
 Its main objective is to provide a simple, stream-lined and reproducible way to run and compare SLAM algorithms. It tracks not only trajectory accuracy(APE or RPE), but also runtime, CPU load and memory usage, offering a more complete assessment of the algorithm's performance.
@@ -12,19 +14,112 @@ Its main objective is to provide a simple, stream-lined and reproducible way to 
 \paragraph{}At its core, RUSTLE takes three main inputs: a dataset in rosbag format, the SLAM algorithm's parameters in yaml format, and the algorithms themselves as docker images. The reason for using Docker is for reliably reproducing the algorithms across many different platforms and environments.
 During execution, the odometry data is streamed into the database(Surrealdb), which, after conclusion, is used to calculate trajectory errors such as the APE and the RPE, using EVO.
 
-\paragraph{}Algorithm executions are run as tests. Each test's configuration is passes as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test one wants to execute.
+\paragraph{}Algorithm executions are run as tests. Each test's configuration is passed as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test to be executed.
 
-%\paragraph{}As for language choice, Rust was chosen mostly due to simplicity of development and the ease with which one can write highly performant code. Other languages, such as c++ and python, also have libraries for working with Docker and ROS, as well as libraries for database hosting. The difference with Rust in this regard is that to use these libraries it is only needed to include them as dependencies, and use them in the codebase, as the download, compilation and linking of these libraries is all automatically handled by Rust's build tool, cargo. As for performance, Rust is known for its compile-time enforced memory safety(at the cost of some control over memory), as well as built in type system guarantees, which prevent common concurrency issues like data races.
+%% Explicar os vários tipos de testes
 
 \section{Development}
+
+\paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller, easier to test and debug sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test and debug each sub-feature.
 
 \subsection{Implementation}
 
 \paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
 
-\paragraph{}What i will be doing: explain the features i will be developing, where my code inserts itself inside of RUSTLE, which optimization strategies will be implemented and why, what tests i will do to test the code and to extract results.
+\paragraph{}In addition to the optimization algorithms, it will also be necessary to write code for exporting results of a tuning test, for later result extraction, processing and discussion, as well as code for parsing a YAML settings file, with all necessary information to run the optimization experiment. Finally, some python scripts will be developed to plot the results of the tuning experiments, which will be presented in the next chapter of this dissertation. Below is a high-level diagram of the features I intend to implement.
 
-\paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller "implementable" sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test each sub-feature.
+% diagrama alto-nível das features(feito em powerpoint)
+
+\subsubsection{Simulated Annealing}
+
+\paragraph{}The Simulated Annealing algorithm implementation is identical to the one provided by Stefan Kroboth~\cite{argmin_ref}.
+
+\paragraph{}For floating-point parameters, the used perturbation function samples a normal distribution function and adds the sampled value to the current value of the parameter. Both the mean and the standard deviation of this normal distribution are hyperparameters that can be specified in a YAML configuration file.
+
+\begin{equation}
+	\Delta_{float} \sim \mathcal{N}(m, d^2)
+\end{equation}
+
+\paragraph{}For integer parameters, a maximum step size is specified for each parameter,  and that step size is multiplied by the current temperature. Then a random integer is generated between the result of that multiplication(see equation~\ref{delta_int}).
+
+\begin{equation}
+	\Delta_{int} \in [-t_i * max\_step, t_i * max\_step]
+	\label{delta_int}
+\end{equation}
+
+\paragraph{}$\Delta_{int}$ is then added to the current value of the parameter, and the value is truncated if it is higher that the parameter's upper bound or lower than its lower bound. Both the upper and lower bounds, as well as the maximum step size for each integer parameter, can be customized used a YAML configuration file.
+
+\paragraph{}During the execution of the algorithm, it is sometimes necessary to reanneal, that is, to reset the temperature to a previous, higher level, to allow the algorithm to escape(or at least try to) a local minima. With that in mind, 3 parameters are necessary:
+
+\begin{itemize}
+	\item reanneal\_fixed - the algorithm resets the temperature no matter what after this many iterations  
+	\item reanneal\_accepted - the algorithm resets the temperature if no neighbor solution is accepted after this many \textbf{consecutive} iterations
+	\item reanneal\_best - the algorithm resets the temperature if no solution better than the incumbent is found after this many \textbf{consecutive} iterations
+\end{itemize}
+
+\paragraph{}As for halting conditions, 2 parameters are specified:
+
+\begin{itemize}
+	\item stop\_accepted - The algorithm stops its execution if this no neighbor solution is accepted for these many \textbf{consecutive} iterations
+	\item stop\_best - the algorithm stops its execution if no solution better than the incumbent is found after these many \textbf{consecutive} iterations
+\end{itemize}
+
+\subsubsection{Grid Search}
+
+\paragraph{}The Grid Search implementation considers the parameter space as a multi dimensional tensor, where each dimension corresponds to a different parameter, and has a differing number of possible values. In each iteration, to obtain the current values of the parameters
+
+\begin{figure}[h]
+\centering
+\begin{algorithm}[H]
+\caption{Grid Search}
+\begin{algorithmic}[1]
+\For{$t = 1, 2, ..., n$}
+	\State Obtain the corresponding values of the parameters from the index of the configuration
+	\State Evaluate the configuration and extract metrics
+	\State If halting conditions are met(time limit or number of configurations), stop the algorithm's execution
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\caption{Grid Search procedure}
+\label{bo_algo}
+\end{figure}
+
+\paragraph{}The halting conditions can be customized via a YAML configuration file. Similarly, the parameter space can be designed in the following way:
+
+\begin{equation}
+	parameter\_name: [first\_value,  step\_size,  number\_of\_values]
+	\label{parameter_space_equation}
+\end{equation}
+
+\paragraph{}Additionally, the code checks the default configuration and catches most common errors, such as the user passing a String for a parameter that is supposed to be an integer.
+
+\subsubsection{Random Search}
+
+\paragraph{}The Random Search Implementation is similar to Grid Search, except that the index of the configuration to be evaluated is randomly generated, and no configuration is evaluated twice, by way of checking a list of previously evaluated configurations.
+
+\begin{figure}[h]
+\centering
+\begin{algorithm}[H]
+\caption{Random Search}
+\begin{algorithmic}[1]
+\For{$t = 1, 2, ..., n$}
+	\State Generate a random number between in the interval [0, n], and check if the number is on the previously generated numbers list. If it is, keep generating numbers until it isn't.
+	\State Add the number to the previously generated numbers list.
+	\State Obtain the parameter's current values and update the \ac{SLAM} configuration
+	\State Evaluate the configuration and extract metrics
+	\If{(elapsed\_time > time\_limit) or (evaluated\_configs > max\_iterations)}
+		   		suspend algorithm execution
+	\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\caption{Random Search procedure}
+\label{bo_algo}
+\end{figure}
+
+\paragraph{}As in Grid Search, in Random Search, both the parameter space and the halting conditions can be specified in a YAML configuration file.
+
+\paragraph{}What i will be doing: explain the features i will be developing, where my code inserts itself inside of RUSTLE, which optimization strategies will be implemented and why, what tests i will do to test the code and to extract results.
 
 \section{Functional requirements}
 
@@ -62,9 +157,18 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 \subsection{Metrics}
 
 %\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
-\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
+%\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
+\paragraph{}During the development, as well as during testing stages, only the \ac{RPE} is begin considered. However, the user can attribute weights to both the \ac{APE} and \ac{RPE} using a YAML configuration file. However, the code supports, with a few smal moddifications, taking into account other metrics(CPU load, memory usage, etc) when computing the fitness value of a configuration.
 
 \subsection{Algorithms}
+
+\paragraph{}In this subsection, I explain both the \ac{SLAM} methods I chose to optimize and the hyperparameters I chose to optimize and why.
+
+\paragraph{}One thing that is applicable to both \ac{SLAM} solutions chosen is that due to the high number of hyperparameters and the memory constraints, it is not possible  neither to optimize every hyperparameter nor to give every hyperparameter a very large number of possible values. For that reason, only a select few hyperparameters will be optimized, and the choices of hyperparameters will be fully explained below.
+
+\subsubsection{faster-lio}
+
+\subsubsection{fast-livo2}
 
 %\paragraph{}Write something about the algorithms tested(point-lio, ig-lio, etc), but emphasize the tuning algorithms apply to any SLAM method.
 \paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.

@@ -12,4 +12,7 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm~\cite {soper2022hyperparameter}.}}{16}{figure.caption.99}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way~\cite {li2018hyperband}.}}{17}{figure.caption.103}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \ac {RUSTLE} diagram}}{23}{figure.caption.119}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Grid Search procedure}}{26}{figure.caption.135}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Random Search procedure}}{27}{figure.caption.140}%
 \addvspace {10\p@ }
