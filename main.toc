@@ -96,45 +96,54 @@
 \contentsline {paragraph}{}{23}{paragraph*.120}%
 \contentsline {paragraph}{}{24}{paragraph*.121}%
 \contentsline {paragraph}{}{24}{paragraph*.122}%
-\contentsline {section}{\numberline {3.2}Development}{24}{section.3.2}%
 \contentsline {paragraph}{}{24}{paragraph*.123}%
-\contentsline {subsection}{\numberline {3.2.1}Implementation}{24}{subsection.3.2.1}%
 \contentsline {paragraph}{}{24}{paragraph*.124}%
-\contentsline {paragraph}{}{25}{paragraph*.125}%
-\contentsline {subsubsection}{Simulated Annealing}{25}{subsubsection*.126}%
+\contentsline {section}{\numberline {3.2}Development}{24}{section.3.2}%
+\contentsline {paragraph}{}{24}{paragraph*.125}%
+\contentsline {subsection}{\numberline {3.2.1}Feature Implementation}{25}{subsection.3.2.1}%
+\contentsline {paragraph}{}{25}{paragraph*.126}%
 \contentsline {paragraph}{}{25}{paragraph*.127}%
-\contentsline {paragraph}{}{25}{paragraph*.128}%
-\contentsline {paragraph}{}{25}{paragraph*.129}%
-\contentsline {paragraph}{}{25}{paragraph*.130}%
-\contentsline {paragraph}{}{25}{paragraph*.131}%
+\contentsline {subsubsection}{Simulated Annealing}{26}{subsubsection*.129}%
+\contentsline {paragraph}{}{26}{paragraph*.130}%
+\contentsline {paragraph}{}{26}{paragraph*.131}%
 \contentsline {paragraph}{}{26}{paragraph*.132}%
-\contentsline {subsubsection}{Grid Search}{26}{subsubsection*.133}%
+\contentsline {paragraph}{}{26}{paragraph*.133}%
 \contentsline {paragraph}{}{26}{paragraph*.134}%
-\contentsline {paragraph}{}{26}{paragraph*.136}%
-\contentsline {paragraph}{}{26}{paragraph*.137}%
-\contentsline {subsubsection}{Random Search}{27}{subsubsection*.138}%
+\contentsline {paragraph}{}{27}{paragraph*.135}%
+\contentsline {subsubsection}{Grid Search}{27}{subsubsection*.136}%
+\contentsline {paragraph}{}{27}{paragraph*.137}%
 \contentsline {paragraph}{}{27}{paragraph*.139}%
-\contentsline {paragraph}{}{27}{paragraph*.141}%
+\contentsline {paragraph}{}{27}{paragraph*.140}%
+\contentsline {subsubsection}{Random Search}{27}{subsubsection*.141}%
 \contentsline {paragraph}{}{27}{paragraph*.142}%
-\contentsline {section}{\numberline {3.3}Functional requirements}{27}{section.3.3}%
-\contentsline {paragraph}{}{27}{paragraph*.143}%
 \contentsline {paragraph}{}{28}{paragraph*.144}%
 \contentsline {paragraph}{}{28}{paragraph*.145}%
+\contentsline {section}{\numberline {3.3}Functional requirements}{28}{section.3.3}%
 \contentsline {paragraph}{}{28}{paragraph*.146}%
 \contentsline {paragraph}{}{28}{paragraph*.147}%
-\contentsline {paragraph}{}{28}{paragraph*.148}%
-\contentsline {paragraph}{}{28}{paragraph*.149}%
-\contentsline {paragraph}{}{28}{paragraph*.150}%
-\contentsline {section}{\numberline {3.4}Testing}{29}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Metrics}{29}{subsection.3.4.1}%
+\contentsline {paragraph}{}{29}{paragraph*.148}%
+\contentsline {paragraph}{}{29}{paragraph*.149}%
+\contentsline {paragraph}{}{29}{paragraph*.150}%
 \contentsline {paragraph}{}{29}{paragraph*.151}%
-\contentsline {subsection}{\numberline {3.4.2}Algorithms}{29}{subsection.3.4.2}%
 \contentsline {paragraph}{}{29}{paragraph*.152}%
 \contentsline {paragraph}{}{29}{paragraph*.153}%
-\contentsline {subsubsection}{faster-lio}{29}{subsubsection*.154}%
-\contentsline {subsubsection}{fast-livo2}{29}{subsubsection*.155}%
-\contentsline {paragraph}{}{29}{paragraph*.156}%
-\contentsline {subsection}{\numberline {3.4.3}Dataset}{29}{subsection.3.4.3}%
-\contentsline {paragraph}{}{29}{paragraph*.157}%
-\contentsline {chapter}{Bibliography}{31}{chapter*.158}%
-\contentsline {chapter}{\numberline {A}Sample Appendix}{37}{appendix.A}%
+\contentsline {section}{\numberline {3.4}Testing}{29}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Metrics}{29}{subsection.3.4.1}%
+\contentsline {paragraph}{}{29}{paragraph*.154}%
+\contentsline {subsection}{\numberline {3.4.2}Algorithms}{30}{subsection.3.4.2}%
+\contentsline {paragraph}{}{30}{paragraph*.155}%
+\contentsline {paragraph}{}{30}{paragraph*.156}%
+\contentsline {subsubsection}{faster-lio}{30}{subsubsection*.157}%
+\contentsline {subsubsection}{fast-livo2}{30}{subsubsection*.158}%
+\contentsline {paragraph}{}{30}{paragraph*.159}%
+\contentsline {subsection}{\numberline {3.4.3}Dataset}{30}{subsection.3.4.3}%
+\contentsline {paragraph}{}{30}{paragraph*.160}%
+\contentsline {subsection}{\numberline {3.4.4}Tuning Strategy}{30}{subsection.3.4.4}%
+\contentsline {paragraph}{}{30}{paragraph*.162}%
+\contentsline {chapter}{\numberline {4}Results}{33}{chapter.4}%
+\contentsline {paragraph}{}{33}{paragraph*.163}%
+\contentsline {section}{\numberline {4.1}faster-lio}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}fast-livo2}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Possible improvements}{33}{section.4.3}%
+\contentsline {chapter}{Bibliography}{35}{chapter*.164}%
+\contentsline {chapter}{\numberline {A}Sample Appendix}{41}{appendix.A}%

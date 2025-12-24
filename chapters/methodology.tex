@@ -17,19 +17,34 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 \paragraph{}Algorithm executions are run as tests. Each test's configuration is passed as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test to be executed.
 
 %% Explicar os vários tipos de testes
+\paragraph{}Tests can be of a few different types, namely:
+\begin{itemize}
+	\item Simple - The rosbag file simply plays from begining to end at normal speed
+	\item Speed - Portions of the dataset are run at different speeds
+	\item Cut - Only specified portions of the dataset are run
+	\item Drop - Não faço ideia
+\end{itemize}
+
+\paragraph{}Every tuning experiment run on \ac{RUSTLE} will be run as a simple test, with the caveat that the user can choose the portion of the dataset to run. This is to facilitate development and testing. When used in production, the user should set both the start and duration of the dataset to 0, meaning, the whole dataset will be run.
 
 \section{Development}
 
 \paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller, easier to test and debug sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test and debug each sub-feature.
 
-\subsection{Implementation}
+\subsection{Feature Implementation}
 
 \paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
 
 \paragraph{}In addition to the optimization algorithms, it will also be necessary to write code for exporting results of a tuning test, for later result extraction, processing and discussion, as well as code for parsing a YAML settings file, with all necessary information to run the optimization experiment. Finally, some python scripts will be developed to plot the results of the tuning experiments, which will be presented in the next chapter of this dissertation. Below is a high-level diagram of the features I intend to implement.
 
 % diagrama alto-nível das features(feito em powerpoint)
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=3,width=0.9\linewidth]{images/rustle_diagram.pdf}
+    \caption{low-level diagram of hyperparameter tuning module}
+\end{figure}
 
+\newpage
 \subsubsection{Simulated Annealing}
 
 \paragraph{}The Simulated Annealing algorithm implementation is identical to the one provided by Stefan Kroboth~\cite{argmin_ref}.
@@ -176,4 +191,18 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 \subsection{Dataset}
 
 %\paragraph{}Mention the datasets used during development, but stress that, as in the SLAM methods used, the tuning algorithms generalize to any dataset.
-\paragraph{}Something about the 2.5 minute Botanic Garden Dataset(outdoor, unstructured setting, not too long(for tuning experiments)).
+%\paragraph{}Something about the 2.5 minute Botanic Garden Dataset(outdoor, unstructured setting, not too long(for tuning experiments)).
+
+\paragraph{}During code development, and also during testing and result extraction, I used the BotanicGarden dataset~\cite{Liu_2024}, specifically the 1006 03 sequence. This dataset presents a challenging, semi-structured environment with diverse sensor modalities, including a DALSA M1930 stereo camera, a DALSA C1930 stereo camera, a Velodyne VLP16 \ac{LiDAR}, a Livox Avia \ac{LiDAR}, and an Xsens Mti-680G \ac{IMU}. All sensors are hardware-synchronized, ensuring time-aligned measurements suitable for sensor fusion. It also provides a robust ground truth, generated using a static terrestrial laser scanner to acquire high-density, high-resolution point clouds. These point clouds were subsequently aligned to produce ground truth trajectories with an accuracy of approximately 1 cm.
+
+\subsection{Tuning Strategy}
+
+\paragraph{}In order to extract good parameter values, the following strategy was devised:
+
+\begin{itemize}
+	\item Run Simulated Annealing. It's likely that more than one run will be required, and the algorithm parameters should be adjusted(reannealing and halting thresholds matter most), as well as some \ac{SLAM} parameters upper and lower bounds.
+	\item Plot the results, particularly the \ac{SLAM} parameter values vs fitness function value(in my case, only the \ac{RPE} is considered). This will help identify "unsafe" and "safe" intervals, meaning, bounds inside which the fitness function value goes up rapidly, and bounds where the fitness function tends to have a low value.
+	\item Using the previously identified "safe" intervals, design a parameter space to further explore.
+	\item Run Grid Search and Random Search. This might help to further reduce the fitness function value, but it also helps to emphasize the advantages in using Random Search over Grid Search.
+	\item Extract the best configuration
+\end{itemize}

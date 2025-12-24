@@ -261,4 +261,10 @@ B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
 \bibitem{argmin_ref}
 S.~Kroboth, ``{argmin}: Numerical optimization in rust,'' 2024.
 
+\bibitem{Liu_2024}
+Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
+  C.~Liu, L.~Chen, W.~Tao, and H.~Zhao, ``Botanicgarden: A high-quality dataset
+  for robot navigation in unstructured natural environments,'' {\em IEEE
+  Robotics and Automation Letters}, vol.~9, p.~2798–2805, Mar. 2024.
+
 \end{thebibliography}

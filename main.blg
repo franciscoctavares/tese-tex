@@ -27,45 +27,45 @@ Warning--empty journal in putra2019parameter
 Warning--empty journal in zheng2020feature
 Warning--empty journal in koide2021automatic
 Warning--empty journal in chen2018visual
-You've used 55 entries,
+You've used 56 entries,
             1876 wiz_defined-function locations,
-            770 strings with 14215 characters,
-and the built_in function-call counts, 14420 in all, are:
-= -- 1380
-> -- 636
+            777 strings with 14631 characters,
+and the built_in function-call counts, 14948 in all, are:
+= -- 1427
+> -- 677
 < -- 0
-+ -- 236
-- -- 181
-* -- 1015
-:= -- 2071
-add.period$ -- 56
-call.type$ -- 55
-change.case$ -- 54
++ -- 250
+- -- 194
+* -- 1053
+:= -- 2144
+add.period$ -- 57
+call.type$ -- 56
+change.case$ -- 55
 chr.to.int$ -- 0
-cite$ -- 73
-duplicate$ -- 755
-empty$ -- 1323
-format.name$ -- 181
-if$ -- 3485
+cite$ -- 74
+duplicate$ -- 785
+empty$ -- 1350
+format.name$ -- 194
+if$ -- 3612
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 50
-newline$ -- 169
-num.names$ -- 55
-pop$ -- 205
+int.to.str$ -- 56
+missing$ -- 51
+newline$ -- 172
+num.names$ -- 56
+pop$ -- 207
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 506
+skip$ -- 541
 stack$ -- 0
-substring$ -- 859
-swap$ -- 303
+substring$ -- 881
+swap$ -- 326
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 18
-while$ -- 137
-width$ -- 57
-write$ -- 504
+while$ -- 139
+width$ -- 58
+write$ -- 514
 (There were 20 warnings)
