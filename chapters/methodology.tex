@@ -49,22 +49,34 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}The Simulated Annealing algorithm implementation is identical to the one provided by Stefan Kroboth~\cite{argmin_ref}.
 
-\paragraph{}For floating-point parameters, the used perturbation function samples a normal distribution function and adds the sampled value to the current value of the parameter. Both the mean and the standard deviation of this normal distribution are hyperparameters that can be specified in a YAML configuration file.
+\paragraph{}One of the most important aspect of any Simulated Annealing implementation are its perturbation functions. They are responsible for generating a new candidate solution. For simplicity's sake, I only implemented a Gaussian perturbation function for continuous parameters and a Uniform perturbation function for discrete parameters.
 
+\paragraph{}For continuous parameters, the used Gaussian perturbation function samples a number from a  Gaussian distribution and adds the sampled value to the current value of the parameter(see equations \ref{pert_float1} and \ref{pert_float2}). Both the mean and standard deviation of this normal distribution are unique to each parameter and can be specified in a YAML configuration file.
+
+\paragraph{}For any continuous parameter $v$:
 \begin{equation}
-	\Delta_{float} \sim \mathcal{N}(m, d^2)
+	v_{i + 1} = v_{i} + \Delta_v
+	\label{pert_float1}
 \end{equation}
 
-\paragraph{}For integer parameters, a maximum step size is specified for each parameter,  and that step size is multiplied by the current temperature. Then a random integer is generated between the result of that multiplication(see equation~\ref{delta_int}).
+\begin{equation}
+	\Delta_{v} \sim \mathcal{N}(\mu, \sigma^2)
+	\label{pert_float2}
+\end{equation}
+
+\paragraph{}For non binary discrete parameters, a maximum step size is specified for each parameter, and a random number is generated within a range whose bounds are specified by the maximum step size and the temperature(see equation~\ref{delta_int}), so it scales up and down with temperature variations.
+
+\paragraph{}For any non binary discrete parameter $k$:
+\begin{equation}
+	k_{i + 1} = k_i + \Delta_k
+\end{equation}
 
 \begin{equation}
-	\Delta_{int} \in [-t_i * max\_step, t_i * max\_step]
+	\Delta_{k} \in [-T_i * max\_step, T_i * max\_step]
 	\label{delta_int}
 \end{equation}
 
-\paragraph{}$\Delta_{int}$ is then added to the current value of the parameter, and the value is truncated if it is higher that the parameter's upper bound or lower than its lower bound. Both the upper and lower bounds, as well as the maximum step size for each integer parameter, can be customized used a YAML configuration file.
-
-\paragraph{}During the execution of the algorithm, it is sometimes necessary to reanneal, that is, to reset the temperature to a previous, higher level, to allow the algorithm to escape(or at least try to) a local minima. With that in mind, 3 parameters are necessary:
+\paragraph{}Another important aspect of Simulated Annealing is the reannealing process. During the execution of the algorithm, it is sometimes necessary to reanneal, that is, to reset the temperature to a previous, higher level, to allow the algorithm to escape(or at least try to) a local minima. With that in mind, 3 parameters are necessary:
 
 \begin{itemize}
 	\item reanneal\_fixed - the algorithm resets the temperature no matter what after this many iterations  
@@ -134,38 +146,7 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}As in Grid Search, in Random Search, both the parameter space and the halting conditions can be specified in a YAML configuration file.
 
-\paragraph{}What i will be doing: explain the features i will be developing, where my code inserts itself inside of RUSTLE, which optimization strategies will be implemented and why, what tests i will do to test the code and to extract results.
-
-\section{Functional requirements}
-
-\paragraph{}The system must allow users to define all relevant settings for the tuning process using a YAML configuration file. This configuration file will serve as the main interface for specifying the tuning method, SLAM algorithm, and dataset to be used. In addition, it will enable the user to indicate which parameters are to be optimized, with one or more values per parameter. Additionaly, the code must ensure type safety, meaning, for example, that a parameter which is supposed to be a String cannot have a u64 passed as a value. Also, the user must have the option of specifying only the parameters he wants to optimize. 
-
-\paragraph{}For grid and random search tuning methods, the configuration file must support flexible representations of parameter values. Each tunable parameter can be defined as a single value, representing a fixed setting, or as an array containing multiple candidate values to be tested. For numerical parameters(integers and floats), a third specification pattern must be supported: a linearly spaced vector. This vector will be described by a three-element array in the form \textbf{[start, step, number\_of\_elements]}, which the system will interpret to automatically generate a sequence of values. This feature will simplify the definition of evenly spaced search spaces for numerical parameters and ensures consistency across different tuning runs. It also makes it significantly less cumbersome to define large sequences of values.
-
-\paragraph{}Every tuning algorithm has, besides the parameter space, some method specific hyperparameters that control its behavior, such as the budget(grid search) or the cooling factor(SA). Each of these parameters must have a default value, so the user doesn't need to fine tune the tuning algorithm's behavior. As for the budget \textbf{B}, a common hyperparameter used in tuning algorithms, it must be either time based, or iterations based(maximum number of iterations to run).
-
-\paragraph{}For easier development and integration with the overall code structure of RUSTLE, the tuning of an algorithm's hyperparameters is treated as a test. Each configuration is run as a \textbf{simple test}, already defined in the code, changing hyperparameters between iterations. This methodology will allow for greater re-usage of already written code, saving on development time.
-
-\paragraph{}When running a tuning test, each configuration and its metrics(results) must be stored for later processing. The tuning method's hyperparameters must be stored as well, mostly for benchmarking purposes.
-
-\paragraph{}For benchmarking different tuning algorithms, there must be a command as simple as \textbf{tune benchmark -algo xxxxx -dataset xxxxx}, which runs a few preselected tuning algorithms, and displays a few performance metrics.
-
-\paragraph{}Whenever possible, configurations should be run concurrently.
-
-\paragraph{}The code written should be future proof, allowing for easier future integrations of more tuning methods into the software.
-
-
-%\begin{itemize}
-	%\item allow the user to specify which tuning method, algorithm and dataset, and also the parameters to optimize using a yaml configuration file.
-	%\item For grid and random search, for any tuned parameters in the configuration file, the general pattern should be either a single value or an array of various values. For numerical parameters(integers or real numbers), a third option must be available: a linearly spaced vector, and that vector is specified through a 3 element array whose elements are [start, step, number\_of\_elements], allowing for the specification of arrays of  n values, without the cumbersomeness of manually specifying all the values.
-	%\item Other settings, such as the budget or the cooling factor in the simulated annealing method, should have default values
-	%\item a budget parameter(B) should be either a maximum number of configurations to run or maximum alloted time. These should be represented by the keys \textbf{max\_iter} and \textbf{max\_time} in the configuration file.
-	%\item tuning a SLAM algorithm's parameters is classified as a test, for easier integration in the existing RUSTLE's architecture.
-	%\item when running a tuning test, all tested parameter combinations should have their respective metrics stored together, for later processing
-	%\item when running a tuning test, all tuning settings should be stored as well, for later processing and examination
-	%\item for overall testing and comparison of different tuning strategies, there should be a command to run a set of tuning algorithms and produce appropriate metrics which later could be displayed as a table or graph.
-	%\item The tuning module should run different configurations concurrently, when possible.
-%\end{itemize}
+%\paragraph{}What i will be doing: explain the features i will be developing, where my code inserts itself inside of RUSTLE, which optimization strategies will be implemented and why, what tests i will do to test the code and to extract results.
 
 \section{Testing}
 
@@ -173,36 +154,53 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 %\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
 %\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
-\paragraph{}During the development, as well as during testing stages, only the \ac{RPE} is begin considered. However, the user can attribute weights to both the \ac{APE} and \ac{RPE} using a YAML configuration file. However, the code supports, with a few smal moddifications, taking into account other metrics(CPU load, memory usage, etc) when computing the fitness value of a configuration.
+\paragraph{}During the development, as well as during testing stages, only the \ac{RPE} is begin considered for the calculation of the fitness function. However, the user can attribute weights to both the \ac{APE} and \ac{RPE} using a YAML configuration file. In addition to that, the code supports, with a few small modifications, taking into account other metrics(CPU load, memory usage, etc).
 
 \subsection{Algorithms}
 
 \paragraph{}In this subsection, I explain both the \ac{SLAM} methods I chose to optimize and the hyperparameters I chose to optimize and why.
 
-\paragraph{}One thing that is applicable to both \ac{SLAM} solutions chosen is that due to the high number of hyperparameters and the memory constraints, it is not possible  neither to optimize every hyperparameter nor to give every hyperparameter a very large number of possible values. For that reason, only a select few hyperparameters will be optimized, and the choices of hyperparameters will be fully explained below.
+%\paragraph{}One thing that is applicable to both \ac{SLAM} solutions chosen is that due to the high number of hyperparameters and the memory constraints, it is not possible  neither to optimize every hyperparameter nor to give every hyperparameter a very large number of possible values. For that reason, only a select few hyperparameters will be optimized, and the choices of hyperparameters will be fully explained below.
 
 \subsubsection{faster-lio}
 
+\begin{itemize}
+	\item point\_filter\_num
+	\item max\_iteration
+	\item filter\_size\_surf
+	\item filter\_size\_map
+	\item cube\_side\_length
+	\item ivox\_grid\_resolution
+	\item ivox\_nearby\_type
+	\item esti\_plane\_threshold
+\end{itemize}
+
 \subsubsection{fast-livo2}
 
-%\paragraph{}Write something about the algorithms tested(point-lio, ig-lio, etc), but emphasize the tuning algorithms apply to any SLAM method.
-\paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.
+%\paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.
 
 \subsection{Dataset}
-
-%\paragraph{}Mention the datasets used during development, but stress that, as in the SLAM methods used, the tuning algorithms generalize to any dataset.
-%\paragraph{}Something about the 2.5 minute Botanic Garden Dataset(outdoor, unstructured setting, not too long(for tuning experiments)).
 
 \paragraph{}During code development, and also during testing and result extraction, I used the BotanicGarden dataset~\cite{Liu_2024}, specifically the 1006 03 sequence. This dataset presents a challenging, semi-structured environment with diverse sensor modalities, including a DALSA M1930 stereo camera, a DALSA C1930 stereo camera, a Velodyne VLP16 \ac{LiDAR}, a Livox Avia \ac{LiDAR}, and an Xsens Mti-680G \ac{IMU}. All sensors are hardware-synchronized, ensuring time-aligned measurements suitable for sensor fusion. It also provides a robust ground truth, generated using a static terrestrial laser scanner to acquire high-density, high-resolution point clouds. These point clouds were subsequently aligned to produce ground truth trajectories with an accuracy of approximately 1 cm.
 
 \subsection{Tuning Strategy}
 
-\paragraph{}In order to extract good parameter values, the following strategy was devised:
+\paragraph{}For result extraction, a tuning strategy was devised, taking into account the strengths of each implemented tuning algorithm and \ac{RUSTLE}'s bottleneck, which will be explained later in this section.
 
-\begin{itemize}
-	\item Run Simulated Annealing. It's likely that more than one run will be required, and the algorithm parameters should be adjusted(reannealing and halting thresholds matter most), as well as some \ac{SLAM} parameters upper and lower bounds.
-	\item Plot the results, particularly the \ac{SLAM} parameter values vs fitness function value(in my case, only the \ac{RPE} is considered). This will help identify "unsafe" and "safe" intervals, meaning, bounds inside which the fitness function value goes up rapidly, and bounds where the fitness function tends to have a low value.
-	\item Using the previously identified "safe" intervals, design a parameter space to further explore.
-	\item Run Grid Search and Random Search. This might help to further reduce the fitness function value, but it also helps to emphasize the advantages in using Random Search over Grid Search.
-	\item Extract the best configuration
-\end{itemize}
+\paragraph{}Firstly, Simulated Annealing was used. The reasons for using Simulated Annealing first are two-fold. First, it is considerably more efficient than using pure Grid/Random Search. Even when taking into account \ac{SA}'s hyperparameters(halting conditions, reannealing parameters, normal distribution's means and standard deviations, and more) and the effect these have in algorithm performance, even a default configuration can perform better than Grid/Random Search. The second reason is a practical one, related to the way \ac{RUSTLE} handles an algorithm run's data. Before running an algorithm, \ac{RUSTLE} creates database entries for all required iterations and stores the relevant data in them. This might be useful for very few runs, but scales poorly when large numbers of runs are required, as is the case with Grid Search and Random Search. Given that a few features depend on this, it was decided to not change this major aspect of \ac{RUSTLE}.
+
+\paragraph{}Secondly, after experimenting with \ac{SA}'s hyperparameters and arriving at a final result, the results were dissected. The goal at this stage is to identify which parameters matter most when minimizing \ac{RPE}, and their promising regions, meaning the intervals [a, b] for each parameter's values where the \ac{RPE} is lowest. For this, several different plots were used. First, heatmap plots for visualizing the Spearman coefficients between the various tuned parameters and the \ac{RPE}. This heatmap answers an important question: "If parameter $x$ increases, will the \ac{RPE} decrease or increase?". After detecting the most important parameters, there is still the task of discover their promising regions. For this task, a simple scatter plot was used, plotting each parameter value vs iteration \ac{RPE}.
+
+\paragraph{}After analizing each scatter plot and choosing appropriate intervals for each parameter, Grid Search is used to attempt to further refine the solution. At this stage, it is important to take the step size of each parameter vector into consideration, given the fundamental bottleneck in the \ac{RUSTLE} codebase. The top 3/4 most important parameters were assigned finer step sizes, while the remaining parameters were given coarser step sizes.
+
+\paragraph{}After running Grid Search, Random Search is run on the same parameter space, with the same settings. This is done mainly to illustrate the differences and advantages of Random Search over Grid Search.
+
+%\paragraph{}In order to extract good parameter values, the following strategy was devised:
+
+%\begin{itemize}
+	%\item Run Simulated Annealing. It's likely that more than one run will be required, and the algorithm parameters should be adjusted(reannealing and halting thresholds matter most), as well as some \ac{SLAM} parameters upper and lower bounds.
+	%\item Plot the results, particularly the \ac{SLAM} parameter values vs fitness function value(in my case, only the \ac{RPE} is considered). This will help identify "unsafe" and "safe" intervals, meaning, bounds inside which the fitness function value goes up rapidly, and bounds where the fitness function tends to have a low value.
+	%\item Using the previously identified "safe" intervals, design a parameter space to further explore.
+	%\item Run Grid Search and Random Search. This might help to further reduce the fitness function value, but it also helps to emphasize the advantages in using Random Search over Grid Search.
+	%\item Extract the best configuration
+%\end{itemize}

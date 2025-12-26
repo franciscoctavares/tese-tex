@@ -109,41 +109,35 @@
 \contentsline {paragraph}{}{26}{paragraph*.132}%
 \contentsline {paragraph}{}{26}{paragraph*.133}%
 \contentsline {paragraph}{}{26}{paragraph*.134}%
-\contentsline {paragraph}{}{27}{paragraph*.135}%
-\contentsline {subsubsection}{Grid Search}{27}{subsubsection*.136}%
+\contentsline {paragraph}{}{26}{paragraph*.135}%
+\contentsline {paragraph}{}{26}{paragraph*.136}%
 \contentsline {paragraph}{}{27}{paragraph*.137}%
+\contentsline {subsubsection}{Grid Search}{27}{subsubsection*.138}%
 \contentsline {paragraph}{}{27}{paragraph*.139}%
-\contentsline {paragraph}{}{27}{paragraph*.140}%
-\contentsline {subsubsection}{Random Search}{27}{subsubsection*.141}%
-\contentsline {paragraph}{}{27}{paragraph*.142}%
+\contentsline {paragraph}{}{27}{paragraph*.141}%
+\contentsline {paragraph}{}{28}{paragraph*.142}%
+\contentsline {subsubsection}{Random Search}{28}{subsubsection*.143}%
 \contentsline {paragraph}{}{28}{paragraph*.144}%
-\contentsline {paragraph}{}{28}{paragraph*.145}%
-\contentsline {section}{\numberline {3.3}Functional requirements}{28}{section.3.3}%
 \contentsline {paragraph}{}{28}{paragraph*.146}%
+\contentsline {section}{\numberline {3.3}Testing}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Metrics}{28}{subsection.3.3.1}%
 \contentsline {paragraph}{}{28}{paragraph*.147}%
+\contentsline {subsection}{\numberline {3.3.2}Algorithms}{29}{subsection.3.3.2}%
 \contentsline {paragraph}{}{29}{paragraph*.148}%
-\contentsline {paragraph}{}{29}{paragraph*.149}%
-\contentsline {paragraph}{}{29}{paragraph*.150}%
+\contentsline {subsubsection}{faster-lio}{29}{subsubsection*.149}%
+\contentsline {subsubsection}{fast-livo2}{29}{subsubsection*.150}%
+\contentsline {subsection}{\numberline {3.3.3}Dataset}{29}{subsection.3.3.3}%
 \contentsline {paragraph}{}{29}{paragraph*.151}%
-\contentsline {paragraph}{}{29}{paragraph*.152}%
+\contentsline {subsection}{\numberline {3.3.4}Tuning Strategy}{29}{subsection.3.3.4}%
 \contentsline {paragraph}{}{29}{paragraph*.153}%
-\contentsline {section}{\numberline {3.4}Testing}{29}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Metrics}{29}{subsection.3.4.1}%
-\contentsline {paragraph}{}{29}{paragraph*.154}%
-\contentsline {subsection}{\numberline {3.4.2}Algorithms}{30}{subsection.3.4.2}%
+\contentsline {paragraph}{}{30}{paragraph*.154}%
 \contentsline {paragraph}{}{30}{paragraph*.155}%
 \contentsline {paragraph}{}{30}{paragraph*.156}%
-\contentsline {subsubsection}{faster-lio}{30}{subsubsection*.157}%
-\contentsline {subsubsection}{fast-livo2}{30}{subsubsection*.158}%
-\contentsline {paragraph}{}{30}{paragraph*.159}%
-\contentsline {subsection}{\numberline {3.4.3}Dataset}{30}{subsection.3.4.3}%
-\contentsline {paragraph}{}{30}{paragraph*.160}%
-\contentsline {subsection}{\numberline {3.4.4}Tuning Strategy}{30}{subsection.3.4.4}%
-\contentsline {paragraph}{}{30}{paragraph*.162}%
-\contentsline {chapter}{\numberline {4}Results}{33}{chapter.4}%
-\contentsline {paragraph}{}{33}{paragraph*.163}%
-\contentsline {section}{\numberline {4.1}faster-lio}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}fast-livo2}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Possible improvements}{33}{section.4.3}%
-\contentsline {chapter}{Bibliography}{35}{chapter*.164}%
-\contentsline {chapter}{\numberline {A}Sample Appendix}{41}{appendix.A}%
+\contentsline {paragraph}{}{30}{paragraph*.157}%
+\contentsline {chapter}{\numberline {4}Results}{31}{chapter.4}%
+\contentsline {paragraph}{}{31}{paragraph*.158}%
+\contentsline {section}{\numberline {4.1}faster-lio}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}fast-livo2}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Possible improvements}{31}{section.4.3}%
+\contentsline {chapter}{Bibliography}{33}{chapter*.159}%
+\contentsline {chapter}{\numberline {A}Sample Appendix}{39}{appendix.A}%
