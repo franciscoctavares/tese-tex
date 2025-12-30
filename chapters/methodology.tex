@@ -1,4 +1,5 @@
-\paragraph{}This chapter will explain the methodology and requirements for the \ac{SLAM} tuning module, developed for \ac{RUSTLE}. For each implemented tuning algorithm, a high level overview of its architecture is provided. Test settings, including test algorithms and dataset choices, are also justified.
+%\paragraph{}This chapter will explain the methodology and requirements for the \ac{SLAM} tuning module, developed for \ac{RUSTLE}. For each implemented tuning algorithm, a high level overview of its architecture is provided. Test settings, including test algorithms and dataset choices, are also justified.
+\paragraph{}This chapter will go over the methodology behind the development and testing of the \ac{SLAM} tuning module developed within \ac{RUSTLE}. It will start by explaining what \ac{RUSTLE} is and it works and then explain how the tuning module fits in with \ac{RUSTLE} and its codebase. Then, lower level details of each implemented tuning algorithm will be explained. Finally, a testing methodology will be introduced and properly explained.
 
 \section{\acs{RUSTLE}}
 
@@ -12,7 +13,7 @@
 Its main objective is to provide a simple, stream-lined and reproducible way to run and compare SLAM algorithms. It tracks not only trajectory accuracy(APE or RPE), but also runtime, CPU load and memory usage, offering a more complete assessment of the algorithm's performance.
 
 \paragraph{}At its core, RUSTLE takes three main inputs: a dataset in rosbag format, the SLAM algorithm's parameters in yaml format, and the algorithms themselves as docker images. The reason for using Docker is for reliably reproducing the algorithms across many different platforms and environments.
-During execution, the odometry data is streamed into the database(Surrealdb), which, after conclusion, is used to calculate trajectory errors such as the APE and the RPE, using EVO.
+During execution, the odometry data is streamed into the database(Surrealdb), which, after conclusion, is used to calculate trajectory errors such as the \ac{APE} and the \ac{RPE}, using EVO~\cite{grupp2017evo}.
 
 \paragraph{}Algorithm executions are run as tests. Each test's configuration is passed as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test to be executed.
 
@@ -27,25 +28,29 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}Every tuning experiment run on \ac{RUSTLE} will be run as a simple test, with the caveat that the user can choose the portion of the dataset to run. This is to facilitate development and testing. When used in production, the user should set both the start and duration of the dataset to 0, meaning, the whole dataset will be run.
 
-\section{Development}
+\paragraph{}The way the user interacts with the application is via a Command Line Interface(CLI), by issuing commands, such as "\textbf{cargo run -p rustle-cli algo add -f examples/algorithms.yaml}" to add one or more algorithms to the database using a settings file, or "\textbf{cargo run -p rustle-cli dataset add -f examples/datasets.yaml}", to add one or more datasets to the database. Similarly, the tuning module will require similarly structured commands, more specifically "\textbf{cargo run -p rustle-cli tune add -f examples/tune\_test.yaml}" to add a new tuning execution, whose settings are specified by in the YAML configuration file, and "\textbf{cargo run -p rustle-cli tune run grid\_test}" to run the specified tuning test.
 
-\paragraph{}Development follows an incremental approach, focusing on small incremental features, well thought and tested. Each big feature, such as random search tuning, is divided into smaller, easier to test and debug sub-features. The reason for this is to make it easier to reason about how to implement the feature, as well as, during development, to make it easier to test and debug each sub-feature.
+\section{Feature Implementation}
 
-\subsection{Feature Implementation}
+%\paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
 
-\paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
+\paragraph{}In the previous chapter, six tuning approaches were discussed: Grid Search, Random Search, Simulated Annealing, Bayesian Optimization, Successive Halving and Hyperband. Despite this, only Grid Search, Random Search and Simulated Annealing will be implemented. It is mainly due to time constraints, as trying to implement, test and debug all six methods in one semester might prove to be too much of a challenge. Also, these three specific methods were chosen as a way to balance time efficiency and fine tuned exploration. Grid Search is an exhaustive baseline method. The user chooses how fine grained the parameter space is and the algorithm explores it sequentially. Random Search is a natural improvement over Grid Search, allowing for a more time efficient \textbf{random} exploration of the parameter space. Finally, Simulated Annealing is a meta-heuristic that improves upon the previous two algorithms by introducing a temperature-controlled acceptance mechanism. Better solutions are always accepted, but worse solutions are also occasionally accepted, according to a probability some function. This allows for a more efficient and informed exploration of the parameter space.
 
-\paragraph{}In addition to the optimization algorithms, it will also be necessary to write code for exporting results of a tuning test, for later result extraction, processing and discussion, as well as code for parsing a YAML settings file, with all necessary information to run the optimization experiment. Finally, some python scripts will be developed to plot the results of the tuning experiments, which will be presented in the next chapter of this dissertation. Below is a high-level diagram of the features I intend to implement.
+%\paragraph{}In addition to the optimization algorithms, it will also be necessary to write code for exporting results of a tuning test, for later result extraction, processing and discussion, as well as code for parsing a YAML settings file, with all necessary information to run the optimization experiment. Finally, some python scripts will be developed to plot the results of the tuning experiments, which will be presented in the next chapter of this dissertation. Below is a high-level diagram of the features I intend to implement.
+
+\paragraph{}Below is a low level diagram of the developed tuning module\ref{low_level_tune_module}. The user first creates a YAML configuration file with the \ac{SLAM} algorithm to be optimized, the dataset on which to optimize the algorithm, the \ac{SLAM} parameters to tune, any halting conditions, and other relevant data(algorithm dependent). Then, when running the optimization test, the code will keep track of the best configuration found so far, as well as some relevant data, such as parameter and \ac{RPE} values at each iteration of the algorithm, and export that data. The best configuration is written to a YAML file and the \textbf{per iteration} data is written to a csv file, for later processing.
 
 % diagrama alto-nível das features(feito em powerpoint)
 \begin{figure}[h]
     \centering
-    \includegraphics[page=3,width=0.9\linewidth]{images/rustle_diagram.pdf}
+    \includegraphics[page=3,width=0.8\linewidth]{images/rustle_diagram.pdf}
     \caption{low-level diagram of hyperparameter tuning module}
+    \label{low_level_tune_module}
 \end{figure}
 
+
 \newpage
-\subsubsection{Simulated Annealing}
+\subsection{Simulated Annealing}
 
 \paragraph{}The Simulated Annealing algorithm implementation is identical to the one provided by Stefan Kroboth~\cite{argmin_ref}.
 
@@ -91,7 +96,7 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	\item stop\_best - the algorithm stops its execution if no solution better than the incumbent is found after these many \textbf{consecutive} iterations
 \end{itemize}
 
-\subsubsection{Grid Search}
+\subsection{Grid Search}
 
 \paragraph{}The Grid Search implementation considers the parameter space as a multi dimensional tensor, where each dimension corresponds to a different parameter, and has a differing number of possible values. In each iteration, to obtain the current values of the parameters
 
@@ -120,7 +125,7 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \paragraph{}Additionally, the code checks the default configuration and catches most common errors, such as the user passing a String for a parameter that is supposed to be an integer.
 
-\subsubsection{Random Search}
+\subsection{Random Search}
 
 \paragraph{}The Random Search Implementation is similar to Grid Search, except that the index of the configuration to be evaluated is randomly generated, and no configuration is evaluated twice, by way of checking a list of previously evaluated configurations.
 
@@ -176,6 +181,22 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 \end{itemize}
 
 \subsubsection{fast-livo2}
+
+\begin{itemize}
+	\item point\_filter\_num
+	\item filter\_size\_surf
+	\item max\_iterations
+	\item patch\_size
+	\item patch\_pyrimid\_level
+	\item voxel\_size
+	\item max\_layer
+	\item max\_points\_num
+	\item half\_map\_size
+	\item sliding\_thresh
+	\item pub\_scan\_num
+	\item filter\_size\_pcd
+	\item interval
+\end{itemize}
 
 %\paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.
 
