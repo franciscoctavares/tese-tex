@@ -17,6 +17,11 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Search procedure}}{27}{figure.caption.138}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Random Search procedure}}{28}{figure.caption.142}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces some stuff}}{34}{figure.caption.162}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces RPE per iteration of Simulated Annealing}}{34}{figure.caption.162}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces cube\_side\_length scatter plot}}{35}{figure.caption.165}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces filter\_size\_surf scatter plot}}{36}{figure.caption.167}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces ivox\_grid\_resolution scatter plot}}{36}{figure.caption.168}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces RPE per iterations of Grid Search}}{37}{figure.caption.172}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces RPE per iterations of Random Search}}{38}{figure.caption.178}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
