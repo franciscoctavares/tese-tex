@@ -12,6 +12,8 @@ Warning--entry type for "argmin_ref" isn't style-file defined
 Warning--empty journal in tareen2019large
 Warning--empty journal in slam_point_cloud
 Warning--empty journal in multi_sensor_slam_arm_robot
+Warning--empty journal in sa_netlogo
+Warning--empty journal in fastlivo2_article1
 Warning--empty journal in becnkis2024survey
 Warning--empty journal in harris1988combined
 Warning--empty journal in image_feature_matching
@@ -27,45 +29,46 @@ Warning--empty journal in putra2019parameter
 Warning--empty journal in zheng2020feature
 Warning--empty journal in koide2021automatic
 Warning--empty journal in chen2018visual
-You've used 56 entries,
+Warning--empty journal in fasterlio_article2
+You've used 63 entries,
             1876 wiz_defined-function locations,
-            777 strings with 14631 characters,
-and the built_in function-call counts, 14948 in all, are:
-= -- 1427
-> -- 677
+            809 strings with 16274 characters,
+and the built_in function-call counts, 16889 in all, are:
+= -- 1582
+> -- 819
 < -- 0
-+ -- 250
-- -- 194
-* -- 1053
-:= -- 2144
-add.period$ -- 57
-call.type$ -- 56
-change.case$ -- 55
++ -- 300
+- -- 237
+* -- 1215
+:= -- 2450
+add.period$ -- 64
+call.type$ -- 63
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 785
-empty$ -- 1350
-format.name$ -- 194
-if$ -- 3612
+cite$ -- 84
+duplicate$ -- 867
+empty$ -- 1509
+format.name$ -- 237
+if$ -- 4052
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 51
-newline$ -- 172
-num.names$ -- 56
-pop$ -- 207
+int.to.str$ -- 63
+missing$ -- 57
+newline$ -- 193
+num.names$ -- 63
+pop$ -- 237
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 541
+skip$ -- 590
 stack$ -- 0
-substring$ -- 881
-swap$ -- 326
+substring$ -- 977
+swap$ -- 353
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 18
-while$ -- 139
-width$ -- 58
-write$ -- 514
-(There were 20 warnings)
+warning$ -- 21
+while$ -- 155
+width$ -- 65
+write$ -- 573
+(There were 23 warnings)

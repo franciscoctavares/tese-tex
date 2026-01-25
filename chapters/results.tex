@@ -4,7 +4,7 @@
 
 \section{faster-lio}
 
-\paragraph{}It is important, before tuning any hyperparameter, to run the algorithm with default parameters, to know what the \ac{RPE} is when no optimization is performed. Below is a table with the 5 run average of the \ac{APE} and \ac{RPE} for the faster-lio algorithm(table \ref{default-faster-lio}). These results were obtained with the parameter values specified in table
+\paragraph{}It is important, before tuning any hyperparameter, to run the algorithm with default parameters, to know what the \ac{RPE} is when no optimization is performed. Below is a table with the 5 run average of the \ac{APE} and \ac{RPE} for the faster-lio algorithm(table \ref{default-faster-lio}). These results were obtained with the parameter values specified in table \ref{default-faster-lio-params}.
 
 \begin{table}[h]
 \centering
@@ -73,7 +73,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 
 \paragraph{}The vertical dotted lines represent the iterations where the temperature was reset to its initial value(reannealing). 
 
-\paragraph{}From figure \ref{faster-lio-sa}, it can be seen that, roughly for the first 80 iterations, reannealing allows the algorithm to escape a local minima and achieve a better solution than the incumbent. After that, it gets stuck and doesn't go anywhere for almost 30 iterations, which was the limit proposed for halting the execution, when no better solution is found. This parameter is customizable, but it was decided, after a few runs with a 30 second section of the dataset, that it was not productive to let the algorithm run for so long without achieving any better solution. Also, given the time each Simulated Annealing run takes(2.5 minutes x ([50, 100] iterations) = [2, 5] hours), some shortcuts had to be taken. One was that most optimizations, in terms of parameter settings, such as delta\_max for discrete parameters or gaussian curve $\mu$ and $\sigma$ values for continuous parameters were adjusted while working with 30 second sections of the dataset. While it does not guarantee that such adjustments will work on the entire dataset, it allows the researcher to understand how their values affect algorithm runtime and performance.
+\paragraph{}From figure \ref{faster-lio-sa}, it can be seen that, roughly for the first 80 iterations, reannealing allows the algorithm to escape a local minima and achieve a better solution than the incumbent. After that, it gets stuck and doesn't go anywhere for almost 30 iterations, which was the limit proposed for halting the execution, when no better solution is found. This parameter is customizable, but it was decided, after a few runs with a 30 second section of the dataset, that it was not productive to let the algorithm run for so long without achieving any better solution. Also, given the time each Simulated Annealing run takes(2.5 minutes x ([50, 100] iterations) = [2, 5] hours), some shortcuts had to be taken. The most important one was that most optimizations, in terms of parameter settings, such as delta\_max for discrete parameters or gaussian curve $\mu$ and $\sigma$ values for continuous parameters were adjusted while working with 30 second sections of the dataset. While it does not guarantee that such adjustments will work on the entire dataset, it allows the researcher to understand how their values affect algorithm runtime and performance.
 
 \begin{figure}[h]
     \centering
@@ -82,14 +82,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
     \label{cube_side_length_scatter}
 \end{figure}
 
-\paragraph{}Figure \ref{cube_side_length_scatter} shows the scatter plot for the discrete parameter. It indicates the optimal range for this parameter is between 1300 and 1700. This isn't conclusive, however. Correlation does not mean causation. Other parameters were tuned and their effects on the \ac{RPE} may be greater, such as filter\_size\_surf(figure \ref{filter_size_surf_scatter}) and ivox\_grid\_resolution(figure \ref{ivox_grid_resolution_scatter}). In both cases, the relationship between parameter value and the \ac{RPE} is even clearer. For these two parameters, the lower their values, the lower the \ac{RPE}. Although filter\_size\_surf seems to stabilize for values between 0.25 and 0.5, it was decided to explore even lower values. For ivox\_grid\_resolution, the lower bound was defined as 0.1, hence why there weren't any values below it. Even though there the scatter plot shows a possible linear relationship between this parameter and the \ac{RPE}, it might be worthwhile to explore lower ivox\_grid\_resolution values. For the parameters filter\_size\_map and esti\_plane\_threshold, the scatter plots looked very similar to filter\_size\_surf and ivox\_grid\_resolution, and a similar reasoning regarding further optimization was applied.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.65\linewidth]{images/filter_size_surf_rpe.pdf}
-    \caption{filter\_size\_surf scatter plot}
-    \label{filter_size_surf_scatter}
-\end{figure}
+\paragraph{}Figure \ref{cube_side_length_scatter} shows the scatter plot for the discrete parameter cube\_side\_length. It indicates the optimal range for this parameter is between 1300 and 1700. This isn't conclusive, however. Correlation does not mean causation. Other parameters were tuned and their effects on the \ac{RPE} may be greater, such as ivox\_grid\_resolution(figure \ref{ivox_grid_resolution_scatter}). In this case, the relationship between parameter value and the \ac{RPE} is even clearer, for there seems to be an almost linear relationship between parameter value and \ac{RPE}. %Although filter\_size\_surf seems to stabilize for values between 0.25 and 0.5, it was decided to explore even lower values. For ivox\_grid\_resolution, the lower bound was defined as 0.1, hence why there weren't any values below it. Even though there the scatter plot shows a possible linear relationship between this parameter and the \ac{RPE}, it might be worthwhile to explore lower ivox\_grid\_resolution values. For the parameters filter\_size\_map and esti\_plane\_threshold, the scatter plots looked very similar to filter\_size\_surf and ivox\_grid\_resolution, and a similar reasoning regarding further optimization was applied.
 
 \begin{figure}[h]
     \centering
@@ -98,24 +91,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
     \label{ivox_grid_resolution_scatter}
 \end{figure}
 
-\paragraph{}After analyzing the scatter plots, the parameter space to be explored further using Grid Search and Random Search is the following:
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-Parameter              & Initial value & Step size & Number of values \\ \hline
-cube\_side\_length     & 700           & -         & 1                \\ \hline
-max\_iteration         & 15            & -         & 1                \\ \hline
-point\_filter\_num     & 4             & -         & 1                \\ \hline
-esti\_plane\_threshold & 0.01          & 0.01      & 10               \\ \hline
-filter\_size\_map      & 0.01          & 0.01      & 10               \\ \hline
-filter\_size\_surf     & 0.15          & 0.01      & 11               \\ \hline
-ivox\_grid\_resolution & 0.01          & 0.01      & 10               \\ \hline
-\end{tabular}
-\caption{faster-lio grid/random search parameter space}
-\label{faster-lio-parameter space}
-\end{table}
+\paragraph{}These scatter plots serve as a visual aid to the researcher to better analyze and understand the relationships between tuned parameter values and target metric values.
 
 \subsection{Grid Search}
 
@@ -123,38 +99,123 @@ ivox\_grid\_resolution & 0.01          & 0.01      & 10               \\ \hline
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\linewidth]{images/faster-lio-grid-search-rpe.pdf}
+    \includegraphics[width=0.6\linewidth]{images/faster-lio-gs.pdf}
     \caption{RPE per iterations of Grid Search}
     \label{faster-lio-grid-search-rpe}
 \end{figure}
 
-\paragraph{}The first thing that comes to mind by looking at figure \ref{faster-lio-grid-search-rpe} is how high the \ac{RPE} values are. This is because of a few reasons.
-
-\paragraph{}Firstly, only 1\% of the parameter space(total of 11000 configurations) was explored. Exploring such a tiny fraction of the parameter space does not yield conclusive results about the optimal parameter values. However, in these circumstances, we do not start from default parameters and attempt to find the most optimal values for all parameters. In theses circumstances, we started with the results of a previous optimization algorithm(Simulated Annealing), and devised a much narrower parameter space considering previous results and potential areas of improvement, to try to further improve the \ac{RPE}. Even though the expectations for further \ac{RPE} improvements were low, it cannot be concluded that the \ac{RPE} has reached its lowest value.
-
-\paragraph{}Secondly, the parameter space is very small, even though only 4 out of the 7 initial parameters are being optimized here, and each parameter can only take 10/11 possible values. The step size values for each parameter determine how fined grained the search is. A very low step size could mean large regions of the parameter space have identical \ac{RPE} values, and the search in those regions wouldn't be productive.
-
-\paragraph{}Given all that, it was decided to run Random Search on the same parameter space, and only then decide, based on its results, if the parameter space should be larger(bigger step sizes + total number of values) or if the results can be considered "as is".
-
-\subsection{Random Search}
-
-\paragraph{}For Random Search, the same parameter space was used(see figure \ref{faster-lio-parameter space}), and the algorithm was run for 5 hours, as was the case with Grid Search. In total, both algorithms were run for a total of 100 iterations. Below is a figure of the \ac{RPE} per iteration of Random Search().
+\paragraph{}As with Simulated Annealing, a few scatter plots are necessary to try to make sense of these results. Below are the three scatter plots which are necessary to understand these results(figures \ref{faster-lio-grid-search-filter_size_map}, \ref{faster-lio-grid-search-filter_size_surf} and \ref{faster-lio-grid-search-ivox_grid_resolution}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/faster-lio-random-search-rpe.pdf}
+    \includegraphics[width=0.6\linewidth]{images/fasterliogs-ivox-grid-resolution.pdf}
+    \caption{ivox\_grid\_resolution scatter plot}
+    \label{faster-lio-grid-search-ivox_grid_resolution}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fasterliogs-filter-size-map.pdf}
+    \caption{filter\_size\_map scatter plot}
+    \label{faster-lio-grid-search-filter_size_map}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fasterliogs-filter-size-surf.pdf}
+    \caption{filter\_size\_surf scatter plot}
+    \label{faster-lio-grid-search-filter_size_surf}
+\end{figure}
+
+\paragraph{}The first thing to note is that all tuned parameters whose scatter plots are not posted here have a pattern equal to that of ivox\_grid\_resolution, hence why they are not relevant. The reason for this pattern is the sequential nature of Grid Search.
+
+\paragraph{}Secondly, the filter\_size\_map parameter does not seem to affect the \ac{RPE} at all, given how sparsely distributed the scatter plot points are. However,  filter\_size\_surf seems to be the only tuned parameter that significantly affects the \ac{RPE}, having an almost linear relationship. However, given the Simulated Annealing results discussed previously, and specifically figures \ref{ivox_grid_resolution_scatter} and \ref{cube_side_length_scatter}, it is possible to assert that the reason parameters such as ivox\_grid\_resolution and cube\_side\_length \textbf{look} like they have no effect on the overall \ac{RPE} value is that Grid Search did not do a comprehensive enough search of the parameter space. At most it can be concluded that \textbf{locally}, fixating the values of all parameters except for filter\_size\_map and filter\_size\_surf, these results are achieved. But that does not tell us much about the global optimal parameters(for sequence 1006\_03 of the BotanicGarden dataset).
+
+%\paragraph{}The first thing that comes to mind by looking at figure \ref{faster-lio-grid-search-rpe} is how high the \ac{RPE} values are. This is because of a few reasons.
+
+%\paragraph{}Firstly, only 1\% of the parameter space(total of 11000 configurations) was explored. Exploring such a tiny fraction of the parameter space does not yield conclusive results about the optimal parameter values. However, in these circumstances, we do not start from default parameters and attempt to find the most optimal values for all parameters. In theses circumstances, we started with the results of a previous optimization algorithm(Simulated Annealing), and devised a much narrower parameter space considering previous results and potential areas of improvement, to try to further improve the \ac{RPE}. Even though the expectations for further \ac{RPE} improvements were low, it cannot be concluded that the \ac{RPE} has reached its lowest value.
+
+%S\paragraph{}Secondly, the parameter space is very small, even though only 4 out of the 7 initial parameters are being optimized here, and each parameter can only take 10/11 possible values. The step size values for each parameter determine how fined grained the search is. A very low step size could mean large regions of the parameter space have identical \ac{RPE} values, and the search in those regions wouldn't be productive.
+
+%\paragraph{}Given all that, it was decided to run Random Search on the same parameter space, and only then decide, based on its results, if the parameter space should be larger(bigger step sizes + total number of values) or if the results can be considered "as is".
+
+\subsection{Random Search}
+
+\paragraph{}For Random Search, the same parameter space was used(see figure \ref{faster-lio-parameter space}), and the algorithm was run for 5 hours, as was the case with Grid Search. In total, both algorithms were run for a total of 100 iterations. Below is a figure of the \ac{RPE} per iteration of Random Search(figure).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{images/faster-lio-rs.pdf}
     \caption{RPE per iterations of Random Search}
     \label{faster-lio-random-search-rpe}
 \end{figure}
 
-\paragraph{}One of the first things that comes to mind when looking at figure \ref{faster-lio-random-search-rpe} are the outliers and how it distorts the plot and makes it very difficult to know the y-axis value of most points. The reason is very simple: Random Search is randomly sampling a configuration out of the 11000 possible configurations, and some of those configurations have much larger \ac{RPE} values.
+\newpage
 
-\paragraph{}The best performing configuration achieved an \ac{RPE} of 0.014405. To put that into perspective, Simulated Annealing achieved 0.014420. This comparison is not obviously fair, given that the parameter space that was used in Random Search was designed \textbf{after} analyzing the results of Simulated Annealing. Also, the difference between the two best performing configurations is not significant enough to conclude anything about the the best performing region in the parameter space.
+%\paragraph{}One of the first things that comes to mind when looking at figure \ref{faster-lio-random-search-rpe} are the outliers and how it distorts the plot and makes it very difficult to know the y-axis value of most points. The reason is very simple: Random Search is randomly sampling a configuration out of the 11000 possible configurations, and some of those configurations have much larger \ac{RPE} values.
 
-\paragraph{}Random Search was mainly used to demonstrate its advantages. One, It outperforms Grid Search in time constrained environments, finding better performing regions of the parameter space randomly. Secondly, in general, it might be a good tool to randomly sample the parameter space for promising regions before moving on to more advanced approaches using more efficient tuning algorithms, provided time constraints are not as "tight" and the parameter space is highly granular, meaning the step sizes are very low, and each parameter is given thousands(possibly millions, depending on the machine's hardware) of possible values.
+%\paragraph{}The best performing configuration achieved an \ac{RPE} of 0.014405. To put that into perspective, Simulated Annealing achieved 0.014420. This comparison is not obviously fair, given that the parameter space that was used in Random Search was designed \textbf{after} analyzing the results of Simulated Annealing. Also, the difference between the two best performing configurations is not significant enough to conclude anything about the the best performing region in the parameter space.
+
+%\paragraph{}Random Search was mainly used to demonstrate its advantages. One, It outperforms Grid Search in time constrained environments, finding better performing regions of the parameter space randomly. Secondly, in general, it might be a good tool to randomly sample the parameter space for promising regions before moving on to more advanced approaches using more efficient tuning algorithms, provided time constraints are not as "tight" and the parameter space is highly granular, meaning the step sizes are very low, and each parameter is given thousands(possibly millions, depending on the machine's hardware) of possible values.
+
+\paragraph{}For the scatter plots, the two outlier points were removed, to undo the scale distortion. As with Grid Search, the scatter plots for ivox\_grid\_resolution(figure \ref{faster-lio-random-search-ivox_grid_resolution}), filter\_size\_map(figure \ref{faster-lio-random-search-filter_size_map}) and filter\_size\_surf(figure \ref{faster-lio-random-search-filter_size_surf}) are presented.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fasterliors-ivox-grid-resolution.pdf}
+    \caption{ivox\_grid\_resolution scatter plot}
+    \label{faster-lio-random-search-ivox_grid_resolution}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fasterliors-filter-size-map.pdf}
+    \caption{filter\_size\_map scatter plot}
+    \label{faster-lio-random-search-filter_size_map}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fasterliors-filter-size-surf.pdf}
+    \caption{filter\_size\_surf scatter plot}
+    \label{faster-lio-random-search-filter_size_surf}
+\end{figure}
+
+\newpage
+
+\paragraph{}The previous three figures allow us to get a better picture of how these parameters influence the \ac{RPE} value. In all three cases, all 9 possible values are explored, showcasing the main advantage of Random Search over Grid Search: with a fixed optimization constraint(in this case, it is 5 hours) and a large enough parameter space(157464 configurations), Random Search not only explores the parameter space better, but also tends to achieve better results.
+
+\subsection{Generalization test}
+
+\paragraph{}For this second test, both the default faster-lio configuration and the best tuned configuration(in this case, this was achieved with Simulated Annealing) will be executed on a different dataset. In this case, as was explained previously, the chosen sequence is the 1018\_03 sequence of the BotanicGarden dataset.
+
+\begin{table}[]
+\centering
+\begin{tabular}{c|c|c|}
+\cline{2-3}
+\multicolumn{1}{l|}{}                     & Best RPE achieved & \%  difference to default \\ \hline
+\multicolumn{1}{|c|}{Default}             & 0.015037          & 0\%                       \\ \hline
+\multicolumn{1}{|c|}{Simulated Annealing} & 0.014420          & +4.1\%                    \\ \hline
+\multicolumn{1}{|c|}{Grid Search}         & 0.015297          & -1.73\%                   \\ \hline
+\multicolumn{1}{|c|}{Random Search}       & 0.015298          & -1.74\%                   \\ \hline
+\end{tabular}
+\caption{faster-lio tuning results}
+\label{faster-lio-tuning-results}
+\end{table}
 
 
 
 \section{fast-livo2}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+APE(RMSE) & RPE(RMSE) \\ \hline
+0.403815  & 0.045583  \\ \hline
+\end{tabular}
+\caption{Default parameter results(5 run average) for fast-livo2}
+\label{default-fast-livo2}
+\end{table}
 
 \section{Possible improvements}

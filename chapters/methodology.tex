@@ -7,13 +7,14 @@
     \centering
     \includegraphics[page=2,width=\linewidth]{images/rustle_diagram.pdf}
     \caption{\ac{RUSTLE} diagram}
+    \label{rustle_diagram}
 \end{figure}
 
 \paragraph{}\ac{RUSTLE} is a command line application, written in Rust, which is designed to simplify the evaluation of SLAM algorithms in mobile robotics.
 Its main objective is to provide a simple, stream-lined and reproducible way to run and compare SLAM algorithms. It tracks not only trajectory accuracy(APE or RPE), but also runtime, CPU load and memory usage, offering a more complete assessment of the algorithm's performance.
 
 \paragraph{}At its core, RUSTLE takes three main inputs: a dataset in rosbag format, the SLAM algorithm's parameters in yaml format, and the algorithms themselves as docker images. The reason for using Docker is for reliably reproducing the algorithms across many different platforms and environments.
-During execution, the odometry data is streamed into the database(Surrealdb), which, after conclusion, is used to calculate trajectory errors such as the \ac{APE} and the \ac{RPE}, using EVO~\cite{grupp2017evo}.
+During execution, the odometry data is streamed into the database, which, after conclusion, is used to calculate trajectory errors such as the \ac{APE} and the \ac{RPE}, using EVO~\cite{grupp2017evo}(figure \ref{rustle_diagram}).
 
 \paragraph{}Algorithm executions are run as tests. Each test's configuration is passed as an YAML file, and contains: its name, number of workers, number of iterations, list of algorithms, dataset on which to execute these algorithms and the test type. Additionally, some additional fields might be required, depending on the type of test to be executed.
 
@@ -23,18 +24,18 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	\item Simple - The rosbag file simply plays from begining to end at normal speed
 	\item Speed - Portions of the dataset are run at different speeds
 	\item Cut - Only specified portions of the dataset are run
-	\item Drop - Não faço ideia
+	\item Drop - Simulates sensor dropout, by reducing sensor message rate over a specified section of the dataset
 \end{itemize}
 
-\paragraph{}Every tuning experiment run on \ac{RUSTLE} will be run as a simple test, with the caveat that the user can choose the portion of the dataset to run. This is to facilitate development and testing. When used in production, the user should set both the start and duration of the dataset to 0, meaning, the whole dataset will be run.
+\paragraph{}Every tuning experiment run on \ac{RUSTLE} will be run as a simple test, with the caveat that the user can choose the portion of the dataset to run. This is to facilitate development and testing. %When used in production, the user should set both the start and duration of the dataset to 0, meaning, the whole dataset will be run.
 
-\paragraph{}The way the user interacts with the application is via a Command Line Interface(CLI), by issuing commands, such as "\textbf{cargo run -p rustle-cli algo add -f examples/algorithms.yaml}" to add one or more algorithms to the database using a settings file, or "\textbf{cargo run -p rustle-cli dataset add -f examples/datasets.yaml}", to add one or more datasets to the database. Similarly, the tuning module will require similarly structured commands, more specifically "\textbf{cargo run -p rustle-cli tune add -f examples/tune\_test.yaml}" to add a new tuning execution, whose settings are specified by in the YAML configuration file, and "\textbf{cargo run -p rustle-cli tune run grid\_test}" to run the specified tuning test.
+%\paragraph{}The way the user interacts with the application is via a Command Line Interface(CLI), by issuing commands, such as "\textbf{cargo run -p rustle-cli algo add -f examples/algorithms.yaml}" to add one or more algorithms to the database using a settings file, or "\textbf{cargo run -p rustle-cli dataset add -f examples/datasets.yaml}", to add one or more datasets to the database. Similarly, the tuning module will require similarly structured commands, more specifically "\textbf{cargo run -p rustle-cli tune add -f examples/tune\_test.yaml}" to add a new tuning execution, whose settings are specified by in the YAML configuration file, and "\textbf{cargo run -p rustle-cli tune run grid\_test}" to run the specified tuning test.
 
 \section{Feature Implementation}
 
 %\paragraph{}The optimization algorithms that were chosen to be implemented are: Grid Search, Random Search and Simulated Annealing. In section 2, more algorithms were mentioned, specifically Bayesian Optimization, Successive Halving and Hyperband. The reasons for deciding only to implement these three of the six are twofold. Firstly, Grid Search serves as a baseline, exhaustive search method, despite being inefficient for large parameter spaces. Random Search is a natural improvement over Grid Search, finding better configurations faster, particularly under a fixed computational budget~\cite{bergstra2012random}. Finally, Simulated Annealing was selected by being a meta-heuristic and a trajectory based method which is capable of escaping local minima. The reason for choosing only three methods out of the six described in section 2 is mostly based on time constraints. Implementing more than 3 methods, particularly Bayesian Optimization and HyperBand, might prove to be too much of a challenge, considering one has to write the code, but also to run each tuning algorithm for multiple runs, for each chosen \ac{SLAM} solution, all before extracting the results, and discussing them in the present dissertation.
 
-\paragraph{}In the previous chapter, six tuning approaches were discussed: Grid Search, Random Search, Simulated Annealing, Bayesian Optimization, Successive Halving and Hyperband. Despite this, only Grid Search, Random Search and Simulated Annealing will be implemented. It is mainly due to time constraints, as trying to implement, test and debug all six methods in one semester might prove to be too much of a challenge. Also, these three specific methods were chosen as a way to balance time efficiency and fine tuned exploration. Grid Search is an exhaustive baseline method. The user chooses how fine grained the parameter space is and the algorithm explores it sequentially. Random Search is a natural improvement over Grid Search, allowing for a more time efficient \textbf{random} exploration of the parameter space. Finally, Simulated Annealing is a meta-heuristic that improves upon the previous two algorithms by introducing a temperature-controlled acceptance mechanism. Better solutions are always accepted, but worse solutions are also occasionally accepted, according to a probability some function. This allows for a more efficient and informed exploration of the parameter space.
+\paragraph{}In the previous chapter, six tuning approaches were discussed: Grid Search, Random Search, Simulated Annealing, Bayesian Optimization, Successive Halving and Hyperband. Despite this, only Grid Search, Random Search and Simulated Annealing will be implemented. This is mainly due to time constraints. Also, these three specific methods were chosen as a way to balance time efficiency and fine tuned exploration. Grid Search is an exhaustive baseline method. The user chooses how fine grained the parameter space is and the algorithm explores it sequentially. Random Search is a natural improvement over Grid Search, allowing for a more time efficient \textbf{random} exploration of the parameter space. Finally, Simulated Annealing is a meta-heuristic that improves upon the previous two algorithms by introducing a temperature-controlled acceptance mechanism. Better solutions are always accepted, but worse solutions are also occasionally accepted, according to a probability some function. This allows for a more efficient and informed exploration of the parameter space.
 
 %\paragraph{}In addition to the optimization algorithms, it will also be necessary to write code for exporting results of a tuning test, for later result extraction, processing and discussion, as well as code for parsing a YAML settings file, with all necessary information to run the optimization experiment. Finally, some python scripts will be developed to plot the results of the tuning experiments, which will be presented in the next chapter of this dissertation. Below is a high-level diagram of the features I intend to implement.
 
@@ -81,20 +82,24 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	\label{delta_int}
 \end{equation}
 
-\paragraph{}Another important aspect of Simulated Annealing is the reannealing process. During the execution of the algorithm, it is sometimes necessary to reanneal, that is, to reset the temperature to a previous, higher level, to allow the algorithm to escape(or at least try to) a local minima. With that in mind, 3 parameters are necessary:
+\paragraph{}Another important aspect of Simulated Annealing is the reannealing process. During the execution of the algorithm, it is sometimes necessary to reanneal, that is, to reset the temperature to a previous, higher level, to allow the algorithm to escape(or at least try to) a local minima. With that in mind, reannealing occurs under three circumstances. The algorithm automatically resets its temperature after a fixed number of iterations; it also does so when no neighboring solution is accepted for a specified stretch of consecutive iterations, and when, after a series of consecutive iterations, no candidate improves upon the current incumbent solution.
 
-\begin{itemize}
-	\item reanneal\_fixed - the algorithm resets the temperature no matter what after this many iterations  
-	\item reanneal\_accepted - the algorithm resets the temperature if no neighbor solution is accepted after this many \textbf{consecutive} iterations
-	\item reanneal\_best - the algorithm resets the temperature if no solution better than the incumbent is found after this many \textbf{consecutive} iterations
-\end{itemize}
+%With that in mind, 3 parameters are necessary:
 
-\paragraph{}As for halting conditions, 2 parameters are specified:
+%\begin{itemize}
+	%\item reanneal\_fixed - the algorithm resets the temperature no matter what after this many iterations  
+	%\item reanneal\_accepted - the algorithm resets the temperature if no neighbor solution is accepted after this many \textbf{consecutive} iterations
+	%\item reanneal\_best - the algorithm resets the temperature if no solution better than the incumbent is found after this many \textbf{consecutive} iterations
+%\end{itemize}
 
-\begin{itemize}
-	\item stop\_accepted - The algorithm stops its execution if this no neighbor solution is accepted for these many \textbf{consecutive} iterations
-	\item stop\_best - the algorithm stops its execution if no solution better than the incumbent is found after these many \textbf{consecutive} iterations
-\end{itemize}
+\paragraph{}As for halting conditions, similarly to reannealing, the algorithm stops its execution if one of three conditions are satisfied. The algorithms stops its execution after a specified maximum number of iterations; it also does so if no neighboring solution is accepted for a specified stretch of consecutive iterations or when, after a series of consecutive iterations, no candidate improves upon the current incumbent solution.
+
+%2 parameters are specified:
+
+%\begin{itemize}
+	%\item stop\_accepted - The algorithm stops its execution if this no neighbor solution is accepted for these many \textbf{consecutive} iterations
+	%\item stop\_best - the algorithm stops its execution if no solution better than the incumbent is found after these many \textbf{consecutive} iterations
+%\end{itemize}
 
 \subsection{Grid Search}
 
@@ -155,19 +160,29 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \section{Testing}
 
-\subsection{Metrics}
-
-%\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
-%\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
-\paragraph{}During the development, as well as during testing stages, only the \ac{RPE} is begin considered for the calculation of the fitness function. However, the user can attribute weights to both the \ac{APE} and \ac{RPE} using a YAML configuration file. In addition to that, the code supports, with a few small modifications, taking into account other metrics(CPU load, memory usage, etc).
-
 \subsection{Algorithms}
 
 \paragraph{}In this subsection, I explain both the \ac{SLAM} methods I chose to optimize and the hyperparameters I chose to optimize and why.
 
+\paragraph{}While almost any \ac{SLAM} method could be used to demonstrate the results of my implementations of the tuning algorithms mentioned previously, both faster-lio and fast-livo2 were chosen for specific reasons. Both faster-lio and fast-livo2 are state of the art solutions and are used extensively in the recent literature~\cite{fasterlio_article1, fasterlio_article2, fasterlio_survey, fastlivo2_article1, fastlivo2_article2}.
+
 %\paragraph{}One thing that is applicable to both \ac{SLAM} solutions chosen is that due to the high number of hyperparameters and the memory constraints, it is not possible  neither to optimize every hyperparameter nor to give every hyperparameter a very large number of possible values. For that reason, only a select few hyperparameters will be optimized, and the choices of hyperparameters will be fully explained below.
 
 \subsubsection{faster-lio}
+
+%\paragraph{}faster-lio was selected as the LiDAR–inertial SLAM system in this dissertation due to its demonstrated real-time performance and competitive accuracy in recent literature. The method employs a tightly coupled LiDAR–IMU formulation based on an iterated Kalman filter~\cite{fasterlio_article1}, enabling efficient local state estimation without relying on loop closure or global optimization~cite{fasterlio_article1}. Additionally, the algorithm exposes a compact yet meaningful set of tunable parameters, which is appropriate for systematic hyperparameter optimization.
+
+\paragraph{}faster-lio was selected as the \ac{LIDAR}–inertial \ac{SLAM} system in this dissertation due to its demonstrated real-time performance and competitive accuracy in recent literature~\cite{fasterlio_article1, fasterlio_comparison}. The method employs a tightly coupled LiDAR–IMU formulation based on an iterated Kalman filter~\cite{fasterlio_article1}, enabling efficient local state estimation without relying on loop closure or global optimization. This property makes faster-lio well suited for analyzing the influence of hyperparameter choices on odometry accuracy under controlled conditions. In addition, the algorithm exposes a compact yet meaningful set of tunable parameters, which is appropriate for systematic hyperparameter optimization.
+
+% diagrama alto-nível das features(feito em powerpoint)
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=1,width=0.8\linewidth]{images/faster-lio.pdf}
+    \caption{FPS comparison of faster-lio vs fast-lio and fast-lio2~\cite{fasterlio_article1}}
+    \label{faster-lio-comparison}
+\end{figure}
+
+\paragraph{}Below is a list of the faster-lio hyperparameters that were optimized.
 
 \begin{itemize}
 	\item point\_filter\_num
@@ -182,6 +197,19 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 
 \subsubsection{fast-livo2}
 
+\paragraph{}fast-livo2 was chosen as a complementary SLAM system to extend the analysis to a multi-modal LiDAR–visual–inertial system. By integrating visual information into the same tightly coupled estimation framework~\cite{fastlivo2_article1}(see figure \ref{fast-livo2 system overview}), fast-livo2 allows for a controlled investigation of how additional sensing modalities affect both system performance and hyperparameter sensitivity.
+
+% diagrama alto-nível das features(feito em powerpoint)
+\begin{figure}[h]
+    \centering
+    \includegraphics[page=1,width=1\linewidth]{images/fast-livo2.pdf}
+    \caption{fast-livo2 system overview~\cite{fastlivo2_article1}}
+    \label{fast-livo2 system overview}
+\end{figure}
+
+
+\paragraph{}Below is a list of the fast-livo2 hyperparameters that were optimized.
+
 \begin{itemize}
 	\item point\_filter\_num
 	\item filter\_size\_surf
@@ -195,26 +223,71 @@ During execution, the odometry data is streamed into the database(Surrealdb), wh
 	\item sliding\_thresh
 	\item pub\_scan\_num
 	\item filter\_size\_pcd
-	\item interval
+	%\item interval
 \end{itemize}
 
 %\paragraph{}Write something about faster-lio and fast-livo2 and why they were chosen.
+
+\subsection{Metrics}
+
+%\paragraph{}Write something about evalutation functions to compare configurations and obtain the better one.
+%\paragraph{}Probably not worth writing an entire subsection about this, but mention that only the RPE is being considered and why, but also mention that the code allows, with a few modifications to consider other metrics(like memory usage and CPU time) into the fitness function, with various weigth distributions.
+\paragraph{}During the development, as well as during testing stages, only the \ac{RPE} is begin considered for the calculation of the fitness function. The reason is fairly simple: both faster-lio and fast-livo2 do not have loop closure, and therefore the \ac{APE} is structurally high. Trying to optimize for the \ac{APE} wouldn't therefore reduce or eliminate it, as trajectory drift would just acumulate slower. Despite all this, the user can attribute weights to both the \ac{APE} and \ac{RPE} using a YAML configuration file. In addition to that, the code supports, with a few small modifications, taking into account other metrics(CPU load, memory usage, etc).
 
 \subsection{Dataset}
 
 \paragraph{}During code development, and also during testing and result extraction, I used the BotanicGarden dataset~\cite{Liu_2024}, specifically the 1006 03 sequence. This dataset presents a challenging, semi-structured environment with diverse sensor modalities, including a DALSA M1930 stereo camera, a DALSA C1930 stereo camera, a Velodyne VLP16 \ac{LIDAR}, a Livox Avia \ac{LIDAR}, and an Xsens Mti-680G \ac{IMU}. All sensors are hardware-synchronized, ensuring time-aligned measurements suitable for sensor fusion. It also provides a robust ground truth, generated using a static terrestrial laser scanner to acquire high-density, high-resolution point clouds. These point clouds were subsequently aligned to produce ground truth trajectories with an accuracy of approximately 1 cm.
 
+\paragraph{}For validation purposes, the 1018\_13 sequence from the BotanicGarden dataset was used, both using default and tuned parameters.
+
 \subsection{Tuning Strategy}
 
-\paragraph{}For result extraction, a tuning strategy was devised, taking into account the strengths of each implemented tuning algorithm and \ac{RUSTLE}'s bottleneck, which will be explained later in this section.
+\paragraph{}For both faster-lio and fast-livo2, two tests were devised.
 
-\paragraph{}Firstly, Simulated Annealing was used. The reasons for using Simulated Annealing first are two-fold. First, it is considerably more efficient than using pure Grid/Random Search. Even when taking into account \ac{SA}'s hyperparameters(halting conditions, reannealing parameters, normal distribution's means and standard deviations, and more) and the effect these have in algorithm performance, even a default configuration can perform better than Grid/Random Search. The second reason is a practical one, related to the way \ac{RUSTLE} handles an algorithm run's data. Before running an algorithm, \ac{RUSTLE} creates database entries for all required iterations and stores the relevant data in them. This might be useful for very few runs, but scales poorly when large numbers of runs are required, as is the case with Grid Search and Random Search. Given that a few features depend on this, it was decided to not change this major aspect of \ac{RUSTLE}.
+\paragraph{}The first test aims to demonstrate the advantage of hyperparameter optimization in comparison to default parameters, as well as to compare the effectiveness of each implemented tuning algorithm. As for each tuned parameters in both faster-lio and fast-livo2, the lower and upper bounds were chosen based on previous experience with these methods, mainly during the development and debugging of the tuning algorithms. Given the parameter bounds, appropriate parameter spaces were designed for Grid/Random Search, aimed at a runtime of 5 hours, and then both tuning algorithms were executed. As for Simulated Annealing, it is slightly more complicated. As explained before, perturbation functions have their own settings parameters, being the delta\_max for discrete parameters and the mean and standard deviation of the gaussian distribution for non discrete parameters. That being said, several runs of Simulated Annealing were needed to adjust these parameters before they allowed for a proper exploration of the previously defined parameter space(within the defined bounds).
 
-\paragraph{}Secondly, after experimenting with \ac{SA}'s hyperparameters and arriving at a final result, the results were dissected. The goal at this stage is to identify which parameters matter most when minimizing \ac{RPE}, and their promising regions, meaning the intervals [a, b] for each parameter's values where the \ac{RPE} is lowest. For this task, a simple scatter plot was used, plotting each parameter value vs iteration \ac{RPE}.
+\paragraph{}The second test is simpler, and aims to validate the first test's results, by running both default parameters and optimized parameter configurations on another dataset. The goal is to test how generalizable an optimized configuration is to other datasets. All tuning efforts were done on the 1006\_03 sequence of the BotanicGarden dataset, while the validation was done on the 1018\_13 sequence of the BotanicGarden dataset.
 
-\paragraph{}After analizing each scatter plot and choosing appropriate intervals for each parameter, Grid Search is used to attempt to further refine the solution. At this stage, it is important to take the step size of each parameter vector into consideration, given the fundamental bottleneck in the \ac{RUSTLE} codebase. The top 3/4 most important parameters were assigned finer step sizes, while the remaining parameters were given coarser step sizes.
+%\paragraph{}For result extraction, a tuning strategy was devised.
 
-\paragraph{}After running Grid Search, Random Search is run on the same parameter space, with the same settings. This is done mainly to illustrate the differences and advantages of Random Search over Grid Search.
+%\paragraph{}For each chosen parameter of both faster-lio and fast-livo2, the lower and upper bounds were chosen based on previous experience with these methods.
+
+%\paragraph{}Then, using these lower and upper bounds, appropriate parameter spaces were designed for Grid/Random Search, aimed at a runtime of 5 hours. Both Grid Search and Random Search were run with the settings mentioned.
+
+%\paragraph{}As for Simulated Annealing, it is slightly more complicated. As explained before, perturbation functions have their own settings(parameters), being the delta\_max for discrete parameters and the mean and standard deviation of the gaussian distribution for non discrete parameters. That being said, several runs of Simulated Annealing were needed to adjust these parameters before they allowed for a proper exploration of the previously defined parameter space(within the defined bounds).
+
+%\paragraph{}For validation purposes, after obtaining the best configuration out of the three methods run(Grid Search, Random Search and Simulated Annealing), that configuration was then run on another sequence of the BotanicGarden dataset.
+
+
+
+\subsection{Machine}
+
+\paragraph{}All tests were done on a machine whose specs are specified in the table below.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+CPU    & AMD Ryzen 7 2700x 3.7GHz    \\ \hline
+GPU    & Nvidia GeForce GTX 1060 6GB \\ \hline
+Memory & 16GB                        \\ \hline
+Disk   & 1TB SSD + 1TB HDD           \\ \hline
+OS     & Ubuntu 20.04.6 LTS          \\ \hline
+Kernel & 5.15.0-139-generic          \\ \hline
+\end{tabular}
+\caption{Test machine specs}
+\label{test-machine-specs}
+\end{table}
+
+%\paragraph{}For result extraction, a tuning strategy was devised, taking into account the strengths of each implemented tuning algorithm and \ac{RUSTLE}'s bottleneck, which will be explained later in this section.
+
+%\paragraph{}Firstly, Simulated Annealing was used. The reasons for using Simulated Annealing first are two-fold. First, it is considerably more efficient than using pure Grid/Random Search. Even when taking into account \ac{SA}'s hyperparameters(halting conditions, reannealing parameters, normal distribution's means and standard deviations, and more) and the effect these have in algorithm performance, even a default configuration can perform better than Grid/Random Search. The second reason is a practical one, related to the way \ac{RUSTLE} handles an algorithm run's data. Before running an algorithm, \ac{RUSTLE} creates database entries for all required iterations and stores the relevant data in them. This might be useful for very few runs, but scales poorly when large numbers of runs are required, as is the case with Grid Search and Random Search. Given that a few features depend on this, it was decided to not change this major aspect of \ac{RUSTLE}.
+
+%\paragraph{}Secondly, after experimenting with \ac{SA}'s hyperparameters and arriving at a final result, the results were dissected. The goal at this stage is to identify which parameters matter most when minimizing \ac{RPE}, and their promising regions, meaning the intervals [a, b] for each parameter's values where the \ac{RPE} is lowest. For this task, a simple scatter plot was used, plotting each parameter value vs iteration \ac{RPE}.
+
+%\paragraph{}After analizing each scatter plot and choosing appropriate intervals for each parameter, Grid Search is used to attempt to further refine the solution. At this stage, it is important to take the step size of each parameter vector into consideration, given the fundamental bottleneck in the \ac{RUSTLE} codebase. The top 3/4 most important parameters were assigned finer step sizes, while the remaining parameters were given coarser step sizes.
+
+%\paragraph{}After running Grid Search, Random Search is run on the same parameter space, with the same settings. This is done mainly to illustrate the differences and advantages of Random Search over Grid Search.
 
 %\paragraph{}In order to extract good parameter values, the following strategy was devised:
 

@@ -3,11 +3,13 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Summary of HPT methods used in literature.}}{20}{table.caption.115}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Test machine specs}}{32}{table.caption.160}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Default parameter results(5 run average) for faster-lio}}{33}{table.caption.156}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Default parameter values for faster-lio}}{33}{table.caption.157}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces faster-lio discrete parameter settings}}{34}{table.caption.160}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces faster-lio continuous parameter settings}}{34}{table.caption.161}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces faster-lio grid/random search parameter space}}{37}{table.caption.170}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Default parameter results(5 run average) for faster-lio}}{33}{table.caption.163}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Default parameter values for faster-lio}}{33}{table.caption.164}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces faster-lio discrete parameter settings}}{34}{table.caption.167}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces faster-lio continuous parameter settings}}{34}{table.caption.168}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces faster-lio tuning results}}{41}{table.caption.191}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Default parameter results(5 run average) for fast-livo2}}{41}{table.caption.192}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

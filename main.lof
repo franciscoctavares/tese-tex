@@ -8,20 +8,27 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search~\cite {castillo2022hyperparameter}.}}{11}{figure.caption.72}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search~\cite {castillo2022hyperparameter}.}}{12}{figure.caption.75}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm~\cite {brochu2010tutorial}.}}{13}{figure.caption.80}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm.}}{15}{figure.caption.94}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm~\cite {sa_netlogo}.}}{15}{figure.caption.94}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm~\cite {soper2022hyperparameter}.}}{16}{figure.caption.99}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way~\cite {li2018hyperband}.}}{17}{figure.caption.103}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \ac {RUSTLE} diagram}}{23}{figure.caption.119}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces low-level diagram of hyperparameter tuning module}}{25}{figure.caption.128}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Search procedure}}{27}{figure.caption.138}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Search procedure}}{28}{figure.caption.142}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces low-level diagram of hyperparameter tuning module}}{25}{figure.caption.127}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Search procedure}}{27}{figure.caption.137}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Search procedure}}{28}{figure.caption.141}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces FPS comparison of faster-lio vs fast-lio and fast-lio2~\cite {fasterlio_article1}}}{29}{figure.caption.147}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces fast-livo2 system overview~\cite {fastlivo2_article1}}}{30}{figure.caption.151}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces RPE per iteration of Simulated Annealing}}{34}{figure.caption.162}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces cube\_side\_length scatter plot}}{35}{figure.caption.165}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces filter\_size\_surf scatter plot}}{36}{figure.caption.167}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces ivox\_grid\_resolution scatter plot}}{36}{figure.caption.168}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces RPE per iterations of Grid Search}}{37}{figure.caption.172}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces RPE per iterations of Random Search}}{38}{figure.caption.178}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces RPE per iteration of Simulated Annealing}}{34}{figure.caption.169}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces cube\_side\_length scatter plot}}{35}{figure.caption.172}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces ivox\_grid\_resolution scatter plot}}{36}{figure.caption.174}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RPE per iterations of Grid Search}}{36}{figure.caption.177}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ivox\_grid\_resolution scatter plot}}{37}{figure.caption.179}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces filter\_size\_map scatter plot}}{37}{figure.caption.180}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces filter\_size\_surf scatter plot}}{38}{figure.caption.181}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces RPE per iterations of Random Search}}{39}{figure.caption.185}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ivox\_grid\_resolution scatter plot}}{39}{figure.caption.187}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces filter\_size\_map scatter plot}}{40}{figure.caption.188}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces filter\_size\_surf scatter plot}}{40}{figure.caption.189}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

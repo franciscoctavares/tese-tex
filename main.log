@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  31 DEC 2025 20:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  25 JAN 2026 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1455,7 +1455,7 @@ Package hyperref Info: Link coloring ON on input line 188.
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=214, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=218, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf>
 Package pdftex.def Info: images/cover.pdf  used on input line 194.
@@ -1468,7 +1468,7 @@ rsion <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=216, page=1, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=220, page=1, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 1>
 Package pdftex.def Info: images/cover.pdf , page1 used on input line 194.
@@ -1499,7 +1499,7 @@ Package pdftex.def Info: images/cover.pdf , page1 used on input line 194.
 
 pdfTeX warning: pdflatex (file ./images/cover.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<images/cover.pdf, id=247, page=2, 597.55246pt x 845.07718pt>
+<images/cover.pdf, id=251, page=2, 597.55246pt x 845.07718pt>
 File: images/cover.pdf Graphic file (type pdf)
 <use images/cover.pdf, page 2>
 Package pdftex.def Info: images/cover.pdf , page2 used on input line 194.
@@ -1517,7 +1517,7 @@ Package pdftex.def Info: images/cover.pdf , page2 used on input line 194.
 [2
 
  <./images/cover.pdf>] (title_page.tex
-<images/UC_logos/UC_V_FundoClaro-negro.png, id=253, 1672.2475pt x 1676.2625pt>
+<images/UC_logos/UC_V_FundoClaro-negro.png, id=257, 1672.2475pt x 1676.2625pt>
 File: images/UC_logos/UC_V_FundoClaro-negro.png Graphic file (type png)
 <use images/UC_logos/UC_V_FundoClaro-negro.png>
 Package pdftex.def Info: images/UC_logos/UC_V_FundoClaro-negro.png  used on inp
@@ -1664,25 +1664,25 @@ LaTeX Warning: Hyper reference `acro:VO' on page xiv undefined on input line 28
 Package acronym Info: Label `acro:HB' newly defined as it shall be overridden
 although it is yet undefined on input line 13.
 Package acronym Info: Label `acro:RUSTLE' overridden on input line 15.
-)
+
+
+[15
+
+])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
 
-[15
-
-]
-
-[16
-
-] (main.lot)
+[16] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
 
 
-[17]
+[17
+
+]
 
 [18
 
@@ -1694,7 +1694,7 @@ Package acronym Info: Label `acro:LIDAR' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 3.
 
-Overfull \hbox (3.7722pt too wide) in paragraph at lines 3--4
+Overfull \hbox (9.2472pt too wide) in paragraph at lines 3--4
 [] [][] \T1/lmr/m/n/10.95 Si-mul-ta-ne-ous Lo-cal-iza-tion and Map-ping ([])[] 
 is one of the most stud-ied top-ics in robotics [[],
  []
@@ -1722,18 +1722,21 @@ Package acronym Info: Label `acro:HPT' overridden on input line 14.
 lm-ts1.enc}]
 Chapter 2.
 (chapters/background.tex
-<images/visual_slam_steps.pdf, id=610, 374.59952pt x 235.47974pt>
+
+pdfTeX warning: pdflatex (file ./images/visual_slam_steps.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<images/visual_slam_steps.pdf, id=639, 399.41219pt x 189.8292pt>
 File: images/visual_slam_steps.pdf Graphic file (type pdf)
 <use images/visual_slam_steps.pdf>
 Package pdftex.def Info: images/visual_slam_steps.pdf  used on input line 15.
-(pdftex.def)             Requested size: 318.66948pt x 200.3204pt.
+(pdftex.def)             Requested size: 409.71692pt x 194.72679pt.
+Package acronym Info: Label `acro:IMU' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
 
 
 [3
 
  <./images/visual_slam_steps.pdf>]
-Package acronym Info: Label `acro:IMU' newly defined as it shall be overridden
-although it is yet undefined on input line 20.
 Package acronym Info: Label `acro:LoG' newly defined as it shall be overridden
 although it is yet undefined on input line 22.
 Package acronym Info: Label `acro:DoG' newly defined as it shall be overridden
@@ -1741,7 +1744,7 @@ although it is yet undefined on input line 22.
 
 
 [4]
-<images/VSLAM.png, id=666, 813.0375pt x 315.1775pt>
+<images/VSLAM.png, id=700, 813.0375pt x 315.1775pt>
 File: images/VSLAM.png Graphic file (type png)
 <use images/VSLAM.png>
 Package pdftex.def Info: images/VSLAM.png  used on input line 37.
@@ -1755,7 +1758,7 @@ although it is yet undefined on input line 46.
 
 
 [6]
-<images/lidar_point_cloud.pdf, id=717, 250.68657pt x 120.45pt>
+<images/lidar_point_cloud.pdf, id=751, 250.68657pt x 120.45pt>
 File: images/lidar_point_cloud.pdf Graphic file (type pdf)
 <use images/lidar_point_cloud.pdf>
 Package pdftex.def Info: images/lidar_point_cloud.pdf  used on input line 59.
@@ -1771,7 +1774,7 @@ Package svg Info: Last page of `./svg-inkscape/multisensor_slam_svg-tex.pdf' is
  1 on input line 71.
 
 (svg-inkscape/multisensor_slam_svg-tex.pdf_tex
-<./svg-inkscape/multisensor_slam_svg-tex.pdf, id=750, page=1, 1047.915pt x 498.
+<./svg-inkscape/multisensor_slam_svg-tex.pdf, id=784, page=1, 1047.915pt x 498.
 86375pt>
 File: ./svg-inkscape/multisensor_slam_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/multisensor_slam_svg-tex.pdf, page 1>
@@ -1799,49 +1802,45 @@ although it is yet undefined on input line 109.
 
 
 [10]
-Package svg Info: Last page of `./svg-inkscape/grid_search_svg-tex.pdf' is 1 on
- input line 125.
- (svg-inkscape/grid_search_svg-tex.pdf_tex
-<./svg-inkscape/grid_search_svg-tex.pdf, id=841, page=1, 189.70876pt x 175.8570
-1pt>
-File: ./svg-inkscape/grid_search_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/grid_search_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/grid_search_svg-tex.pdf , page1 used on
- input line 56.
-(pdftex.def)             Requested size: 227.62206pt x 211.00589pt.
-)
-Package svg Info: Last page of `./svg-inkscape/random_search_svg-tex.pdf' is 1 
-on input line 136.
 
-(svg-inkscape/random_search_svg-tex.pdf_tex
-<./svg-inkscape/random_search_svg-tex.pdf, id=848, page=1, 205.96951pt x 181.87
-952pt>
-File: ./svg-inkscape/random_search_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/random_search_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/random_search_svg-tex.pdf , page1 used 
-on input line 56.
-(pdftex.def)             Requested size: 227.62206pt x 200.99777pt.
-)
+pdfTeX warning: pdflatex (file ./images/search_tese.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<images/search_tese.pdf, id=874, page=1, 241.15094pt x 219.18889pt>
+File: images/search_tese.pdf Graphic file (type pdf)
+<use images/search_tese.pdf, page 1>
+Package pdftex.def Info: images/search_tese.pdf , page1 used on input line 124.
+
+(pdftex.def)             Requested size: 273.14923pt x 248.29594pt.
+
+
+pdfTeX warning: pdflatex (file ./images/search_tese.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<images/search_tese.pdf, id=880, page=2, 256.42801pt x 223.00313pt>
+File: images/search_tese.pdf Graphic file (type pdf)
+<use images/search_tese.pdf, page 2>
+Package pdftex.def Info: images/search_tese.pdf , page2 used on input line 134.
+
+(pdftex.def)             Requested size: 273.14923pt x 237.56294pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[11 <./svg-inkscape/grid_search_svg-tex.pdf>]
+[11 <./images/search_tese.pdf>]
 Package acronym Info: Label `acro:BO' newly defined as it shall be overridden
-although it is yet undefined on input line 146.
+although it is yet undefined on input line 144.
 
 
-[12 <./svg-inkscape/random_search_svg-tex.pdf>]
+[12 <./images/search_tese.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 162.
+put line 160.
 Package acronym Info: Label `acro:EI' newly defined as it shall be overridden
-although it is yet undefined on input line 181.
+although it is yet undefined on input line 179.
 Package acronym Info: Label `acro:PI' newly defined as it shall be overridden
-although it is yet undefined on input line 181.
+although it is yet undefined on input line 179.
 Package acronym Info: Label `acro:ULCB' newly defined as it shall be overridden
 
-although it is yet undefined on input line 181.
+although it is yet undefined on input line 179.
 
 
 [13
@@ -1849,43 +1848,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.captio
 n.80}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.189     \item R
+l.187     \item R
                  epeat steps 1, 2 and 3 until some stopping criteria is met(...
 ]
 Package acronym Info: Label `acro:SA' newly defined as it shall be overridden
-although it is yet undefined on input line 198.
+although it is yet undefined on input line 196.
 
 
 [14]
-Package svg Info: Last page of `./svg-inkscape/SA_svg-tex.pdf' is 1 on input li
-ne 209.
- (svg-inkscape/SA_svg-tex.pdf_tex
-<./svg-inkscape/SA_svg-tex.pdf, id=937, page=1, 298.716pt x 239.09326pt>
-File: ./svg-inkscape/SA_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/SA_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/SA_svg-tex.pdf , page1 used on input li
-ne 56.
-(pdftex.def)             Requested size: 182.09486pt x 145.75182pt.
-)
+
+pdfTeX warning: pdflatex (file ./images/SA.pdf): PDF inclusion: found PDF versi
+on <1.7>, but at most version <1.5> allowed
+<images/SA.pdf, id=1009, 301.79753pt x 252.04163pt>
+File: images/SA.pdf Graphic file (type pdf)
+<use images/SA.pdf>
+Package pdftex.def Info: images/SA.pdf  used on input line 208.
+(pdftex.def)             Requested size: 273.14923pt x 228.12756pt.
 Package acronym Info: Label `acro:SH' newly defined as it shall be overridden
-although it is yet undefined on input line 215.
+although it is yet undefined on input line 214.
 
 
-[15 <./svg-inkscape/SA_svg-tex.pdf>]
+[15 <./images/SA.pdf>]
 Package svg Info: Last page of `./svg-inkscape/SH_svg-tex.pdf' is 1 on input li
-ne 222.
+ne 221.
  (svg-inkscape/SH_svg-tex.pdf_tex
-<./svg-inkscape/SH_svg-tex.pdf, id=958, page=1, 369.17924pt x 233.67299pt>
+<./svg-inkscape/SH_svg-tex.pdf, id=1166, page=1, 369.17924pt x 233.67299pt>
 File: ./svg-inkscape/SH_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SH_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/SH_svg-tex.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 273.14923pt x 172.89746pt.
 )
-<images/hyperband.pdf, id=966, 465.53926pt x 254.1495pt>
+<images/hyperband.pdf, id=1174, 465.53926pt x 254.1495pt>
 File: images/hyperband.pdf Graphic file (type pdf)
 <use images/hyperband.pdf>
-Package pdftex.def Info: images/hyperband.pdf  used on input line 241.
+Package pdftex.def Info: images/hyperband.pdf  used on input line 240.
 (pdftex.def)             Requested size: 341.43307pt x 186.39626pt.
 
 
@@ -1901,74 +1898,84 @@ Underfull \vbox (badness 2744) has occurred while \output is active []
 [17 <./images/hyperband.pdf>]
 Package acronym Info: Label `acro:SMBO' newly defined as it shall be overridden
 
-although it is yet undefined on input line 260.
+although it is yet undefined on input line 259.
 
 
 [18]
 Package acronym Info: Label `acro:PSO' newly defined as it shall be overridden
-although it is yet undefined on input line 262.
+although it is yet undefined on input line 261.
 Package acronym Info: Label `acro:EA' newly defined as it shall be overridden
-although it is yet undefined on input line 262.
+although it is yet undefined on input line 261.
 
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 []|\T1/lmr/m/n/10.95 Z. Zheng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 []|\T1/lmr/m/n/10.95 Feature-based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 \T1/lmr/m/n/10.95 Vi-sual Odom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 \T1/lmr/m/n/10.95 e-try(not full
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 []|\T1/lmr/m/n/10.95 A. Pu-tra and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 \T1/lmr/m/n/10.95 P. Pra-jitno
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 []|\T1/lmr/m/n/10.95 G-mapping
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 \T1/lmr/m/n/10.95 SLAM(particle
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 272--272
+Underfull \hbox (badness 3271) in paragraph at lines 271--271
 []|\T1/lmr/m/n/10.95 K. Koide et al
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
 []|\T1/lmr/m/n/10.95 Lidar Odom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
 \T1/lmr/m/n/10.95 e-try(not full
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 272--272
+Underfull \hbox (badness 1975) in paragraph at lines 271--271
 \T1/lmr/m/n/10.95 en-vi-ron-ments, both com-po-nents (trans-la-
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 272--272
+\T1/lmr/m/n/10.95 P. Skrzypczy«ski
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[]|\T1/lmr/m/n/10.95 RGB-D Vi-sual
  []
 
 
@@ -1978,16 +1985,6 @@ Underfull \hbox (badness 1221) in paragraph at lines 273--273
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 273--273
-[]|\T1/lmr/m/n/10.95 RGB-D Vi-sual
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 274--274
-\T1/lmr/m/n/10.95 P. Skrzypczy«ski
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--274
 []|\T1/lmr/m/n/10.95 RGB-D Vi-sual
  []
 
@@ -2011,7 +2008,7 @@ Chapter 3.
 
 pdfTeX warning: pdflatex (file ./images/rustle_diagram.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<images/rustle_diagram.pdf, id=1093, page=2, 963.6pt x 542.025pt>
+<images/rustle_diagram.pdf, id=1301, page=2, 963.6pt x 542.025pt>
 File: images/rustle_diagram.pdf Graphic file (type pdf)
 <use images/rustle_diagram.pdf, page 2>
 Package pdftex.def Info: images/rustle_diagram.pdf , page2 used on input line 8
@@ -2025,11 +2022,11 @@ Package pdftex.def Info: images/rustle_diagram.pdf , page2 used on input line 8
 
 pdfTeX warning: pdflatex (file ./images/rustle_diagram.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<images/rustle_diagram.pdf, id=1138, page=3, 963.6pt x 542.025pt>
+<images/rustle_diagram.pdf, id=1347, page=3, 963.6pt x 542.025pt>
 File: images/rustle_diagram.pdf Graphic file (type pdf)
 <use images/rustle_diagram.pdf, page 3>
 Package pdftex.def Info: images/rustle_diagram.pdf , page3 used on input line 4
-6.
+7.
 (pdftex.def)             Requested size: 364.19667pt x 204.8551pt.
 
 
@@ -2039,29 +2036,45 @@ Package pdftex.def Info: images/rustle_diagram.pdf , page3 used on input line 4
 
 [27
 pdfTeX warning (ext4): destination with the same identifier (name{figure.captio
-n.138}) has been already used, duplicate ignored
+n.137}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.128 \subsection{Random Search}
-                                ]
+l.155 \end{figure}
+                  ]
 
 [28
 pdfTeX warning (ext4): destination with the same identifier (name{figure.captio
-n.142}) has been already used, duplicate ignored
+n.141}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.170 \subsubsection{faster-lio}
-                                ]
+l.176 
+      ]
 
-[29]
+pdfTeX warning: pdflatex (file ./images/faster-lio.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/faster-lio.pdf, id=1429, page=1, 216.91039pt x 113.09251pt>
+File: images/faster-lio.pdf Graphic file (type pdf)
+<use images/faster-lio.pdf, page 1>
+Package pdftex.def Info: images/faster-lio.pdf , page1 used on input line 180.
+(pdftex.def)             Requested size: 364.19667pt x 189.88712pt.
 
-[30])
 
-[31]
+[29 <./images/faster-lio.pdf>]
 
-[32
+pdfTeX warning: pdflatex (file ./images/fast-livo2.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/fast-livo2.pdf, id=1459, page=1, 494.99931pt x 152.4897pt>
+File: images/fast-livo2.pdf Graphic file (type pdf)
+<use images/fast-livo2.pdf, page 1>
+Package pdftex.def Info: images/fast-livo2.pdf , page1 used on input line 205.
+(pdftex.def)             Requested size: 455.24411pt x 140.25034pt.
 
-]
+
+[30 <./images/fast-livo2.pdf>]
+
+[31])
+
+[32]
 Chapter 4.
 (chapters/results.tex
 
@@ -2070,8 +2083,10 @@ LaTeX Warning: No positions in optional float specifier.
 
 
 
-[33]
-<images/faster-lio-sa.pdf, id=1259, 462.52798pt x 346.89601pt>
+[33
+
+]
+<images/faster-lio-sa.pdf, id=1578, 462.52798pt x 346.89601pt>
 File: images/faster-lio-sa.pdf Graphic file (type pdf)
 <use images/faster-lio-sa.pdf>
 Package pdftex.def Info: images/faster-lio-sa.pdf  used on input line 69.
@@ -2079,7 +2094,7 @@ Package pdftex.def Info: images/faster-lio-sa.pdf  used on input line 69.
 
 
 [34 <./images/faster-lio-sa.pdf>]
-<images/cube_side_length_rpe.pdf, id=1347, 462.52798pt x 346.89601pt>
+<images/cube_side_length_rpe.pdf, id=1626, 462.52798pt x 346.89601pt>
 File: images/cube_side_length_rpe.pdf Graphic file (type pdf)
 <use images/cube_side_length_rpe.pdf>
 Package pdftex.def Info: images/cube_side_length_rpe.pdf  used on input line 80
@@ -2088,88 +2103,145 @@ Package pdftex.def Info: images/cube_side_length_rpe.pdf  used on input line 80
 
 
 [35 <./images/cube_side_length_rpe.pdf>]
-<images/filter_size_surf_rpe.pdf, id=1413, 462.52798pt x 346.89601pt>
-File: images/filter_size_surf_rpe.pdf Graphic file (type pdf)
-<use images/filter_size_surf_rpe.pdf>
-Package pdftex.def Info: images/filter_size_surf_rpe.pdf  used on input line 89
-.
-(pdftex.def)             Requested size: 295.90588pt x 221.93858pt.
-<images/ivox_grid_resolution_rpe.pdf, id=1414, 462.52798pt x 346.89601pt>
+<images/ivox_grid_resolution_rpe.pdf, id=1690, 462.52798pt x 346.89601pt>
 File: images/ivox_grid_resolution_rpe.pdf Graphic file (type pdf)
 <use images/ivox_grid_resolution_rpe.pdf>
 Package pdftex.def Info: images/ivox_grid_resolution_rpe.pdf  used on input lin
-e 96.
+e 89.
 (pdftex.def)             Requested size: 295.90588pt x 221.93858pt.
-
-
-[36 <./images/filter_size_surf_rpe.pdf> <./images/ivox_grid_resolution_rpe.pdf
-
-pdfTeX warning: pdflatex (file ./images/ivox_grid_resolution_rpe.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<images/faster-lio-grid-search-rpe.pdf, id=1523, 462.52798pt x 346.89601pt>
-File: images/faster-lio-grid-search-rpe.pdf Graphic file (type pdf)
-<use images/faster-lio-grid-search-rpe.pdf>
-Package pdftex.def Info: images/faster-lio-grid-search-rpe.pdf  used on input l
-ine 126.
-(pdftex.def)             Requested size: 341.43307pt x 256.085pt.
-
-
-[37 <./images/faster-lio-grid-search-rpe.pdf>]
-<images/faster-lio-random-search-rpe.pdf, id=1586, 462.52798pt x 346.89601pt>
-File: images/faster-lio-random-search-rpe.pdf Graphic file (type pdf)
-<use images/faster-lio-random-search-rpe.pdf>
-Package pdftex.def Info: images/faster-lio-random-search-rpe.pdf  used on input
- line 145.
+<images/faster-lio-gs.pdf, id=1693, 462.52798pt x 346.89601pt>
+File: images/faster-lio-gs.pdf Graphic file (type pdf)
+<use images/faster-lio-gs.pdf>
+Package pdftex.def Info: images/faster-lio-gs.pdf  used on input line 102.
 (pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
 
 
-[38 <./images/faster-lio-random-search-rpe.pdf>])
+[36 <./images/ivox_grid_resolution_rpe.pdf> <./images/faster-lio-gs.pdf>]
+<images/fasterliogs-ivox-grid-resolution.pdf, id=1796, 462.52798pt x 346.89601p
+t>
+File: images/fasterliogs-ivox-grid-resolution.pdf Graphic file (type pdf)
+<use images/fasterliogs-ivox-grid-resolution.pdf>
+Package pdftex.def Info: images/fasterliogs-ivox-grid-resolution.pdf  used on i
+nput line 111.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+<images/fasterliogs-filter-size-map.pdf, id=1797, 462.52798pt x 346.89601pt>
+File: images/fasterliogs-filter-size-map.pdf Graphic file (type pdf)
+<use images/fasterliogs-filter-size-map.pdf>
+Package pdftex.def Info: images/fasterliogs-filter-size-map.pdf  used on input 
+line 118.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+<images/fasterliogs-filter-size-surf.pdf, id=1798, 462.52798pt x 346.89601pt>
+File: images/fasterliogs-filter-size-surf.pdf Graphic file (type pdf)
+<use images/fasterliogs-filter-size-surf.pdf>
+Package pdftex.def Info: images/fasterliogs-filter-size-surf.pdf  used on input
+ line 125.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
 
-[39]
 
-[40
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-]
-Chapter 5.
-(chapters/conclusion.tex) (main.bbl
+
+
+[37 <./images/fasterliogs-ivox-grid-resolution.pdf> <./images/fasterliogs-filte
+r-size-map.pdf>]
+
+LaTeX Warning: Reference `faster-lio-parameter space' on page 38 undefined on i
+nput line 144.
+
+<images/faster-lio-rs.pdf, id=1884, 462.52798pt x 346.89601pt>
+File: images/faster-lio-rs.pdf Graphic file (type pdf)
+<use images/faster-lio-rs.pdf>
+Package pdftex.def Info: images/faster-lio-rs.pdf  used on input line 148.
+(pdftex.def)             Requested size: 295.90588pt x 221.93858pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[38 <./images/fasterliogs-filter-size-surf.pdf>]
+<images/fasterliors-ivox-grid-resolution.pdf, id=1925, 462.52798pt x 346.89601p
+t>
+File: images/fasterliors-ivox-grid-resolution.pdf Graphic file (type pdf)
+<use images/fasterliors-ivox-grid-resolution.pdf>
+Package pdftex.def Info: images/fasterliors-ivox-grid-resolution.pdf  used on i
+nput line 165.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+<images/fasterliors-filter-size-map.pdf, id=1926, 462.52798pt x 346.89601pt>
+File: images/fasterliors-filter-size-map.pdf Graphic file (type pdf)
+<use images/fasterliors-filter-size-map.pdf>
+Package pdftex.def Info: images/fasterliors-filter-size-map.pdf  used on input 
+line 172.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/fasterliors-filter-size-surf.pdf, id=1927, 462.52798pt x 346.89601pt>
+File: images/fasterliors-filter-size-surf.pdf Graphic file (type pdf)
+<use images/fasterliors-filter-size-surf.pdf>
+Package pdftex.def Info: images/fasterliors-filter-size-surf.pdf  used on input
+ line 179.
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[39 <./images/faster-lio-rs.pdf> <./images/fasterliors-ivox-grid-resolution.pdf
+>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 188.
+
+
+
+[40 <./images/fasterliors-filter-size-map.pdf> <./images/fasterliors-filter-siz
+e-surf.pdf>])
 
 [41]
 
 [42
 
 ]
+Chapter 5.
+(chapters/conclusion.tex) (main.bbl
 
 [43]
 
-[44]
+[44
+
+]
+
+[45]
+
+[46]
+
+[47]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-64.
+78.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-[45]
-Underfull \hbox (badness 3240) in paragraph at lines 183--187
+Underfull \hbox (badness 3240) in paragraph at lines 197--201
 []\T1/lmr/m/n/10.95 A. Bis-suel, ``Hyper-parameter op-ti-miza-tion al-go-rithms
 : a short re-view,'' \T1/lmr/m/it/10.95 Criteo
  []
 
 
 
-[46])
+[48]
 
-[47]
+[49])
 
-[48
-
-]
+[50]
 Appendix A.
 (appendix/sample.tex)
 
-[49] (main.aux)
+[51
+
+] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -2182,38 +2254,57 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0E48FECD55376DB1C468D02EFBCE1DD8;6516.
+(rerunfilecheck)             Checksum: FDC721107999E7D991B8B382AC700150;6645.
  ) 
 Here is how much of TeX's memory you used:
- 36616 strings out of 468133
- 739556 string characters out of 5424868
- 1260895 words of memory out of 5000000
- 64108 multiletter control sequences out of 15000+600000
+ 36688 strings out of 468133
+ 741348 string characters out of 5424868
+ 1263702 words of memory out of 5000000
+ 64168 multiletter control sequences out of 15000+600000
  709900 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,17n,121p,1975b,863s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,17n,121p,1975b,911s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmbx10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Francisco Tavares/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Francisco Tavares/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Francisc
-o Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Use
-rs/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.
-pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmr12.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmr6.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Francisco Tavares/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Francisco Tavares/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Francisco Ta
-vares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/User
-s/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
-pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmsy8.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (69 pages, 3466151 bytes).
+amsfonts/cm/cmbx10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Francisco Tavares/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Franc
+isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Francisco Tavares/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fr
+ancisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mib10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Users/Francisco Tavares/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Francisco Tavares/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/
+Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Users/Francisco Tavares/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Francisco Tavares/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Franci
+sco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/
+Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lme
+x10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmmi10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmmi6.pfb><C:/Users/Francisco Tavares/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Francisco Tavares/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Francisco Tavare
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Franc
+isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/U
+sers/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8
+.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmr9.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmri10.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisco Tavares/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Francisco Tavare
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Franc
+isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
+/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb>
+Output written on main.pdf (71 pages, 5186839 bytes).
 PDF statistics:
- 1856 PDF objects out of 2073 (max. 8388607)
- 385 named destinations out of 1000 (max. 500000)
- 636 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2316 PDF objects out of 2487 (max. 8388607)
+ 406 named destinations out of 1000 (max. 500000)
+ 664 words of extra memory for PDF output out of 10000 (max. 10000000)
 

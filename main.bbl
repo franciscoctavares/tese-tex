@@ -29,6 +29,9 @@ E.~Brochu, V.~M. Cora, and N.~De~Freitas, ``A tutorial on bayesian optimization
   hierarchical reinforcement learning,'' {\em arXiv preprint arXiv:1012.2599},
   2010.
 
+\bibitem{sa_netlogo}
+F.~S. Caparrini, ``Simulated annealing in netlogo,'' 2019.
+
 \bibitem{soper2022hyperparameter}
 D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
   cross validation,'' {\em Algorithms}, vol.~16, no.~1, p.~17, 2022.
@@ -37,6 +40,17 @@ D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
 L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
   A novel bandit-based approach to hyperparameter optimization,'' {\em Journal
   of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
+
+\bibitem{fasterlio_article1}
+C.~Bai, T.~Xiao, Y.~Chen, H.~Wang, F.~Zhang, and X.~Gao, ``Faster-lio:
+  Lightweight tightly coupled lidar-inertial odometry using parallel sparse
+  incremental voxels,'' {\em IEEE Robotics and Automation Letters}, vol.~7,
+  no.~2, pp.~4861--4868, 2022.
+
+\bibitem{fastlivo2_article1}
+C.~Zheng, W.~Xu, Z.~Zou, T.~Hua, C.~Yuan, D.~He, B.~Zhou, Z.~Liu, J.~Lin,
+  F.~Zhu, Y.~Ren, R.~Wang, F.~Meng, and F.~Zhang, ``Fast-livo2: Fast, direct
+  lidar-inertial-visual odometry,'' 2024.
 
 \bibitem{becnkis2024survey}
 R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
@@ -260,6 +274,27 @@ B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
 
 \bibitem{argmin_ref}
 S.~Kroboth, ``{argmin}: Numerical optimization in rust,'' 2024.
+
+\bibitem{fasterlio_article2}
+Y.~Li, H.~Zhang, and J.~Wang, ``Triangle descriptor loop detection method based
+  on faster-lio,'' vol.~XLVIII-4/W10-2024, pp.~183--190, 2024.
+
+\bibitem{fasterlio_survey}
+T.~Wang, S.~Li, and Y.~Chen, ``Lidar odometry: Recent advancements and
+  remaining challenges,'' {\em Journal of Real-Time Image Processing}, 2024.
+
+\bibitem{fastlivo2_article2}
+B.~Zhou, C.~Zheng, Z.~Wang, F.~Zhu, Y.~Cai, and F.~Zhang, ``Fast-livo2 on
+  resource-constrained platforms: Lidar-inertial-visual odometry with efficient
+  memory and computation,'' 2025.
+
+\bibitem{fasterlio_comparison}
+J.~B{\k{e}}dkowski, M.~Matecki, M.~Pe{\l}ka, K.~Majek, P.~Lekston,
+  A.~Kostrzewa, J.~Markiewicz, S.~{\L}api{\'n}ski, M.~W{\l}asiuk, and
+  K.~Mrozowski, ``The benchmark of lidar odometry algorithms utilised for a
+  low-cost mobile mapping system,'' {\em The International Archives of the
+  Photogrammetry, Remote Sensing and Spatial Information Sciences}, vol.~48,
+  pp.~25--32, 2025.
 
 \bibitem{Liu_2024}
 Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
