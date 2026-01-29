@@ -1,1 +1,21 @@
+\paragraph{}In this dissertation, I implement three hyperparameter optimization algorithms, namely Grid Search, Random Search, and Simulated Annealing. It has five components: dataset definition, \ac{SLAM} algorithm, tuning algorithm and parameter selection, and metric weights. Dataset definition refers not just to choosing the dataset for which to optimize the \ac{SLAM} parameters, but also the section of that dataset for which to optimize. The parameter selection requires a search space to be delimited. For Grid/Random Search, that is simply defining upper and lower bounds, as well as a step size, for each parameter. For Simulated Annealing, additional settings related to perturbation functions and reannealing must be specified. Attributing weights to each metric(in this case, only the \ac{APE} and \ac{RPE} were considered) allows the tuner to optimize the chosen \ac{SLAM} algorithm for one of the metrics. Through an external configuration file, the tuner can specify all the components just mentioned.
+
+\paragraph{}For testing the implementations, the BotanicGarden dataset was used, specifically the 1006\_03 sequence, and the chosen state-of-the-art \ac{SLAM} solutions were faster-lio and fast-livo2. As for metrics, both faster-lio and fast-livo2 were optimized for the \ac{RPE}. A few parameters were chosen for both algorithms, and their upper and lower bounds delimited accordingly. The algorithms were then run on two different test cases. Firstly, I evaluated the performance of all three tuning algorithms as contrasted to its default configuration. It was found that Grid and Random Search had a slightly worse performance that the default executions, while Simulated Annealing managed to achieve a 4.1\% lower \ac{RPE} in the case of faster-lio, and a placeholder\% lower \ac{RPE} in the case of fast-livo2. Although Grid and Random Search are both baseline methods, their poor performance is partly explained by referencing a previously explained \ac{RUSTLE} structural limitation, imposing a practical limit on the granularity of the search space for both Grid and Random Search. Nevertheless, the implemented tuning algorithms are universal(agnostic to the \ac{SLAM} solution they are optimizing) and can be a viable option for increasing the performance of any \ac{SLAM} solution.
+
+%Escrever algo sobre os testes de generalização
+
+\paragraph{}
+
 \section{Future work}
+
+\paragraph{}I have adapted and implemented three hyperparameter tuning algorithms to \ac{SLAM} optimization. The algorithms show some promise in enhancing \ac{SLAM} performance, but there are still many open questions to answer.
+
+\subsubsection{Tuning Algorithms}
+
+\paragraph{}Section 3.2 proposed using Grid Search, Random Search and Simulated Annealing as the algorithms to fine tune \ac{SLAM}. Due to time constraints, it wasn't possible to implement other, more efficient algorithms such as Bayesian Optimization or Successive Halving. I plan to implement those, as well to fine tune the already implementated algorithms. Some examples of such improvements are tweaking the halting/reannealing conditions of Simulated Annealing, or adjusting the step sizes of a few parameters in Grid/Random Search for finder exploration.
+
+\paragraph{}Additionally, given the moderate success of Simulated Annealing, I plan to study and implement other meta-heuristic based algorithms, such as Particle Swarm or Genetic algorithms.
+
+\subsubsection{Other \ac{SLAM} Solutions}
+
+\paragraph{}I explored the application of the implemented tuning strategies on faster-lio and fast-livo2. Theoretically, the tuning process relies on the chosen dataset and not the \ac{SLAM} algorithm. It was therefore assumed the implemented tuning algorithms might work just as well on other \ac{SLAM} solutions. In the future, I plan to use the implemented optimization algorithms on different \ac{SLAM} solutions(e.g ig-lio, lio-sam), and compare the effectiveness of hyperparameter tuning on different \ac{SLAM} solutions.

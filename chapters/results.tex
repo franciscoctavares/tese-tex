@@ -183,7 +183,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 
 \newpage
 
-\paragraph{}The previous three figures allow us to get a better picture of how these parameters influence the \ac{RPE} value. In all three cases, all 9 possible values are explored, showcasing the main advantage of Random Search over Grid Search: with a fixed optimization constraint(in this case, it is 5 hours) and a large enough parameter space(157464 configurations), Random Search not only explores the parameter space better, but also tends to achieve better results.
+\paragraph{}The previous three figures allow us to get a better picture of how these parameters influence the \ac{RPE} value. In all three cases, all 9 possible values are explored, showcasing the main advantage of Random Search over Grid Search: with a fixed optimization constraint(in this case, a time limit of 5 hours) and a large enough parameter space(157464 configurations), Random Search not only explores the parameter space better, but also tends to achieve better results.
 
 \subsection{Generalization test}
 
@@ -217,5 +217,3 @@ APE(RMSE) & RPE(RMSE) \\ \hline
 \caption{Default parameter results(5 run average) for fast-livo2}
 \label{default-fast-livo2}
 \end{table}
-
-\section{Possible improvements}

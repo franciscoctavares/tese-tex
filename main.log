@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  25 JAN 2026 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  29 JAN 2026 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2191,7 +2191,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 >]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 188.
+               Default added (so using `tbp') on input line 192.
 
 
 
@@ -2204,15 +2204,24 @@ e-surf.pdf>])
 
 ]
 Chapter 5.
-(chapters/conclusion.tex) (main.bbl
+(chapters/conclusion.tex
+Overfull \hbox (0.41092pt too wide) in paragraph at lines 3--4
+[] [][] \T1/lmr/m/n/10.95 For test-ing the im-ple-men-ta-tions, the Botan-ic-Ga
+r-den dataset was used, specif-i-cally the 1006_03
+ []
 
-[43]
 
-[44
+Underfull \vbox (badness 5771) has occurred while \output is active []
+
+
+
+[43]) (main.bbl
+
+[44]
+
+[45
 
 ]
-
-[45]
 
 [46]
 
@@ -2254,12 +2263,12 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FDC721107999E7D991B8B382AC700150;6645.
+(rerunfilecheck)             Checksum: 821C567F0D745EC7B0B906CF1A5FCC16;6657.
  ) 
 Here is how much of TeX's memory you used:
- 36688 strings out of 468133
- 741348 string characters out of 5424868
- 1263702 words of memory out of 5000000
+ 36698 strings out of 468133
+ 741506 string characters out of 5424868
+ 1263703 words of memory out of 5000000
  64168 multiletter control sequences out of 15000+600000
  709900 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2302,9 +2311,9 @@ s/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Franc
 isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
 /Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb>
-Output written on main.pdf (71 pages, 5186839 bytes).
+Output written on main.pdf (71 pages, 5195169 bytes).
 PDF statistics:
- 2316 PDF objects out of 2487 (max. 8388607)
- 406 named destinations out of 1000 (max. 500000)
+ 2348 PDF objects out of 2487 (max. 8388607)
+ 416 named destinations out of 1000 (max. 500000)
  664 words of extra memory for PDF output out of 10000 (max. 10000000)
 
