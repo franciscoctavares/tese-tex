@@ -1,34 +1,43 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system~\cite {tareen2019large}.}}{3}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM~\cite {danicasado2021}.}}{5}{figure.caption.41}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example\cite {slam_point_cloud}.}}{7}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi sensor SLAM system for an industrial robot\cite {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.56}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search~\cite {castillo2022hyperparameter}.}}{11}{figure.caption.72}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search~\cite {castillo2022hyperparameter}.}}{12}{figure.caption.75}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The Bayesian Optimization algorithm~\cite {brochu2010tutorial}.}}{13}{figure.caption.80}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm~\cite {sa_netlogo}.}}{15}{figure.caption.94}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm~\cite {soper2022hyperparameter}.}}{16}{figure.caption.99}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces \ac {HB} algorithm described in a more systematic way~\cite {li2018hyperband}.}}{17}{figure.caption.103}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system~\cite {tareen2019large}.}}{3}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM feature detection and tracking(left) and 3D reconstruction(right)~\cite {danicasado2021}.}}{5}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example~\cite {slam_point_cloud}.}}{7}{figure.caption.56}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Multi-Sensor SLAM system for an industrial robot~\cite {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.62}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search~\cite {castillo2022hyperparameter}.}}{11}{figure.caption.77}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Graphical illustration of parameter space exploration in random search~\cite {castillo2022hyperparameter}.}}{11}{figure.caption.80}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Bayesian Optimization algorithm steps~\cite {brochu2010tutorial}.}}{12}{figure.caption.85}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A graphic representation of the simulated annealing algorithm~\cite {sa_netlogo}.}}{14}{figure.caption.98}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A graphic representation of the Successive Halving algorithm~\cite {soper2022hyperparameter}.}}{15}{figure.caption.103}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Hyperband described in a more systematic way~\cite {li2018hyperband}.}}{16}{figure.caption.107}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \ac {RUSTLE} diagram}}{23}{figure.caption.119}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces low-level diagram of hyperparameter tuning module}}{25}{figure.caption.127}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Search procedure}}{27}{figure.caption.137}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Search procedure}}{28}{figure.caption.141}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces FPS comparison of faster-lio vs fast-lio and fast-lio2~\cite {fasterlio_article1}}}{29}{figure.caption.147}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces fast-livo2 system overview~\cite {fastlivo2_article1}}}{30}{figure.caption.151}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \ac {RUSTLE} software architecture}}{21}{figure.caption.122}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Low-level diagram of hyperparameter tuning module.}}{23}{figure.caption.130}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Search procedure}}{24}{figure.caption.132}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Search procedure}}{25}{figure.caption.136}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Fast-LIVO2 system overview~\cite {fastlivo2_article1}}}{27}{figure.caption.152}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces A bird view of the 3D survey map of BotanicGarden~\cite {liu2024botanicgarden}}}{28}{figure.caption.155}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces RPE per iteration of Simulated Annealing}}{34}{figure.caption.169}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces cube\_side\_length scatter plot}}{35}{figure.caption.172}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces ivox\_grid\_resolution scatter plot}}{36}{figure.caption.174}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RPE per iterations of Grid Search}}{36}{figure.caption.177}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces ivox\_grid\_resolution scatter plot}}{37}{figure.caption.179}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces filter\_size\_map scatter plot}}{37}{figure.caption.180}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces filter\_size\_surf scatter plot}}{38}{figure.caption.181}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces RPE per iterations of Random Search}}{39}{figure.caption.185}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces ivox\_grid\_resolution scatter plot}}{39}{figure.caption.187}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces filter\_size\_map scatter plot}}{40}{figure.caption.188}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces filter\_size\_surf scatter plot}}{40}{figure.caption.189}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces RPE per iteration of Simulated Annealing}}{32}{figure.caption.167}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces cube\_side\_length scatter plot}}{33}{figure.caption.169}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces ivox\_grid\_resolution scatter plot}}{34}{figure.caption.171}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RPE per iterations of Grid Search}}{34}{figure.caption.174}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ivox\_grid\_resolution scatter plot}}{35}{figure.caption.176}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces filter\_size\_map scatter plot}}{35}{figure.caption.177}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces filter\_size\_surf scatter plot}}{36}{figure.caption.178}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces RPE per iterations of Random Search}}{36}{figure.caption.182}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ivox\_grid\_resolution scatter plot}}{37}{figure.caption.184}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces filter\_size\_map scatter plot}}{37}{figure.caption.185}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces filter\_size\_surf scatter plot}}{38}{figure.caption.186}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces RPE per iteration of Simulated Annealing}}{40}{figure.caption.195}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces filter\_size\_pcd scatter plot}}{41}{figure.caption.197}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces point\_filter\_num scatter plot}}{41}{figure.caption.199}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces RPE per iteration for Grid Search}}{42}{figure.caption.201}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces filter\_size\_pcd scatter plot}}{42}{figure.caption.203}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces outlier\_threshold scatter plot}}{43}{figure.caption.204}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces RPE per iterations of Random Search}}{43}{figure.caption.207}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces filter\_size\_pcd scatter plot}}{44}{figure.caption.209}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces outlier\_threshold scatter plot}}{44}{figure.caption.210}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

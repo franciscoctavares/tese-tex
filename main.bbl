@@ -41,16 +41,16 @@ L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
   A novel bandit-based approach to hyperparameter optimization,'' {\em Journal
   of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
 
-\bibitem{fasterlio_article1}
-C.~Bai, T.~Xiao, Y.~Chen, H.~Wang, F.~Zhang, and X.~Gao, ``Faster-lio:
-  Lightweight tightly coupled lidar-inertial odometry using parallel sparse
-  incremental voxels,'' {\em IEEE Robotics and Automation Letters}, vol.~7,
-  no.~2, pp.~4861--4868, 2022.
-
 \bibitem{fastlivo2_article1}
 C.~Zheng, W.~Xu, Z.~Zou, T.~Hua, C.~Yuan, D.~He, B.~Zhou, Z.~Liu, J.~Lin,
   F.~Zhu, Y.~Ren, R.~Wang, F.~Meng, and F.~Zhang, ``Fast-livo2: Fast, direct
   lidar-inertial-visual odometry,'' 2024.
+
+\bibitem{liu2024botanicgarden}
+Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
+  C.~Liu, {\em et~al.}, ``Botanicgarden: A high-quality dataset for robot
+  navigation in unstructured natural environments,'' {\em IEEE Robotics and
+  Automation Letters}, vol.~9, no.~3, pp.~2798--2805, 2024.
 
 \bibitem{becnkis2024survey}
 R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
@@ -61,6 +61,16 @@ R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
 P.-Y. Lajoie, B.~Ramtoula, F.~Wu, and G.~Beltrame, ``Towards collaborative
   simultaneous localization and mapping: a survey of the current research
   landscape,'' {\em Field Robotics}, vol.~2, pp.~971--1000, 2022.
+
+\bibitem{kazerouni2022survey}
+I.~A. Kazerouni, L.~Fitzgerald, G.~Dooly, and D.~Toal, ``A survey of
+  state-of-the-art on visual slam,'' {\em Expert Systems with Applications},
+  vol.~205, p.~117734, 2022.
+
+\bibitem{li2025review}
+Y.~Li, J.~An, N.~He, Y.~Li, Z.~Han, Z.~Chen, and Y.~Qu, ``A review of
+  simultaneous localization and mapping algorithms based on lidar,'' {\em World
+  Electric Vehicle Journal}, vol.~16, no.~2, p.~56, 2025.
 
 \bibitem{taheri2021slam}
 H.~Taheri and Z.~C. Xia, ``Slam; definition and evolution,'' {\em Engineering
@@ -87,10 +97,6 @@ D.~G. Lowe, ``Distinctive image features from scale-invariant keypoints,'' {\em
 Y.~Liao, Y.~Di, K.~Zhu, H.~Zhou, M.~Lu, Y.~Zhang, Q.~Duan, and J.~Liu, ``Local
   feature matching from detector-based to detector-free: a survey,'' {\em
   Applied Intelligence}, vol.~54, no.~5, pp.~3954--3989, 2024.
-
-\bibitem{image_feature_matching}
-A.~Jakubović and J.~Velagić, ``Image feature matching and object detection
-  using brute-force matchers,'' pp.~83--86, 2018.
 
 \bibitem{chen2018submap}
 W.~Chen, L.~Zhu, Y.~Guan, C.~R. Kube, and H.~Zhang, ``Submap-based pose-graph
@@ -274,6 +280,12 @@ B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
 
 \bibitem{argmin_ref}
 S.~Kroboth, ``{argmin}: Numerical optimization in rust,'' 2024.
+
+\bibitem{fasterlio_article1}
+C.~Bai, T.~Xiao, Y.~Chen, H.~Wang, F.~Zhang, and X.~Gao, ``Faster-lio:
+  Lightweight tightly coupled lidar-inertial odometry using parallel sparse
+  incremental voxels,'' {\em IEEE Robotics and Automation Letters}, vol.~7,
+  no.~2, pp.~4861--4868, 2022.
 
 \bibitem{fasterlio_article2}
 Y.~Li, H.~Zhang, and J.~Wang, ``Triangle descriptor loop detection method based
