@@ -2,7 +2,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Common steps of a generic Visual SLAM system~\cite {tareen2019large}.}}{3}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM feature detection and tracking(left) and 3D reconstruction(right)~\cite {danicasado2021}.}}{5}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visual SLAM feature detection and tracking (left) and 3D reconstruction (right)~\cite {danicasado2021}.}}{5}{figure.caption.47}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces LiDAR SLAM point cloud example~\cite {slam_point_cloud}.}}{7}{figure.caption.56}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Multi-Sensor SLAM system for an industrial robot~\cite {multi_sensor_slam_arm_robot}.}}{8}{figure.caption.62}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Graphical illustration of parameter space exploration in grid search~\cite {castillo2022hyperparameter}.}}{11}{figure.caption.77}%
@@ -30,14 +30,13 @@
 \contentsline {figure}{\numberline {4.9}{\ignorespaces ivox\_grid\_resolution scatter plot}}{37}{figure.caption.184}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces filter\_size\_map scatter plot}}{37}{figure.caption.185}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces filter\_size\_surf scatter plot}}{38}{figure.caption.186}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces RPE per iteration of Simulated Annealing}}{40}{figure.caption.195}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces filter\_size\_pcd scatter plot}}{41}{figure.caption.197}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces point\_filter\_num scatter plot}}{41}{figure.caption.199}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces RPE per iteration for Grid Search}}{42}{figure.caption.201}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces filter\_size\_pcd scatter plot}}{42}{figure.caption.203}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces outlier\_threshold scatter plot}}{43}{figure.caption.204}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces RPE per iterations of Random Search}}{43}{figure.caption.207}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces filter\_size\_pcd scatter plot}}{44}{figure.caption.209}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces outlier\_threshold scatter plot}}{44}{figure.caption.210}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.12}{\ignorespaces RPE per iteration of Simulated Annealing}}{41}{figure.caption.197}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces filter\_size\_pcd scatter plot}}{41}{figure.caption.199}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces point\_filter\_num scatter plot}}{42}{figure.caption.201}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces RPE per iteration for Grid Search}}{42}{figure.caption.203}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces filter\_size\_pcd scatter plot}}{43}{figure.caption.205}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces outlier\_threshold scatter plot}}{43}{figure.caption.206}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces RPE per iterations of Random Search}}{44}{figure.caption.209}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces filter\_size\_pcd scatter plot}}{44}{figure.caption.211}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces outlier\_threshold scatter plot}}{45}{figure.caption.212}%
 \addvspace {10\p@ }

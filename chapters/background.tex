@@ -38,13 +38,13 @@
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\linewidth]{images/VSLAM.png}
-    \caption{Visual SLAM feature detection and tracking(left) and 3D reconstruction(right)~\cite{danicasado2021}.}
+    \caption{Visual SLAM feature detection and tracking (left) and 3D reconstruction (right)~\cite{danicasado2021}.}
     \label{fig:enter-label}
 \end{figure}
 
 \paragraph{}In terms of hyperparameters, let us consider a few of the most important ones and their effect on the performance of the visual \ac{SLAM} system.
 
-\paragraph{}When performing feature detection and matching, a few important parameters are: \textbf{feature matching threshold}, \textbf{feature detection sensitivity} and the \textbf{scale factor} (in the case of pyramid-based detectors). The \textbf{feature matching threshold} determines how similar two feature descriptors must be to be considered a valid correspondence~\cite{fontan2024anyfeature}. It directly affects how the system associates points between frames or keyframes. A high threshold ensures that only highly similar descriptors are matched~\cite{fontan2024anyfeature}, which increases precision but risks losing correspondences when illumination or viewpoint changes. A low threshold increases the number of matches but allows more outliers, which can corrupt motion estimation~\cite{fontan2024anyfeature}. The \textbf{feature detection sensitivity} defines how easily the detector identifies keypoints in an image, usually based on a response strength or cornerness threshold. A higher sensitivity results in many detected features, improving robustness in textured environments, but it adds computational cost and potential noise. A lower sensitivity limits detections to the strongest points, making tracking faster but potentially unstable in low-texture areas. Lastly, the \textbf{scale factor} (only applicable for pyramid-based detectors) determine how much each image pyramid level is downsampled relative to the previous level~\cite{lindeberg2014scale}. A smaller scale factor adds more levels, improving the ability of the system to handle zooming and depth, but at the cost of aditional computational cost~\cite{lindeberg2014scale}. A higher  scale factor reduces the robustness to scale variations but speeds up feature extraction~\cite{lindeberg2014scale}. In short, this parameter controls a trade-off between real time performance and scale invariant tracking.
+\paragraph{}When performing feature detection and matching, a few important parameters are: \textbf{feature matching threshold}, \textbf{feature detection sensitivity} and the \textbf{scale factor} (in the case of pyramid-based detectors). The \textbf{feature matching threshold} determines how similar two feature descriptors must be to be considered a valid correspondence~\cite{fontan2024anyfeature}. It directly affects how the system associates points between frames or keyframes. A high threshold ensures that only highly similar descriptors are matched~\cite{fontan2024anyfeature}, which increases precision but risks losing correspondences when illumination or viewpoint changes. A low threshold increases the number of matches but allows more outliers, which can corrupt motion estimation~\cite{fontan2024anyfeature}. The \textbf{feature detection sensitivity} defines how easily the detector identifies keypoints in an image, usually based on a response strength or cornerness threshold. A higher sensitivity results in many detected features, improving robustness in textured environments, but it adds computational cost and potential noise. A lower sensitivity limits detections to the strongest points, making tracking faster but potentially unstable in low-texture areas. Lastly, the \textbf{scale factor} (only applicable for pyramid-based detectors) determine how much each image pyramid level is downsampled relative to the previous level~\cite{lindeberg1998feature}. A smaller scale factor adds more levels, improving the ability of the system to handle zooming and depth, but at the cost of aditional computational cost~\cite{lindeberg1998feature}. A higher  scale factor reduces the robustness to scale variations but speeds up feature extraction~\cite{lindeberg1998feature}. In short, this parameter controls a trade-off between real time performance and scale invariant tracking.
 
 \paragraph{}On the topic of pose estimation, \ac{RANSAC} is a particularly important algorithm. Specifically, the \textbf{maximum number of iterations} and the \textbf{minimum number of data points} to fit the model are important parameters. The \textbf{maximum number of iterations} specifies how many hypotheses \ac{RANSAC} should run when estimating the camera pose. A higher value increases the probability of finding a correct model, even with many outliers, but adds computational cost~\cite{raguram2008comparative}, while a lower value is too permissive when accepting points into the model, and  can lead to unreliable pose estimates~\cite{raguram2008comparative}. This is a trade-off between robustness to outliers and real time performance. The \textbf{minimum number of data points} (or minimum inlier count) controls how many features correpondences are required to accept a pose estimation as valid. A low value makes the system acccept unstable or incorrect poses, resulting in drift~\cite{raguram2008comparative}, while a high value might make tracking unfeasible, when very few feature matches are available~\cite{raguram2008comparative}.
 
@@ -298,34 +298,37 @@ By increasing the budget allocated to a decreasing number of configurations at e
 \paragraph{}With regards to population-based approaches, relatively little research has been conducted specifically in the context of \ac{SLAM}. However, a study by Kostusiak and Skrzypczyński~\cite{kostusiak2019efficiency} used a \ac{PSO} algorithm and an \ac{EA} to tune the parameters of an RGB-D Visual Odometry system to improve motion estimation accuracy. Using the TUM RGB-D dataset for training and the PUT Kinect dataset for testing, the authors applied the two previously mentioned methods to adjust only five influential hyperparameters related to feature detection (AKAZE feature detector threshold) and outlier rejection (two \ac{RANSAC} distance and inlier/outlier thresholds)~\cite{kostusiak2019efficiency}. The optimization, guided by the values of the \ac{ATE} and \ac{RPE}, showed that tuning these few parameters, particularly the AKAZE feature threshold and \ac{RANSAC} distance limits, significantly reduced trajectory errors, with ATE dropping from about 1.6m to 0.29m~\cite{kostusiak2019efficiency}. While the Particle Swarm algorithm achieved the best accuracy out of the 2 tuning strategies, the Evolutionary Algorithm achieved similar results in one-fifth of the time~\cite{kostusiak2019efficiency}. Alternatively, the authors also manually tuned the parameters, with significantly inferior results than \ac{PSO}~\cite{kostusiak2019efficiency}.
 
 \begin{landscape}
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{|p{30mm}| p{30mm}| p{50mm}| p{75mm}|}
-%\hline
-%Article(s)                        & SLAM category                   & Optimization method            & Results \\ \hline
-%Z. Zheng (2020)~\cite{zheng2020feature}                          & Feature-based Visual Odometry(not full \ac{SLAM}) & Grid Search                    &  Across 8 optimized sequences, average ATE decreased, on average, 64.68\%       \\ \hline
-%A. Putra and P. Prajitno (2019)~\cite{putra2019parameter}     & G-mapping SLAM(particle filter)                & Brute Force                    &  Navigation time of a predefined path was reduced from 32 to 25 seconds      \\ \hline
-%K. Koide et al (2021)~\cite{koide2021automatic}                    & Lidar Odometry(not full \ac{SLAM})                & based on Bayesian Optimization & \textbf{With data augmentation}, in both tested environments, both components (translational and rotational) of the drift error decreased by at least 9.8\%.      \\ \hline
-%A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency} & RGB-D Visual Odometry         & Particle Swarm Optimization    & Both ATE and RPE decreased by well over 50\%, and optimized parameters generalize well to other sequences        \\ \hline
-%A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency} & RGB-D Visual Odometry         & Evolutionary Algorithm         &  With \ac{EA}, the tuning duration is about 5x shorter than \ac{PSO},        \\ \hline
-%\end{tabular}
-%\caption{Summary of HPT methods used in literature.}
-%\label{tab:my-table}
-%\end{table}
 
-\begin{table}[]
+\begin{table}
 \centering
-\begin{tabular}{@{}cccc@{}}
-\toprule
-Article(s)                                                                                                          & SLAM category                                                                           & Optimization method                                 & Results                                                                                                                                                                                            \\ \midrule
-\multicolumn{1}{|c|}{Z. Zheng (2020)~\cite{zheng2020feature}}                                 & \multicolumn{1}{c|}{Feature-based Visual Odometry(not full \ac{SLAM})} & \multicolumn{1}{c|}{Grid Search}                    & \multicolumn{1}{c|}{Across 8 optimized sequences, average ATE decreased, on average, 64.68\%}                                                                                                      \\ \midrule
-\multicolumn{1}{|c|}{A. Putra and P. Prajitno (2019)~\cite{putra2019parameter}}               & \multicolumn{1}{c|}{G-mapping SLAM(particle filter)}                                    & \multicolumn{1}{c|}{Brute Force}                    & \multicolumn{1}{c|}{Navigation time of a predefined path was reduced from 32 to 25 seconds}                                                                                                        \\ \midrule
-\multicolumn{1}{|c|}{K. Koide et al (2021)~\cite{koide2021automatic}}                         & \multicolumn{1}{c|}{Lidar Odometry(not full \ac{SLAM})}                & \multicolumn{1}{c|}{based on Bayesian Optimization} & \multicolumn{1}{c|}{\textbf{With data augmentation}, in both tested environments, both components (translational and rotational) of the drift error decreased by at least 9.8\%.} \\ \midrule
-\multicolumn{1}{|c|}{A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency}} & \multicolumn{1}{c|}{RGB-D Visual Odometry}                                              & \multicolumn{1}{c|}{Particle Swarm Optimization}    & \multicolumn{1}{c|}{Both ATE and RPE decreased by well over 50\%, and optimized parameters generalize well to other sequences}                                                                     \\
-A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency}                       & RGB-D Visual Odometry                                                                   & Evolutionary Algorithm                              & With \ac{EA}, the tuning duration is about 5x shorter than \ac{PSO},                                                                                             \\ \bottomrule
-\end{tabular}
-\caption{}
-\label{tab:my-table}
+\footnotesize
+  \begin{tabular}{@{} p{0.25\textwidth} p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} @{}}
+    \toprule
+	Article(s) &  SLAM category  & Optimization method(s) & Results \\
+    \addlinespace
+    \hline
+    
+	Z. Zheng (2020)~\cite{zheng2020feature} & Feature-based Visual Odometry (not full \ac{SLAM}) & Grid Search & Across 8 optimized sequences, average ATE decreased, on average, 64.68\%\\
+    \addlinespace
+    
+	A. Putra and P. Prajitno (2019)~\cite{putra2019parameter} & G-mapping SLAM (particle filter) & Brute Force & Navigation time of a predefined path was reduced from 32 to 25 seconds \\
+    \addlinespace   
+    
+	K. Koide et al (2021)~\cite{koide2021automatic} & Lidar Odometry (not full \ac{SLAM}) & based on Bayesian Optimization &  \textbf{With data augmentation}, in both tested environments, drift error decreased by at least 9.8\% \\
+	\addlinespace 
+	
+	A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency} & RGB-D Visual Odometry & Particle Swarm Optimization (PSO) & RPE decreased by well over 50\% \\
+	
+	\cline{3-4}	& & & \\
+	
+	& & Evolutionary Algorithm (EA) & Similar performance to PSO, but tuning duration is 5x shorter \\
+	
+	%\multirow{2}{0.3\textwidth}{Particle Swarm Optimization (PSO) \newline Evolutionary Algorithm (EA)} & \multirow{2}{0.3\textwidth}{RPE decreased by well over 50\% \newline Similar performance to PSO, but tuning duration is 5x shorter}\\
+	
+	\\
+    
+    \end{tabular}
+\caption{Summary of \ac{HPT} methods used in the literature.}
 \end{table}
 
 \end{landscape}
@@ -351,6 +354,8 @@ A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency}        
 	\item Implementation of several algorithms for tuning a \ac{SLAM} system's parameters, namely Grid Search, Random Search, and Simulated Annealing
 	
 	\item Integration of the implemented tuning algorithms into the existing open source framework (\ac{RUSTLE}) to allow for automated and streamlined tuning
+	
+	\item Validation and testing of the implemented tuning algorithms on two SLAM solutions
 
 \end{itemize}
 

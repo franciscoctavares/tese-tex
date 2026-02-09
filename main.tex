@@ -7,6 +7,8 @@
 % Includes
 
 \usepackage{booktabs}
+\usepackage{lscape}
+
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
@@ -292,14 +294,4 @@
 \titleformat{\chapter}[display]	% Return chapter titles to normal, taking up a whole page (cool for appendices)
 {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 
-
-%APPENDIX
-\begin{appendix}			% Start appendices
-\chapter{Sample Appendix}	% One chapter per appendix
-\label{app: sample appendix}
-\input{appendix/sample.tex}
-% To include pdf use this
-%\includepdf[pages={-}]{path/to/appendix.pdf}
-
-\end{appendix}
 \end{document}

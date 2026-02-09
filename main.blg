@@ -5,69 +5,49 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: bibliography/references.bib
-Warning--entry type for "danicasado2021" isn't style-file defined
---line 246 of file bibliography/references.bib
-Warning--entry type for "argmin_ref" isn't style-file defined
---line 555 of file bibliography/references.bib
 Warning--empty journal in tareen2019large
-Warning--empty journal in slam_point_cloud
-Warning--empty journal in multi_sensor_slam_arm_robot
-Warning--empty journal in sa_netlogo
-Warning--empty journal in fastlivo2_article1
-Warning--empty journal in becnkis2024survey
-Warning--empty journal in harris1988combined
-Warning--empty journal in picard2023surveyrealtime3dscene
-Warning--empty journal in li20213dpointcloudreconstruction
-Warning--empty journal in fontan2024anyfeature
-Warning--empty journal in lindeberg2014scale
-Warning--empty journal in raguram2008comparative
-Warning--empty journal in jorge2024impact
-Warning--empty journal in liu2024voxelslamcompleteaccurateversatile
-Warning--empty journal in liu2023lidarinertialvisualslamloopdetection
-Warning--empty journal in putra2019parameter
-Warning--empty journal in zheng2020feature
-Warning--empty journal in koide2021automatic
-Warning--empty journal in chen2018visual
-Warning--empty journal in fasterlio_article2
-You've used 65 entries,
+Warning--can't use both volume and number fields in harris1988combined
+Warning--empty year in picard2023surveyrealtime3dscene
+Warning--can't use both volume and number fields in zheng2020feature
+You've used 64 entries,
             1876 wiz_defined-function locations,
-            818 strings with 16794 characters,
-and the built_in function-call counts, 17694 in all, are:
-= -- 1651
-> -- 883
+            822 strings with 16891 characters,
+and the built_in function-call counts, 18051 in all, are:
+= -- 1708
+> -- 858
 < -- 0
-+ -- 322
-- -- 257
-* -- 1286
-:= -- 2575
-add.period$ -- 66
-call.type$ -- 65
-change.case$ -- 64
++ -- 313
+- -- 249
+* -- 1299
+:= -- 2578
+add.period$ -- 68
+call.type$ -- 64
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 85
-duplicate$ -- 905
-empty$ -- 1559
-format.name$ -- 257
-if$ -- 4238
+cite$ -- 68
+duplicate$ -- 942
+empty$ -- 1639
+format.name$ -- 249
+if$ -- 4367
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 59
+int.to.str$ -- 64
+missing$ -- 58
 newline$ -- 199
-num.names$ -- 65
-pop$ -- 238
+num.names$ -- 64
+pop$ -- 233
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 621
+skip$ -- 651
 stack$ -- 0
-substring$ -- 1013
-swap$ -- 376
+substring$ -- 1057
+swap$ -- 405
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 20
-while$ -- 160
-width$ -- 67
-write$ -- 597
-(There were 22 warnings)
+warning$ -- 4
+while$ -- 163
+width$ -- 66
+write$ -- 622
+(There were 4 warnings)

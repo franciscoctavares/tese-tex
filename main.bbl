@@ -1,22 +1,25 @@
 \begin{thebibliography}{10}
 
 \bibitem{tareen2019large}
-S.~A.~K. TAREEN, ``Large scale 3d simultaneous localization and mapping
+S.~A.~K. Tareen, ``Large scale 3d simultaneous localization and mapping
   (ls-3d-slam) using monocular vision,'' 2019.
 
 \bibitem{danicasado2021}
-D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam,''
+D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam.''
+  \url{https://medium.com/@dcasadoherraez/introduction-to-visual-slam-chapter-1-introduction-to-slam-a0211654bf0e},
   2021.
 
 \bibitem{slam_point_cloud}
 F.~Andert, O.~B{\"o}ttcher, A.~Mushyam, and P.~Schm{\"a}lzle, ``Semantic lidar
-  point cloud mapping and cloud-based slam for autonomous driving,''
-  pp.~853--860, 2025.
+  point cloud mapping and cloud-based slam for autonomous driving,'' in {\em
+  2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)},
+  pp.~853--860, IEEE, 2025.
 
 \bibitem{multi_sensor_slam_arm_robot}
 R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
   mobile industrial robot system for automated intelligent manufacturing
-  applications,'' pp.~1673--1678, 2020.
+  applications,'' in {\em 2020 IEEE/ASME International Conference on Advanced
+  Intelligent Mechatronics (AIM)}, pp.~1673--1678, IEEE, 2020.
 
 \bibitem{castillo2022hyperparameter}
 E.~I.~M. Castillo, {\em Hyperparameter Optimization for SLAM: An Approach for
@@ -30,7 +33,9 @@ E.~Brochu, V.~M. Cora, and N.~De~Freitas, ``A tutorial on bayesian optimization
   2010.
 
 \bibitem{sa_netlogo}
-F.~S. Caparrini, ``Simulated annealing in netlogo,'' 2019.
+F.~S. Caparrini, ``Simulated annealing in netlogo.''
+  \url{https://www.cs.us.es/~fsancho/Blog/posts/Simulated_Annealing_in_NetLogo.md},
+  2019.
 
 \bibitem{soper2022hyperparameter}
 D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
@@ -42,9 +47,9 @@ L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
   of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
 
 \bibitem{fastlivo2_article1}
-C.~Zheng, W.~Xu, Z.~Zou, T.~Hua, C.~Yuan, D.~He, B.~Zhou, Z.~Liu, J.~Lin,
-  F.~Zhu, Y.~Ren, R.~Wang, F.~Meng, and F.~Zhang, ``Fast-livo2: Fast, direct
-  lidar-inertial-visual odometry,'' 2024.
+B.~Zhou, C.~Zheng, Z.~Wang, F.~Zhu, Y.~Cai, and F.~Zhang, ``Fast-livo2 on
+  resource-constrained platforms: Lidar-inertial-visual odometry with efficient
+  memory and computation,'' {\em IEEE Robotics and Automation Letters}, 2025.
 
 \bibitem{liu2024botanicgarden}
 Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
@@ -55,7 +60,8 @@ Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
 \bibitem{becnkis2024survey}
 R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
   A.~Anc{\=a}ns, and A.~Ipatovs, ``A survey and practical application of slam
-  algorithms,'' pp.~1--10, 2024.
+  algorithms,'' in {\em 2024 Photonics \& Electromagnetics Research Symposium
+  (PIERS)}, pp.~1--10, IEEE, 2024.
 
 \bibitem{lajoie2022towards}
 P.-Y. Lajoie, B.~Ramtoula, F.~Wu, and G.~Beltrame, ``Towards collaborative
@@ -83,7 +89,8 @@ A.~Macario~Barros, M.~Michel, Y.~Moline, G.~Corre, and F.~Carrel, ``A
 
 \bibitem{harris1988combined}
 C.~Harris, M.~Stephens, {\em et~al.}, ``A combined corner and edge detector,''
-  vol.~15, no.~50, pp.~10--5244, 1988.
+  in {\em Alvey vision conference}, vol.~15, pp.~10--5244, Manchester, UK,
+  1988.
 
 \bibitem{lindeberg1998feature}
 T.~Lindeberg, ``Feature detection with automatic scale selection,'' {\em
@@ -105,12 +112,13 @@ W.~Chen, L.~Zhu, Y.~Guan, C.~R. Kube, and H.~Zhang, ``Submap-based pose-graph
   (IROS)}, pp.~6851--6856, IEEE, 2018.
 
 \bibitem{picard2023surveyrealtime3dscene}
-Q.~Picard, S.~Chevobbe, M.~Darouich, and J.-Y. Didier, ``A survey on real-time
-  3d scene reconstruction with slam methods in embedded systems,'' 2023.
+Q.~Picard, S.~Chevobbe, M.~Darouich, and J.~Didier, ``A survey on real-time 3d
+  scene reconstruction with slam methods in embedded systems. arxiv 2023,''
+  {\em arXiv preprint arXiv:2309.05349}.
 
 \bibitem{li20213dpointcloudreconstruction}
 Z.~Li, F.~Ye, and X.~Guan, ``3d point cloud reconstruction and slam as an
-  input,'' 2021.
+  input,'' {\em arXiv preprint arXiv:2112.12907}, 2021.
 
 \bibitem{chen2018review}
 Y.~Chen, Y.~Zhou, Q.~Lv, and K.~K. Deveerasetty, ``A review of v-slam,'' in
@@ -119,16 +127,13 @@ Y.~Chen, Y.~Zhou, Q.~Lv, and K.~K. Deveerasetty, ``A review of v-slam,'' in
 
 \bibitem{fontan2024anyfeature}
 A.~Fontan, J.~Civera, and M.~Milford, ``Anyfeature-vslam: Automating the usage
-  of any chosen feature into visual slam,'' vol.~2, 2024.
-
-\bibitem{lindeberg2014scale}
-T.~Lindeberg, ``" scale selection", computer vision: A reference guide,(k.
-  ikeuchi, editor),'' 2014.
+  of any chosen feature into visual slam,'' in {\em Proceedings of the
+  Robotics: Science and Systems}, vol.~2, 2024.
 
 \bibitem{raguram2008comparative}
 R.~Raguram, J.-M. Frahm, and M.~Pollefeys, ``A comparative analysis of ransac
-  techniques leading to adaptive real-time random sample consensus,''
-  pp.~500--513, 2008.
+  techniques leading to adaptive real-time random sample consensus,'' in {\em
+  European conference on computer vision}, pp.~500--513, Springer, 2008.
 
 \bibitem{yan2019illumination}
 D.~Yan, W.~Tuo, W.~Wang, and S.~Li, ``Illumination robust loop closure
@@ -149,7 +154,8 @@ D.~Zhu, Q.~Wang, F.~Wang, and X.~Gong, ``Research on 3d lidar outdoor slam
 \bibitem{jorge2024impact}
 J.~Jorge, T.~Barros, C.~Premebida, M.~Aleksandrov, D.~Goehring, and U.~Nunes,
   ``Impact of 3d lidar resolution in graph-based slam approaches: A comparative
-  study,'' pp.~1--6, 2024.
+  study,'' in {\em 2024 7th Iberian Robotics Conference (ROBOT)}, pp.~1--6,
+  IEEE, 2024.
 
 \bibitem{wang2023comparative}
 H.~Wang, Y.~Yin, and Q.~Jing, ``Comparative analysis of 3d lidar scan-matching
@@ -169,10 +175,11 @@ M.~Servières, V.~Renaudin, A.~Dupuis, and N.~Antigny, ``Visual and
 \bibitem{liu2024voxelslamcompleteaccurateversatile}
 Z.~Liu, H.~Li, C.~Yuan, X.~Liu, J.~Lin, R.~Li, C.~Zheng, B.~Zhou, W.~Liu, and
   F.~Zhang, ``Voxel-slam: A complete, accurate, and versatile lidar-inertial
-  slam system,'' 2024.
+  slam system,'' {\em arXiv preprint arXiv:2410.08935}, 2024.
 
 \bibitem{liu2023lidarinertialvisualslamloopdetection}
-K.~Liu, ``A lidar-inertial-visual slam system with loop detection,'' 2023.
+K.~Liu, ``A lidar-inertial-visual slam system with loop detection,'' {\em arXiv
+  preprint arXiv:2301.05604}, 2023.
 
 \bibitem{kitti_dataset}
 A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``Vision meets robotics: The
@@ -200,10 +207,9 @@ B.~Bischl, M.~Binder, M.~Lang, T.~Pielok, J.~Richter, S.~Coors, J.~Thomas,
   arxiv,'' {\em arXiv preprint arXiv:2107.05847}, 2021.
 
 \bibitem{bissuel2020hyper}
-A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' {\em
-  Criteo tech blog, Medium. Dispon{\'\i}vel em: https://medium.
-  com/criteo-labs/hyper-parameter-optimizationalgorithms-2fe447525903. Acedido
-  em}, 2020.
+A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' 2020.
+\newblock \url{https://medium.
+  com/criteo-labs/hyper-parameter-optimizationalgorithms-2fe447525903}.
 
 \bibitem{morales2023survey}
 A.~Morales-Hern{\'a}ndez, I.~Van~Nieuwenhuyse, and S.~Rojas~Gonzalez, ``A
@@ -257,29 +263,34 @@ S.~Falkner, A.~Klein, and F.~Hutter, ``Bohb: Robust and efficient
 \bibitem{putra2019parameter}
 I.~A. Putra and P.~Prajitno, ``Parameter tuning of g-mapping slam (simultaneous
   localization and mapping) on mobile robot with laser-range finder 360
-  sensor,'' pp.~148--153, 2019.
+  sensor,'' in {\em 2019 International Seminar on Research of Information
+  Technology and Intelligent Systems (ISRITI)}, pp.~148--153, IEEE, 2019.
 
 \bibitem{zheng2020feature}
 Z.~Zheng, ``Feature based monocular visual odometry for autonomous driving and
-  hyperparameter tuning to improve trajectory estimation,'' vol.~1453, no.~1,
-  p.~012067, 2020.
+  hyperparameter tuning to improve trajectory estimation,'' in {\em Journal of
+  Physics: Conference Series}, vol.~1453, p.~012067, IOP Publishing, 2020.
 
 \bibitem{koide2021automatic}
 K.~Koide, M.~Yokozuka, S.~Oishi, and A.~Banno, ``Automatic hyper-parameter
-  tuning for black-box lidar odometry,'' pp.~5069--5074, 2021.
+  tuning for black-box lidar odometry,'' in {\em 2021 IEEE International
+  Conference on Robotics and Automation (ICRA)}, pp.~5069--5074, IEEE, 2021.
 
 \bibitem{chen2018visual}
-Z.~Chen, ``Visual-inertial slam extrinsic parameter calibration based on
-  bayesian optimization,'' 2018.
+Z.~Chen, {\em Visual-inertial slam extrinsic parameter calibration based on
+  bayesian optimization}.
+\newblock University of Colorado at Boulder, 2018.
 
 \bibitem{bodin2018slambench2multiobjectiveheadtoheadbenchmarking}
-B.~Bodin, H.~Wagstaff, S.~Saeedi, L.~Nardi, E.~Vespa, J.~H. Mayer, A.~Nisbet,
-  M.~Luján, S.~Furber, A.~J. Davison, P.~H.~J. Kelly, and M.~O'Boyle,
-  ``Slambench2: Multi-objective head-to-head benchmarking for visual slam,''
-  2018.
+B.~Bodin, H.~Wagstaff, S.~Saecdi, L.~Nardi, E.~Vespa, J.~Mawer, A.~Nisbet,
+  M.~Luj{\'a}n, S.~Furber, A.~J. Davison, {\em et~al.}, ``Slambench2:
+  Multi-objective head-to-head benchmarking for visual slam,'' in {\em 2018
+  IEEE International Conference on Robotics and Automation (ICRA)},
+  pp.~3637--3644, IEEE, 2018.
 
 \bibitem{argmin_ref}
 S.~Kroboth, ``{argmin}: Numerical optimization in rust,'' 2024.
+\newblock \url{https://github.com/argmin-rs/argmin}.
 
 \bibitem{fasterlio_article1}
 C.~Bai, T.~Xiao, Y.~Chen, H.~Wang, F.~Zhang, and X.~Gao, ``Faster-lio:
@@ -288,8 +299,10 @@ C.~Bai, T.~Xiao, Y.~Chen, H.~Wang, F.~Zhang, and X.~Gao, ``Faster-lio:
   no.~2, pp.~4861--4868, 2022.
 
 \bibitem{fasterlio_article2}
-Y.~Li, H.~Zhang, and J.~Wang, ``Triangle descriptor loop detection method based
-  on faster-lio,'' vol.~XLVIII-4/W10-2024, pp.~183--190, 2024.
+S.~Wang, H.~Huang, J.~Yang, J.~Bian, and S.~Jiang, ``Triangle descriptor loop
+  detection method based on faster-lio,'' {\em The International Archives of
+  the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  vol.~48, pp.~183--189, 2024.
 
 \bibitem{fasterlio_survey}
 T.~Wang, S.~Li, and Y.~Chen, ``Lidar odometry: Recent advancements and

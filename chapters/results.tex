@@ -196,9 +196,24 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 
 %\paragraph{}The previous three figures allow us to get a better picture of how these parameters influence the \ac{RPE} value. In all three cases, all 9 possible values are explored, showcasing the main advantage of Random Search over Grid Search: with a fixed optimization constraint(in this case, a time limit of 5 hours) and a large enough parameter space(157464 configurations), Random Search not only explores the parameter space better, but also tends to achieve better results.
 
+\newpage
 \paragraph{}The previous three figures provide a clearer understanding of how these parameters affect the \ac{RPE}. In each case, all nine possible values are examined, highlighting the primary advantage of Random Search over Grid Search: given a fixed optimization constraint (in this case, a time limit of five hours) and a sufficiently large parameter space (157464 configurations), Random Search not only explores the space more effectively but also generally achieves superior results.
 
+\paragraph{}Table \ref{faster-lio table} sums up the results of the tuning process for Faster-LIO.
 
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c|c|}
+\cline{2-3}
+\multicolumn{1}{l|}{}                       & RPE      & \% difference to default configuration \\ \hline
+\multicolumn{1}{|c|}{Default configuration} & 0.015037 & +0\%  \\ \hline
+\multicolumn{1}{|c|}{Grid Search}           & 0.015297 & +1.73\% \\ \hline
+\multicolumn{1}{|c|}{Random Search}         & 0.015298 & +1.74\% \\ \hline
+\multicolumn{1}{|c|}{Simulated Annealing}   & 0.014420 & -4.1\%  \\ \hline
+\end{tabular}
+\caption{Faster-LIO tuning results}
+\label{faster-lio table}
+\end{table}
 
 \section{Fast-LIVO2}
 
@@ -208,7 +223,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \centering
 \begin{tabular}{|l|l|}
 \hline
-APE(RMSE) & RPE(RMSE) \\ \hline
+APE (RMSE) & RPE (RMSE) \\ \hline
 0.403815  & 0.045583  \\ \hline
 \end{tabular}
 \caption{Default parameter results (5 run average) for Fast-LIVO2}
@@ -281,7 +296,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
     \label{fast-livo2-sa}
 \end{figure}
 
-\paragraph{}From Figure \ref{fast-livo2-sa}, it can be seen that, roughly for the first 70 iterations, reannealing allows the algorithm to escape local minima and achieve a better solution than the incumbent. After this point, the algorithm seemed to stagnate, with no further improvements observed until iteration 100, after which it halted its execution. Due to the considerable runtime of each simulated annealing run (approximately 2.5 minutes per iteration, amounting to 2–5 hours for 50–100 iterations), as well as the increased number of parameters of Fast-LIVO2 relative to Faster-LIO, a few conclusions can be deduced. One, Simulated Annealing requires constant interaction and feedback from the tuner in order to adjust the algorithm hyperparameters, particularly the perturbation functions' settings, taking several runs before performance reaches acceptable levels.
+\paragraph{}From Figure \ref{fast-livo2-sa}, it can be seen that, roughly for the first 70 iterations, reannealing allows the algorithm to escape local minima and achieve a better solution than the incumbent. After this point, the algorithm seemed to stagnate, with no further improvements observed until iteration 100, after which it halted its execution. Due to the considerable runtime of each simulated annealing run (approximately 2.5 minutes per iteration, amounting to 2–5 hours for 50–100 iterations), as well as the increased number of parameters of Fast-LIVO2 relative to Faster-LIO, some conclusions can be drawn. One, Simulated Annealing requires constant interaction and feedback from the tuner in order to adjust the algorithm hyperparameters, particularly the perturbation functions' settings, taking several runs before performance reaches acceptable levels.
 
 \newpage
 \begin{figure}[h]
@@ -328,7 +343,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \end{figure}
 
 \newpage
-\paragraph{}First thing that should be noted is that while in Faster-LIO 7 parameters were tuned, in Fast-LIVO2 there are 12 parameters being tuned, and therefore, taking into account practical limitations of \ac{RUSTLE} means the parameter space is necessarily sparser and not detailed enough for a conclusive analysis. Despite that, Grid Search still manages to achieve an \ac{RPE} value of 0.0316, which is about 30.5\% lower than the default configuration.
+\paragraph{}The first thing that should be noted is that while in Faster-LIO seven parameters were tuned, in Fast-LIVO2 there are twelve parameters being tuned, and therefore, taking into account practical limitations, this means the parameter space is necessarily sparser and not detailed enough for a conclusive analysis. Despite that, Grid Search still manages to achieve an \ac{RPE} value of 0.0316, which is about 30.5\% lower than the default configuration.
 
 \subsection{Random Search}
 
@@ -362,8 +377,22 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 
 \paragraph{}Unlike Faster-LIO, it is not possible to derive any meaningful conclusions from the Random Search scatter plots for Fast-LIVO2. Even though Random Search managed to achieve an \ac{RPE} value 5.4\% lower than Grid Search, mostly due to its pseudo-random nature, the increased number of tuned parameters for Fast-LIVO2, as mentioned previously, forces the tuner to design a low resolution search space, limiting the potential benefits.
 
+\newpage
+\paragraph{}Table \ref{fast-livo2-table} sums up the results of the tuning process for Fast-LIVO2.
 
-%While it does not guarantee that such adjustments will work on the entire dataset, it allows the researcher to understand how their values affect algorithm runtime and performance.
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c|c|}
+\cline{2-3}
+\multicolumn{1}{l|}{}                       & RPE      & \% difference to default configuration \\ \hline
+\multicolumn{1}{|c|}{Default configuration} & 0.045583 & +0\%                                   \\ \hline
+\multicolumn{1}{|c|}{Grid Search}           & 0.031670 & -30.52\%                               \\ \hline
+\multicolumn{1}{|c|}{Random Search}         & 0.029969 & -34.25\%                               \\ \hline
+\multicolumn{1}{|c|}{Simulated Annealing}   & 0.006979 & -84.69\%                               \\ \hline
+\end{tabular}
+\caption{Fast-LIVO2 tuning results}
+\label{fast-livo2-table}
+\end{table}
 
 
 
