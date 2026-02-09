@@ -5,40 +5,39 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: bibliography/references.bib
-Warning--empty journal in tareen2019large
 Warning--can't use both volume and number fields in harris1988combined
 Warning--empty year in picard2023surveyrealtime3dscene
 Warning--can't use both volume and number fields in zheng2020feature
 You've used 64 entries,
             1876 wiz_defined-function locations,
-            822 strings with 16891 characters,
-and the built_in function-call counts, 18051 in all, are:
-= -- 1708
+            824 strings with 16943 characters,
+and the built_in function-call counts, 18040 in all, are:
+= -- 1711
 > -- 858
 < -- 0
 + -- 313
 - -- 249
 * -- 1299
-:= -- 2578
+:= -- 2581
 add.period$ -- 68
 call.type$ -- 64
 change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 942
-empty$ -- 1639
+cite$ -- 67
+duplicate$ -- 939
+empty$ -- 1633
 format.name$ -- 249
-if$ -- 4367
+if$ -- 4363
 int.to.chr$ -- 0
 int.to.str$ -- 64
-missing$ -- 58
+missing$ -- 57
 newline$ -- 199
 num.names$ -- 64
-pop$ -- 233
+pop$ -- 228
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 651
+skip$ -- 652
 stack$ -- 0
 substring$ -- 1057
 swap$ -- 405
@@ -46,8 +45,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
+warning$ -- 3
 while$ -- 163
 width$ -- 66
-write$ -- 622
-(There were 4 warnings)
+write$ -- 625
+(There were 3 warnings)

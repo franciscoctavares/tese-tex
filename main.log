@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2314,19 +2314,19 @@ Underfull \vbox (badness 1755) has occurred while \output is active []
 [47]) (main.bbl
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
 []\T1/lmr/m/n/10.95 D. Casado, ``In-tro-duc-tion to vi-sual slam: Chap-ter 1 ^^
 Vin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
 \T1/lmr/m/n/10.95 tro-duc-tion to slam.'' [][]$\T1/lmtt/m/n/10.95 https : / / m
 edium . com / @dcasadoherraez /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
 \T1/lmtt/m/n/10.95 introduction-[]to-[]visual-[]slam-[]chapter-[]1-[]introducti
 on-[]to-[]slam-[]a0211654bf0e$[][]\T1/lmr/m/n/10.95 ,
  []
@@ -2340,7 +2340,7 @@ on-[]to-[]slam-[]a0211654bf0e$[][]\T1/lmr/m/n/10.95 ,
 [50]
 
 [51]
-Underfull \hbox (badness 1590) in paragraph at lines 181--183
+Underfull \hbox (badness 1590) in paragraph at lines 182--184
 []\T1/lmr/m/n/10.95 K. Liu, ``A lidar-inertial-visual slam sys-tem with loop de
 -tec-tion,'' \T1/lmr/m/it/10.95 arXiv preprint
  []
@@ -2428,7 +2428,7 @@ isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
 /Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
 tt9.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (74 pages, 6475766 bytes).
+Output written on main.pdf (74 pages, 6475818 bytes).
 PDF statistics:
  2893 PDF objects out of 2984 (max. 8388607)
  445 named destinations out of 1000 (max. 500000)
