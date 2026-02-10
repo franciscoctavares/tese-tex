@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.19)  10 FEB 2026 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1970,7 +1970,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--320
 
 [19]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-46.
+45.
 
 (C:\Users\Francisco Tavares\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.f
 d
@@ -2369,7 +2369,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  36890 strings out of 468133
  747151 string characters out of 5424868
- 1267014 words of memory out of 5000000
+ 1267012 words of memory out of 5000000
  64323 multiletter control sequences out of 15000+600000
  710808 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2428,7 +2428,7 @@ isco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
 /Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
 tt9.pfb><C:/Users/Francisco Tavares/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (74 pages, 6475818 bytes).
+Output written on main.pdf (74 pages, 6475838 bytes).
 PDF statistics:
  2893 PDF objects out of 2984 (max. 8388607)
  445 named destinations out of 1000 (max. 500000)
