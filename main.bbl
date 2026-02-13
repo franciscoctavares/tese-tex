@@ -1,63 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{tareen2019large}
-S.~A.~K. Tareen, ``Large scale 3d simultaneous localization and mapping
-  (ls-3d-slam) using monocular vision,'' Master's thesis, Pakistan Navy
-  Engineering College, Islamabad, Pakistan, 2019.
-
-\bibitem{danicasado2021}
-D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam.''
-  \url{https://medium.com/@dcasadoherraez/introduction-to-visual-slam-chapter-1-introduction-to-slam-a0211654bf0e},
-  2021.
-
-\bibitem{slam_point_cloud}
-F.~Andert, O.~B{\"o}ttcher, A.~Mushyam, and P.~Schm{\"a}lzle, ``Semantic lidar
-  point cloud mapping and cloud-based slam for autonomous driving,'' in {\em
-  2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)},
-  pp.~853--860, IEEE, 2025.
-
-\bibitem{multi_sensor_slam_arm_robot}
-R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
-  mobile industrial robot system for automated intelligent manufacturing
-  applications,'' in {\em 2020 IEEE/ASME International Conference on Advanced
-  Intelligent Mechatronics (AIM)}, pp.~1673--1678, IEEE, 2020.
-
-\bibitem{castillo2022hyperparameter}
-E.~I.~M. Castillo, {\em Hyperparameter Optimization for SLAM: An Approach for
-  Enhancing ORB-SLAM2's Performance}.
-\newblock PhD thesis, University of Alberta, 2022.
-
-\bibitem{brochu2010tutorial}
-E.~Brochu, V.~M. Cora, and N.~De~Freitas, ``A tutorial on bayesian optimization
-  of expensive cost functions, with application to active user modeling and
-  hierarchical reinforcement learning,'' {\em arXiv preprint arXiv:1012.2599},
-  2010.
-
-\bibitem{sa_netlogo}
-F.~S. Caparrini, ``Simulated annealing in netlogo.''
-  \url{https://www.cs.us.es/~fsancho/Blog/posts/Simulated_Annealing_in_NetLogo.md},
-  2019.
-
-\bibitem{soper2022hyperparameter}
-D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
-  cross validation,'' {\em Algorithms}, vol.~16, no.~1, p.~17, 2022.
-
-\bibitem{li2018hyperband}
-L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
-  A novel bandit-based approach to hyperparameter optimization,'' {\em Journal
-  of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
-
-\bibitem{fastlivo2_article1}
-B.~Zhou, C.~Zheng, Z.~Wang, F.~Zhu, Y.~Cai, and F.~Zhang, ``Fast-livo2 on
-  resource-constrained platforms: Lidar-inertial-visual odometry with efficient
-  memory and computation,'' {\em IEEE Robotics and Automation Letters}, 2025.
-
-\bibitem{liu2024botanicgarden}
-Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
-  C.~Liu, {\em et~al.}, ``Botanicgarden: A high-quality dataset for robot
-  navigation in unstructured natural environments,'' {\em IEEE Robotics and
-  Automation Letters}, vol.~9, no.~3, pp.~2798--2805, 2024.
-
 \bibitem{becnkis2024survey}
 R.~Be{\c{n}}kis, E.~Grabs, T.~Chen, A.~Ratkuns, D.~{\v{C}}ulkovs,
   A.~Anc{\=a}ns, and A.~Ipatovs, ``A survey and practical application of slam
@@ -82,6 +24,11 @@ Y.~Li, J.~An, N.~He, Y.~Li, Z.~Han, Z.~Chen, and Y.~Qu, ``A review of
 \bibitem{taheri2021slam}
 H.~Taheri and Z.~C. Xia, ``Slam; definition and evolution,'' {\em Engineering
   Applications of Artificial Intelligence}, vol.~97, p.~104032, 2021.
+
+\bibitem{tareen2019large}
+S.~A.~K. Tareen, ``Large scale 3d simultaneous localization and mapping
+  (ls-3d-slam) using monocular vision,'' Master's thesis, Pakistan Navy
+  Engineering College, Islamabad, Pakistan, 2019.
 
 \bibitem{macario2022comprehensive}
 A.~Macario~Barros, M.~Michel, Y.~Moline, G.~Corre, and F.~Carrel, ``A
@@ -126,6 +73,11 @@ Y.~Chen, Y.~Zhou, Q.~Lv, and K.~K. Deveerasetty, ``A review of v-slam,'' in
   {\em 2018 IEEE International Conference on Information and Automation
   (ICIA)}, pp.~603--608, IEEE, 2018.
 
+\bibitem{danicasado2021}
+D.~Casado, ``Introduction to visual slam: Chapter 1 —introduction to slam.''
+  \url{https://medium.com/@dcasadoherraez/introduction-to-visual-slam-chapter-1-introduction-to-slam-a0211654bf0e},
+  2021.
+
 \bibitem{fontan2024anyfeature}
 A.~Fontan, J.~Civera, and M.~Milford, ``Anyfeature-vslam: Automating the usage
   of any chosen feature into visual slam,'' in {\em Proceedings of the
@@ -147,6 +99,12 @@ X.~Yue, Y.~Zhang, J.~Chen, J.~Chen, X.~Zhou, and M.~He, ``Lidar-based slam for
   the international journal of robotics research and application}, vol.~51,
   no.~2, pp.~196--205, 2024.
 
+\bibitem{slam_point_cloud}
+F.~Andert, O.~B{\"o}ttcher, A.~Mushyam, and P.~Schm{\"a}lzle, ``Semantic lidar
+  point cloud mapping and cloud-based slam for autonomous driving,'' in {\em
+  2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)},
+  pp.~853--860, IEEE, 2025.
+
 \bibitem{zhu2025research}
 D.~Zhu, Q.~Wang, F.~Wang, and X.~Gong, ``Research on 3d lidar outdoor slam
   algorithm based on lidar/imu tight coupling,'' {\em Scientific Reports},
@@ -167,6 +125,12 @@ H.~Wang, Y.~Yin, and Q.~Jing, ``Comparative analysis of 3d lidar scan-matching
 N.~Stathoulopoulos, V.~Sumathy, C.~Kanellakis, and G.~Nikolakopoulos, ``Why
   sample space matters: Keyframe sampling optimization for lidar-based place
   recognition,'' {\em arXiv preprint arXiv:2410.02643}, 2024.
+
+\bibitem{multi_sensor_slam_arm_robot}
+R.~C. Luo, S.~L. Lee, Y.~C. Wen, and C.~H. Hsu, ``Modular ros based autonomous
+  mobile industrial robot system for automated intelligent manufacturing
+  applications,'' in {\em 2020 IEEE/ASME International Conference on Advanced
+  Intelligent Mechatronics (AIM)}, pp.~1673--1678, IEEE, 2020.
 
 \bibitem{visual_inertial}
 M.~Servières, V.~Renaudin, A.~Dupuis, and N.~Antigny, ``Visual and
@@ -207,6 +171,11 @@ B.~Bischl, M.~Binder, M.~Lang, T.~Pielok, J.~Richter, S.~Coors, J.~Thomas,
   optimization: Foundations, algorithms, best practices and open challenges.
   arxiv,'' {\em arXiv preprint arXiv:2107.05847}, 2021.
 
+\bibitem{castillo2022hyperparameter}
+E.~I.~M. Castillo, {\em Hyperparameter Optimization for SLAM: An Approach for
+  Enhancing ORB-SLAM2's Performance}.
+\newblock PhD thesis, University of Alberta, 2022.
+
 \bibitem{bissuel2020hyper}
 A.~Bissuel, ``Hyper-parameter optimization algorithms: a short review,'' 2020.
 \newblock \url{https://medium.
@@ -221,6 +190,12 @@ A.~Morales-Hern{\'a}ndez, I.~Van~Nieuwenhuyse, and S.~Rojas~Gonzalez, ``A
 \bibitem{mockus1998application}
 J.~Mockus, ``The application of bayesian methods for seeking the extremum,''
   {\em Towards global optimization}, vol.~2, p.~117, 1998.
+
+\bibitem{brochu2010tutorial}
+E.~Brochu, V.~M. Cora, and N.~De~Freitas, ``A tutorial on bayesian optimization
+  of expensive cost functions, with application to active user modeling and
+  hierarchical reinforcement learning,'' {\em arXiv preprint arXiv:1012.2599},
+  2010.
 
 \bibitem{elshawi2019automated}
 R.~Elshawi, M.~Maher, and S.~Sakr, ``Automated machine learning:
@@ -246,6 +221,11 @@ O.~Ghasemalizadeh, S.~Khaleghian, and S.~Taheri, ``A review of optimization
   techniques in artificial networks,'' {\em International Journal of Advanced
   Research}, vol.~4, no.~9, pp.~1668--86, 2016.
 
+\bibitem{sa_netlogo}
+F.~S. Caparrini, ``Simulated annealing in netlogo.''
+  \url{https://www.cs.us.es/~fsancho/Blog/posts/Simulated_Annealing_in_NetLogo.md},
+  2019.
+
 \bibitem{soper2021greed}
 D.~S. Soper, ``Greed is good: Rapid hyperparameter optimization and model
   selection using greedy k-fold cross validation,'' {\em Electronics}, vol.~10,
@@ -256,10 +236,19 @@ C.~Huang, Y.~Li, and X.~Yao, ``A survey of automatic parameter tuning methods
   for metaheuristics,'' {\em IEEE transactions on evolutionary computation},
   vol.~24, no.~2, pp.~201--216, 2019.
 
+\bibitem{soper2022hyperparameter}
+D.~S. Soper, ``Hyperparameter optimization using successive halving with greedy
+  cross validation,'' {\em Algorithms}, vol.~16, no.~1, p.~17, 2022.
+
 \bibitem{falkner2018bohb}
 S.~Falkner, A.~Klein, and F.~Hutter, ``Bohb: Robust and efficient
   hyperparameter optimization at scale,'' in {\em International conference on
   machine learning}, pp.~1437--1446, PMLR, 2018.
+
+\bibitem{li2018hyperband}
+L.~Li, K.~Jamieson, G.~DeSalvo, A.~Rostamizadeh, and A.~Talwalkar, ``Hyperband:
+  A novel bandit-based approach to hyperparameter optimization,'' {\em Journal
+  of Machine Learning Research}, vol.~18, no.~185, pp.~1--52, 2018.
 
 \bibitem{putra2019parameter}
 I.~A. Putra and P.~Prajitno, ``Parameter tuning of g-mapping slam (simultaneous
@@ -309,6 +298,11 @@ S.~Wang, H.~Huang, J.~Yang, J.~Bian, and S.~Jiang, ``Triangle descriptor loop
 T.~Wang, S.~Li, and Y.~Chen, ``Lidar odometry: Recent advancements and
   remaining challenges,'' {\em Journal of Real-Time Image Processing}, 2024.
 
+\bibitem{fastlivo2_article1}
+B.~Zhou, C.~Zheng, Z.~Wang, F.~Zhu, Y.~Cai, and F.~Zhang, ``Fast-livo2 on
+  resource-constrained platforms: Lidar-inertial-visual odometry with efficient
+  memory and computation,'' {\em IEEE Robotics and Automation Letters}, 2025.
+
 \bibitem{fastlivo2_article2}
 B.~Zhou, C.~Zheng, Z.~Wang, F.~Zhu, Y.~Cai, and F.~Zhang, ``Fast-livo2 on
   resource-constrained platforms: Lidar-inertial-visual odometry with efficient
@@ -327,5 +321,11 @@ Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
   C.~Liu, L.~Chen, W.~Tao, and H.~Zhao, ``Botanicgarden: A high-quality dataset
   for robot navigation in unstructured natural environments,'' {\em IEEE
   Robotics and Automation Letters}, vol.~9, p.~2798–2805, Mar. 2024.
+
+\bibitem{liu2024botanicgarden}
+Y.~Liu, Y.~Fu, M.~Qin, Y.~Xu, B.~Xu, F.~Chen, B.~Goossens, P.~Z. Sun, H.~Yu,
+  C.~Liu, {\em et~al.}, ``Botanicgarden: A high-quality dataset for robot
+  navigation in unstructured natural environments,'' {\em IEEE Robotics and
+  Automation Letters}, vol.~9, no.~3, pp.~2798--2805, 2024.
 
 \end{thebibliography}

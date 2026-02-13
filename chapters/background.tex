@@ -4,7 +4,7 @@
 
 \paragraph{}\ac{SLAM} is a fundamental problem in robotics and computer vision, wherein a robotic system moves around in an unknown environment, and builds a map of said environment while simultaneously determining its own pose within said map~\citep{taheri2021slam}.
 
-\paragraph{}SLAM systems use sensors such as \ac{LiDAR}'s, cameras, IMU's and GPS to collect data about the environment, which then is processed by the backend~\cite{taheri2021slam}, which is implementation dependent.
+\paragraph{}SLAM systems use sensors such as \ac{LiDAR}'s, cameras, \ac{IMU}'s and GPS to collect data about the environment, which then is processed by the backend~\cite{taheri2021slam}, which is implementation dependent.
 
 \paragraph{}Generally speaking, a SLAM method involves the following steps (not necessarily in this order):
 
@@ -13,7 +13,7 @@
     %\includegraphics[width=0.75\linewidth]{images/BO.png}
     %\includesvg[width=0.5\linewidth]{images/visual_slam_steps.svg}
 	\includegraphics[width=0.75\linewidth]{images/visual_slam_steps.pdf}    
-    \caption{Common steps of a generic Visual SLAM system~\cite{tareen2019large}.}
+    \caption[Common steps of a generic Visual SLAM system.]{Common steps of a generic Visual SLAM system~\cite{tareen2019large}.}
     \label{fig:enter-label}
 \end{figure}
 
@@ -38,15 +38,13 @@
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\linewidth]{images/VSLAM.png}
-    \caption{Visual SLAM feature detection and tracking (left) and 3D reconstruction (right)~\cite{danicasado2021}.}
-    \label{fig:enter-label}
+    \caption[Visual SLAM feature detection and tracking (left) and 3D reconstruction (right).]{Visual SLAM feature detection and tracking (left) and 3D reconstruction (right)~\cite{danicasado2021}.}
+    \label{vslam-example}
 \end{figure}
 
-\paragraph{}In terms of hyperparameters, let us consider a few of the most important ones and their effect on the performance of the visual \ac{SLAM} system.
+\paragraph{}In terms of hyperparameters, let us consider a few of the most important ones and their effect on the performance of the visual \ac{SLAM} system. When performing feature detection and matching (Figure \ref{vslam-example}), a few important parameters are: \textbf{feature matching threshold}, \textbf{feature detection sensitivity} and the \textbf{scale factor} (in the case of pyramid-based detectors). The \textbf{feature matching threshold} determines how similar two feature descriptors must be to be considered a valid correspondence~\cite{fontan2024anyfeature}. It directly affects how the system associates points between frames or keyframes. A high threshold ensures that only highly similar descriptors are matched~\cite{fontan2024anyfeature}, which increases precision but risks losing correspondences when illumination or viewpoint changes. A low threshold increases the number of matches but allows more outliers, which can corrupt motion estimation~\cite{fontan2024anyfeature}. The \textbf{feature detection sensitivity} defines how easily the detector identifies keypoints in an image, usually based on a response strength or cornerness threshold. A higher sensitivity results in many detected features, improving robustness in textured environments, but it adds computational cost and potential noise. A lower sensitivity limits detections to the strongest points, making tracking faster but potentially unstable in low-texture areas. Lastly, the \textbf{scale factor} (only applicable for pyramid-based detectors) determine how much each image pyramid level is downsampled relative to the previous level~\cite{lindeberg1998feature}. A smaller scale factor adds more levels, improving the ability of the system to handle zooming and depth, but at the cost of aditional computational cost~\cite{lindeberg1998feature}. A higher  scale factor reduces the robustness to scale variations but speeds up feature extraction~\cite{lindeberg1998feature}. In short, this parameter controls a trade-off between real time performance and scale invariant tracking.
 
-\paragraph{}When performing feature detection and matching, a few important parameters are: \textbf{feature matching threshold}, \textbf{feature detection sensitivity} and the \textbf{scale factor} (in the case of pyramid-based detectors). The \textbf{feature matching threshold} determines how similar two feature descriptors must be to be considered a valid correspondence~\cite{fontan2024anyfeature}. It directly affects how the system associates points between frames or keyframes. A high threshold ensures that only highly similar descriptors are matched~\cite{fontan2024anyfeature}, which increases precision but risks losing correspondences when illumination or viewpoint changes. A low threshold increases the number of matches but allows more outliers, which can corrupt motion estimation~\cite{fontan2024anyfeature}. The \textbf{feature detection sensitivity} defines how easily the detector identifies keypoints in an image, usually based on a response strength or cornerness threshold. A higher sensitivity results in many detected features, improving robustness in textured environments, but it adds computational cost and potential noise. A lower sensitivity limits detections to the strongest points, making tracking faster but potentially unstable in low-texture areas. Lastly, the \textbf{scale factor} (only applicable for pyramid-based detectors) determine how much each image pyramid level is downsampled relative to the previous level~\cite{lindeberg1998feature}. A smaller scale factor adds more levels, improving the ability of the system to handle zooming and depth, but at the cost of aditional computational cost~\cite{lindeberg1998feature}. A higher  scale factor reduces the robustness to scale variations but speeds up feature extraction~\cite{lindeberg1998feature}. In short, this parameter controls a trade-off between real time performance and scale invariant tracking.
-
-\paragraph{}On the topic of pose estimation, \ac{RANSAC} is a particularly important algorithm. Specifically, the \textbf{maximum number of iterations} and the \textbf{minimum number of data points} to fit the model are important parameters. The \textbf{maximum number of iterations} specifies how many hypotheses \ac{RANSAC} should run when estimating the camera pose. A higher value increases the probability of finding a correct model, even with many outliers, but adds computational cost~\cite{raguram2008comparative}, while a lower value is too permissive when accepting points into the model, and  can lead to unreliable pose estimates~\cite{raguram2008comparative}. This is a trade-off between robustness to outliers and real time performance. The \textbf{minimum number of data points} (or minimum inlier count) controls how many features correpondences are required to accept a pose estimation as valid. A low value makes the system acccept unstable or incorrect poses, resulting in drift~\cite{raguram2008comparative}, while a high value might make tracking unfeasible, when very few feature matches are available~\cite{raguram2008comparative}.
+\paragraph{}On the topic of pose estimation, \ac{RANSAC} is a particularly important algorithm, which iteratively fits a model to random subsets of data to find the best model that ignores outliers. Specifically, the \textbf{maximum number of iterations} and the \textbf{minimum number of data points} to fit the model are important parameters. The \textbf{maximum number of iterations} specifies how many hypotheses \ac{RANSAC} should run when estimating the camera pose. A higher value increases the probability of finding a correct model, even with many outliers, but adds computational cost~\cite{raguram2008comparative}, while a lower value is too permissive when accepting points into the model, and  can lead to unreliable pose estimates~\cite{raguram2008comparative}. This is a trade-off between robustness to outliers and real time performance. The \textbf{minimum number of data points} (or minimum inlier count) controls how many features correpondences are required to accept a pose estimation as valid. A low value makes the system acccept unstable or incorrect poses, resulting in drift, while a high value might make tracking unfeasible, when very few feature matches are available~\cite{raguram2008comparative}.
 
 \paragraph{}Finally, on the topic of loop closure, the \textbf{loop detection threshold} is one of the most important parameters, which determines how similar two keyframes must be (using a bag of words similarity score, for instance)~\cite{yan2019illumination}. A high threshold only triggers loop closure on highly confident matches. This prevents some false positives but might miss some oportunities to correct drift~\cite{yan2019illumination}. A low threshold increases loop closure sensitivity, but can incorrectly detect loops that might corrupt the map~\cite{yan2019illumination}.
 
@@ -60,11 +58,11 @@
 	\centering
 	%\includegraphics[width=0.75\linewidth]{images/lidar_point_cloud.svg}
 	\includegraphics[width=0.75\linewidth]{images/lidar_point_cloud.pdf}
-    \caption{LiDAR SLAM point cloud example~\cite{slam_point_cloud}.}
-    \label{fig:enter-label}
+    \caption[LiDAR SLAM point cloud example.]{LiDAR SLAM point cloud example~\cite{slam_point_cloud}.}
+    \label{lidar-point-cloud-example}
 \end{figure}
 
-\paragraph{}In terms of hyperparameters, a few of the most important hyperparameters often present in \ac{LiDAR} based \ac{SLAM} methods are: \textbf{voxel size}, \textbf{map resolution}, \textbf{maximum correspondence distance} and \textbf{keyframe insertion threshold}. The \textbf{voxel size} determines how much the \ac{LiDAR} point cloud is downsampled before registration. A smaller value helps to preserve detail and accuracy, but sharply increases computation time and noise sensitivity~\cite{zhu2025research}. Larger voxels speed up the system and are more robust to noise, but might increase drift in the process~\cite{zhu2025research}. The \textbf{map resolution} affects the granularity of the internal representation (voxel grid). A high resolution captures more fine-grained features but consumes more memory and processing time~\cite{jorge2024impact}, while a coarse map runs faster but loses detail, affecting localization accuracy~\cite{jorge2024impact}. The \textbf{maximum correspondence distance} determines how far two points can be from each other to be considered a match during scan registration. If too small, the algorithm (\ac{ICP}, \ac{NDT}) may fail to produce enough correspondences, leading to unstable pose estimations~\cite{wang2023comparative}. On the other extreme, if the value set is too high, then incorrect matches will introduce more drift and distort the produced map~\cite{wang2023comparative}. The \textbf{keyframe insertion threshold} (based on distance, for example) controls how often new keyframes are created. Low thresholds yield many keyframes, increasing accuracy but slowing optimization~\cite{stathoulopoulos2024sample}, while high thresholds risk under sampling, introducing drift and lowering loop closure detection~\cite{stathoulopoulos2024sample}.
+\paragraph{}In terms of hyperparameters, a few of the most important hyperparameters often present in \ac{LiDAR} based \ac{SLAM} methods are: \textbf{voxel size}, \textbf{map resolution}, \textbf{maximum correspondence distance} and \textbf{keyframe insertion threshold}. The \textbf{voxel size} determines how much the \ac{LiDAR} point cloud (Figure \ref{lidar-point-cloud-example}) is downsampled before registration. A smaller value helps to preserve detail and accuracy, but sharply increases computation time and noise sensitivity~\cite{zhu2025research}. Larger voxels speed up the system and are more robust to noise, but might increase drift in the process~\cite{zhu2025research}. The \textbf{map resolution} affects the granularity of the internal representation (voxel grid). A high resolution captures more fine-grained features but consumes more memory and processing time~\cite{jorge2024impact}, while a coarse map runs faster but loses detail, affecting localization accuracy~\cite{jorge2024impact}. The \textbf{maximum correspondence distance} determines how far two points can be from each other to be considered a match during scan registration. If too small, the algorithm (\ac{ICP}, \ac{NDT}) may fail to produce enough correspondences, leading to unstable pose estimations~\cite{wang2023comparative}. On the other extreme, if the value set is too high, then incorrect matches will introduce more drift and distort the produced map~\cite{wang2023comparative}. The \textbf{keyframe insertion threshold} (based on distance, for example) controls how often new keyframes are created. Low thresholds yield many keyframes, increasing accuracy but slowing optimization, while high thresholds risk under sampling, introducing drift and lowering loop closure detection~\cite{stathoulopoulos2024sample}.
 
 \subsubsection{Multi-Sensor SLAM}
 
@@ -76,16 +74,16 @@
     \centering
     %\includegraphics[width=0.75\linewidth]{images/lidar_SLAM.jpg}
     \includesvg[width=0.75\linewidth]{images/multisensor_slam.svg}
-    \caption{Multi-Sensor SLAM system for an industrial robot~\cite{multi_sensor_slam_arm_robot}.}
-    \label{fig:enter-label}
+    \caption[Multi-Sensor SLAM system for an industrial robot.]{Multi-Sensor SLAM system for an industrial robot~\cite{multi_sensor_slam_arm_robot}.}
+    \label{industrial-robot-slam}
 \end{figure}
 
-\paragraph{}A few common multi sensor \ac{SLAM} solutions include: visual inertial \ac{SLAM}~\cite{visual_inertial}, LiDAR inertial \ac{SLAM}~\cite{liu2024voxelslamcompleteaccurateversatile} and visual-lidar-inertial \ac{SLAM} ~\cite{liu2023lidarinertialvisualslamloopdetection}. \textbf{Visual inertial \ac{SLAM}} combines the spatial information from a camera with the higher temporal resolution of an \ac{IMU} to make up for the other sensor's weaknesses. When the \ac{IMU} accumulates too much drift, the cameras help correct it, and the \ac{IMU} helps under poor visual conditions. Its main disadvantage is the high sensitivity to visual degradation, such as fog and dark areas. \textbf{LiDAR-Inertial \ac{SLAM}}'s main advantage is the high robustness in low light or outdoor environments and the resilience to visual noise, present in nightly, foggy and even dusty environments. Two main limitations are the more expensive/heavier setups and the limitation in texture representation (pure geometry only). In \textbf{Visual-Lidar-Inertial \ac{SLAM}}, rich visual features, accurate range data and motion tracking are all present. It however requires a complex calibration and synchronization process, being more expensive and requiring more computational power than simpler multi sensor approaches to \ac{SLAM}.
+\paragraph{}A few common multi sensor \ac{SLAM} solutions include: visual inertial \ac{SLAM}~\cite{visual_inertial} (Figure \ref{industrial-robot-slam}), LiDAR inertial \ac{SLAM}~\cite{liu2024voxelslamcompleteaccurateversatile} and visual-lidar-inertial \ac{SLAM} ~\cite{liu2023lidarinertialvisualslamloopdetection}. \textbf{Visual inertial \ac{SLAM}} combines the spatial information from a camera with the higher temporal resolution of an \ac{IMU} to make up for the other sensor's weaknesses. When the \ac{IMU} accumulates too much drift, the cameras help correct it, and the \ac{IMU} helps under poor visual conditions. Its main disadvantage is the high sensitivity to visual degradation, such as fog and dark areas. \textbf{LiDAR-Inertial \ac{SLAM}}'s main advantage is the high robustness in low light or outdoor environments and the resilience to visual noise, present in nightly, foggy and even dusty environments. Two main limitations are the more expensive/heavier setups and the limitation in texture representation (pure geometry only). In \textbf{Visual-Lidar-Inertial \ac{SLAM}}, rich visual features, accurate range data and motion tracking are all present. It however requires a complex calibration and synchronization process, being more expensive and requiring more computational power than simpler multi sensor approaches to \ac{SLAM}.
 
 %\paragraph{}In terms of hyperparameters, multi sensor \ac{SLAM}'s paramaters are largely an amalgamation of their individual sensor constituents.
 
 \subsection{Evaluation of SLAM}
-\paragraph{}Assessing \ac{SLAM} performance requires quantitative and qualitative metrics that evaluate how accurate, robust and efficient the estimated map and trajectory are. A few evaluation criteria include the \ac{ATE}, \ac{RPE}, resource usage (memory and CPU time consumption), etc.
+\paragraph{}Assessing \ac{SLAM} performance requires quantitative and qualitative metrics that evaluate how accurate, robust and efficient the estimated map and trajectory are. A few evaluation criteria include the \ac{ATE}, Relative Pose Error (RPE), resource usage (memory and CPU time consumption), etc.
 
 \paragraph{}The \textbf{\ac{ATE}} measures the global deviation between estimated and ground truth trajectories. At each point in the trajectory, the difference between the estimated pose and the ground truth pose is computed. For a more general measure of the \ac{ATE}, one might also calculate the \ac{RMSE}, as follows:
 
@@ -118,7 +116,7 @@
 
 \subsubsection{Grid Search}
 
-\paragraph{}Grid Search is a basic solution for \ac{HPO}. It simply consists of an exhaustive search and evaluation of all possible hyperparameter combinations within a predefined parameter space~\cite{yang2020hyperparameter}. In spite of the development of more sophisticated and specific algorithms in recent decades, Grid Search remains popular due to its simple implementation and trivial paralelization~\cite{yang2020hyperparameter}. The main drawback is its computational cost, due to the curse of dimensionality being a serious problem in models with large numbers of hyperparameters~\cite{yang2020hyperparameter}. This might be summarized by the following equation:
+\paragraph{}Grid Search is a basic solution for \ac{HPO}. It simply consists of an exhaustive search and evaluation of all possible hyperparameter combinations within a predefined parameter space~\cite{yang2020hyperparameter} (Figure \ref{grid-search-plot}). In spite of the development of more sophisticated and specific algorithms in recent decades, Grid Search remains popular due to its simple implementation and trivial paralelization~\cite{yang2020hyperparameter}. The main drawback is its computational cost, due to the curse of dimensionality being a serious problem in models with large numbers of hyperparameters~\cite{yang2020hyperparameter}. This might be summarized by the following equation:
 
 \begin{equation}
     N_c = \prod_{n=1}^{k} {N_{P_i}},
@@ -134,22 +132,22 @@ Inspection of Equation \ref{equation_grid_search} reveals that this algorithm do
 \begin{figure}[h]
     \centering
     \includegraphics[page=1, width=0.6\linewidth]{images/search_tese.pdf}
-    \caption{Graphical illustration of parameter space exploration in grid search~\cite{castillo2022hyperparameter}.}
-    \label{fig:enter-label}
+    \caption[Graphical illustration of parameter space exploration in grid search.]{Graphical illustration of parameter space exploration in grid search~\cite{castillo2022hyperparameter}.}
+    \label{grid-search-plot}
 \end{figure}
 
 \newpage
 \subsubsection{Random Search}
 
-\paragraph{}Random Search is a variation of Grid Search. It randomly samples configurations in the aforementioned parameter space~\cite{bissuel2020hyper}. Both Grid Search and Random Search are very similar implementation wise, with one major difference: Random Search requires a budget to be specified, whether it is time, number of configurations, etc~\cite{bergstra2012random}. Compared to Grid Search, Random Search offers faster convergence toward local or global optima~\cite{bergstra2012random}; however, this advantage becomes less pronounced as the parameter space grows.
+\paragraph{}Random Search is a variation of Grid Search. It randomly samples configurations in the aforementioned parameter space~\cite{bissuel2020hyper} (Figure \ref{random-search-plot}). Both Grid Search and Random Search are very similar implementation wise, with one major difference: Random Search requires a budget to be specified, whether it is time, number of configurations, etc~\cite{bergstra2012random}. Compared to Grid Search, Random Search offers faster convergence toward local or global optima~\cite{bergstra2012random}; however, this advantage becomes less pronounced as the parameter space grows.
 
 %The main advantage Random Search has over Grid Search is the faster convergence over a local or global optima~\cite{bergstra2012random}, although this advantage gets slimmer the larger the parameter space.
 
 \begin{figure}[h]
     \centering
     \includegraphics[page=2, width=0.5\linewidth]{images/search_tese.pdf}
-    \caption{Graphical illustration of parameter space exploration in random search~\cite{castillo2022hyperparameter}.}
-    \label{fig:enter-label}
+    \caption[Graphical illustration of parameter space exploration in random search.]{Graphical illustration of parameter space exploration in random search~\cite{castillo2022hyperparameter}.}
+    \label{random-search-plot}
 \end{figure}
 
 \newpage
@@ -167,7 +165,7 @@ Inspection of Equation \ref{equation_grid_search} reveals that this algorithm do
 \caption{Bayesian Optimization}
 \begin{algorithmic}[1]
 \For{$t = 1, 2, \ldots$}
-    \State Find $x_t$ by optimizing the acquisition function over the GP:
+    \State Find $x_t$ by optimizing the acquisition function over the Gaussian Process (GP):
         \[
             x_t = \arg\max_x \, u(x \mid \mathcal{D}_{1:t-1})
         \]
@@ -176,14 +174,14 @@ Inspection of Equation \ref{equation_grid_search} reveals that this algorithm do
 \EndFor
 \end{algorithmic}
 \end{algorithm}
-\caption{Bayesian Optimization algorithm steps~\cite{brochu2010tutorial}.}
+\caption[Bayesian Optimization algorithm steps.]{Bayesian Optimization algorithm steps~\cite{brochu2010tutorial}.}
 \label{bo_algo}
 \end{figure}
 
 \paragraph{}Bayesian Optimization has two main components:
 \begin{itemize}
 
-    \item A Surrogate model, which is a probabilistic, fast proximate model that stands in for, and is much easier to evaluate than, an unknown(black box) or expensive function~\cite{elshawi2019automated}. Instead of repeatedly evaluating the true function, which might take a long time, the surrogate model (usually a Gaussian Process~\cite{bissuel2020hyper}) learns from previous evaluations, and predicts both the expected mean value of the true function (in this case, the \ac{RMSE} of the \ac{RPE} of a \ac{SLAM} solution) and the uncertainty at each point. The uncertainty is what informs and guides the algorithm on what point to sample next, by balancing promising regions with unexplored ones (higher uncertainty).
+    \item A Surrogate model, which is a probabilistic, fast proximate model that stands in for, and is much easier to evaluate than, an unknown (black box) or expensive function~\cite{elshawi2019automated}. Instead of repeatedly evaluating the true function, which might take a long time, the surrogate model (usually a Gaussian Process~\cite{bissuel2020hyper}) learns from previous evaluations, and predicts both the expected mean value of the true function (in this case, the \ac{RMSE} of the \ac{RPE} of a \ac{SLAM} solution) and the uncertainty at each point. The uncertainty is what informs and guides the algorithm on what point to sample next, by balancing promising regions with unexplored ones (higher uncertainty).
     
 	\item An Acquisition function, which is the rule \ac{BO} uses to choose the next objective function point to evaluate~\cite{elshawi2019automated}. It uses the surrogate model's predictions (mean and uncertainty) and combines them into a single score, which is then used to evaluate the best candidate point. Common Acquisition functions include \ac{PI}, which focuses on the \textbf{chance} of beating the current best result, and \ac{ULCB}, which explicitly trades-off mean and uncertainty using a tunable hyperparameter~\cite{frazier2018tutorial}.
 	
@@ -222,7 +220,7 @@ Inspection of Equation \ref{equation_grid_search} reveals that this algorithm do
     \centering
     %\includesvg[width=0.4\linewidth]{images/SA.svg}
     \includegraphics[width=0.5\linewidth]{images/SA.pdf}
-    \caption{A graphic representation of the simulated annealing algorithm~\cite{sa_netlogo}.}
+    \caption[A graphic representation of the Simulated Annealing algorithm.]{A graphic representation of the Simulated Annealing algorithm~\cite{sa_netlogo}.}
     \label{fig:enter-label}
 \end{figure}
 
@@ -236,7 +234,7 @@ Inspection of Equation \ref{equation_grid_search} reveals that this algorithm do
     \centering
     %\includegraphics[width=0.5\linewidth]{}
     \includesvg[width=0.6\linewidth]{images/SH.svg}
-    \caption{A graphic representation of the Successive Halving algorithm~\cite{soper2022hyperparameter}.}
+    \caption[A graphic representation of the Successive Halving algorithm.]{A graphic representation of the Successive Halving algorithm~\cite{soper2022hyperparameter}.}
     \label{fig:enter-label}
 \end{figure}
 
@@ -263,7 +261,7 @@ By increasing the budget allocated to a decreasing number of configurations at e
     \centering
     \includegraphics[width=0.75\linewidth]{images/hyperband.pdf}
     %\includesvg[width=0.65\linewidth]{images/Hyperband.svg}
-    \caption{Hyperband described in a more systematic way~\cite{li2018hyperband}.}
+    \caption[Hyperband described in a more systematic way.]{Hyperband described in a more systematic way~\cite{li2018hyperband}.}
     \label{fig:enter-label}
 \end{figure}
 
@@ -320,7 +318,7 @@ By increasing the budget allocated to a decreasing number of configurations at e
 	A. Kostusiak and P. Skrzypczyński (2019)~\cite{kostusiak2019efficiency} & RGB-D Visual Odometry & Particle Swarm Optimization (PSO) & RPE decreased by well over 50\% \\
 	\addlinespace
 	
-	\rule[-0.5ex]{4cm}{1.5pt} & \rule[-0.5ex]{4cm}{1.5pt} & Evolutionary Algorithm (EA) & Similar performance to PSO, but tuning duration is 5x shorter \\
+	\rule[-0.4ex]{4cm}{1.5pt} & \rule[-0.4ex]{4cm}{1.5pt} & Evolutionary Algorithm (EA) & Similar performance to PSO, but tuning duration is 5x shorter \\
 	
 	%\multirow{2}{0.3\textwidth}{Particle Swarm Optimization (PSO) \newline Evolutionary Algorithm (EA)} & \multirow{2}{0.3\textwidth}{RPE decreased by well over 50\% \newline Similar performance to PSO, but tuning duration is 5x shorter}\\
 	

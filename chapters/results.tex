@@ -15,7 +15,7 @@
 APE (RMSE) & RPE (RMSE) \\ \hline
 0.664834  & 0.015037  \\ \hline
 \end{tabular}
-\caption{Default parameter results (5 run average) for Faster-LIO}
+\caption{Default parameter results (5 run average) for Faster-LIO.}
 \label{default-faster-lio}
 \end{table}
 
@@ -31,7 +31,7 @@ cube\_side\_length     & 1000 \\ \hline
 ivox\_grid\_resolution & 0.5  \\ \hline
 esti\_plane\_threshold & 0.1  \\ \hline
 \end{tabular}
-\caption{Default parameter values for Faster-LIO}
+\caption{Default parameter values for Faster-LIO.}
 \label{default-faster-lio-params}
 \end{table}
 
@@ -71,7 +71,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\linewidth]{images/faster-lio-sa.pdf}
-    \caption{RPE per iteration of Simulated Annealing}
+    \caption{RPE per iteration of Simulated Annealing.}
     \label{faster-lio-sa}
 \end{figure}
 
@@ -85,7 +85,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\linewidth]{images/cube_side_length_rpe.pdf}
-    \caption{cube\_side\_length scatter plot}
+    \caption{cube\_side\_length scatter plot.}
     \label{cube_side_length_scatter}
 \end{figure}
 
@@ -94,7 +94,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\linewidth]{images/ivox_grid_resolution_rpe.pdf}
-    \caption{ivox\_grid\_resolution scatter plot}
+    \caption{ivox\_grid\_resolution scatter plot.}
     \label{ivox_grid_resolution_scatter}
 \end{figure}
 
@@ -107,7 +107,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/faster-lio-gs.pdf}
-    \caption{RPE per iterations of Grid Search}
+    \caption{RPE per iterations of Grid Search.}
     \label{faster-lio-grid-search-rpe}
 \end{figure}
 
@@ -118,21 +118,21 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliogs-ivox-grid-resolution.pdf}
-    \caption{ivox\_grid\_resolution scatter plot}
+    \caption{ivox\_grid\_resolution scatter plot.}
     \label{faster-lio-grid-search-ivox_grid_resolution}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliogs-filter-size-map.pdf}
-    \caption{filter\_size\_map scatter plot}
+    \caption{filter\_size\_map scatter plot.}
     \label{faster-lio-grid-search-filter_size_map}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliogs-filter-size-surf.pdf}
-    \caption{filter\_size\_surf scatter plot}
+    \caption{filter\_size\_surf scatter plot.}
     \label{faster-lio-grid-search-filter_size_surf}
 \end{figure}
 
@@ -159,7 +159,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\linewidth]{images/faster-lio-rs.pdf}
-    \caption{RPE per iterations of Random Search}
+    \caption{RPE per iterations of Random Search.}
     \label{faster-lio-random-search-rpe}
 \end{figure}
 
@@ -176,28 +176,28 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliors-ivox-grid-resolution.pdf}
-    \caption{ivox\_grid\_resolution scatter plot}
+    \caption{ivox\_grid\_resolution scatter plot.}
     \label{faster-lio-random-search-ivox_grid_resolution}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliors-filter-size-map.pdf}
-    \caption{filter\_size\_map scatter plot}
+    \caption{filter\_size\_map scatter plot.}
     \label{faster-lio-random-search-filter_size_map}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fasterliors-filter-size-surf.pdf}
-    \caption{filter\_size\_surf scatter plot}
+    \caption{filter\_size\_surf scatter plot.}
     \label{faster-lio-random-search-filter_size_surf}
 \end{figure}
 
 %\paragraph{}The previous three figures allow us to get a better picture of how these parameters influence the \ac{RPE} value. In all three cases, all 9 possible values are explored, showcasing the main advantage of Random Search over Grid Search: with a fixed optimization constraint(in this case, a time limit of 5 hours) and a large enough parameter space(157464 configurations), Random Search not only explores the parameter space better, but also tends to achieve better results.
 
 \newpage
-\paragraph{}The previous three figures provide a clearer understanding of how these parameters affect the \ac{RPE}. In each case, all nine possible values are examined, highlighting the primary advantage of Random Search over Grid Search: given a fixed optimization constraint (in this case, a time limit of five hours) and a sufficiently large parameter space (157464 configurations), Random Search not only explores the space more effectively but also generally achieves superior results.
+\paragraph{}Figures \ref{faster-lio-random-search-ivox_grid_resolution}, \ref{faster-lio-random-search-filter_size_map} and \ref{faster-lio-random-search-filter_size_surf} provide a clearer understanding of how these parameters affect the \ac{RPE}. In each case, all nine possible values are examined, highlighting the primary advantage of Random Search over Grid Search: given a fixed optimization constraint (in this case, a time limit of five hours) and a sufficiently large parameter space (157464 configurations), Random Search not only explores the space more effectively but also generally achieves superior results.
 
 \paragraph{}Table \ref{faster-lio table} sums up the results of the tuning process for Faster-LIO.
 
@@ -211,7 +211,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 \multicolumn{1}{|c|}{Random Search}         & 0.015298 & +1.74\% \\ \hline
 \multicolumn{1}{|c|}{Simulated Annealing}   & 0.014420 & -4.1\%  \\ \hline
 \end{tabular}
-\caption{Faster-LIO tuning results}
+\caption{Faster-LIO tuning results.}
 \label{faster-lio table}
 \end{table}
 
@@ -226,7 +226,7 @@ esti\_plane\_threshold & 0.5           & 0.1         & 0.75        & -0.01 & 0.0
 APE (RMSE) & RPE (RMSE) \\ \hline
 0.403815  & 0.045583  \\ \hline
 \end{tabular}
-\caption{Default parameter results (5 run average) for Fast-LIVO2}
+\caption{Default parameter results (5 run average) for Fast-LIVO2.}
 \label{default-fast-livo2}
 \end{table}
 
@@ -249,7 +249,7 @@ outlier\_threshold     & 1000 \\ \hline
 sliding\_thresh        & 8    \\ \hline
 voxel\_size            & 0.5  \\ \hline
 \end{tabular}
-\caption{Default parameter values for Fast-LIVO2}
+\caption{Default parameter values for Fast-LIVO2.}
 \label{default-fast-livo2-params}
 \end{table}
 
@@ -272,7 +272,7 @@ half\_map\_size       & 400           & 75          & 750         & 150       \\
 sliding\_thresh       & 15            & 8           & 25          & 7         \\ \hline
 outlier\_threshold    & 4000          & 750         & 7500        & 1500      \\ \hline
 \end{tabular}
-\caption{Fast-LIVO2 discrete parameter settings}
+\caption{Fast-LIVO2 discrete parameter settings.}
 \label{fast-livo2-discrete-params-settings}
 \end{table}
 
@@ -285,14 +285,14 @@ Parameter          & Initial Value & Lower Bound & Upper Bound & $\mu$  & $\sigm
 filter\_size\_surf & 1.45          & 0.1         & 5.0         & -0.035 & 0.003    \\ \hline
 voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003    \\ \hline
 \end{tabular}
-\caption{Fast-LIVO2 continuous parameter settings}
+\caption{Fast-LIVO2 continuous parameter settings.}
 \label{fast-livo2-continuous-params-settings}
 \end{table}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\linewidth]{images/fast-livo2-sa.pdf}
-    \caption{RPE per iteration of Simulated Annealing}
+    \caption{RPE per iteration of Simulated Annealing.}
     \label{fast-livo2-sa}
 \end{figure}
 
@@ -302,7 +302,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\linewidth]{images/fast-livo2-sa-filter_size_pcd.pdf}
-    \caption{filter\_size\_pcd scatter plot}
+    \caption{filter\_size\_pcd scatter plot.}
     \label{fast-livo2-filter_size_pcd_scatter}
 \end{figure}
 
@@ -312,7 +312,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-sa-point_filter_num.pdf}
     \caption{point\_filter\_num scatter plot}
-    \label{fast-livo2-point_filter_num_scatter}
+    \label{fast-livo2-point_filter_num_scatter.}
 \end{figure}
 
 \subsection{Grid Search}
@@ -322,7 +322,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{images/fast-livo2-gs.pdf}
-    \caption{RPE per iteration for Grid Search}
+    \caption{RPE per iteration for Grid Search.}
     \label{fast-livo2-grid_search}
 \end{figure}
 
@@ -331,14 +331,14 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-gs-filter_size_pcd_rpe.pdf}
-    \caption{filter\_size\_pcd scatter plot}
+    \caption{filter\_size\_pcd scatter plot.}
     \label{fast-livo2-grid_search-filter_size_pcd}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-gs-outlier_threshold_rpe.pdf}
-    \caption{outlier\_threshold scatter plot}
+    \caption{outlier\_threshold scatter plot.}
     \label{fast-livo2-grid_search-outlier_threshold}
 \end{figure}
 
@@ -354,7 +354,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-rs.pdf}
-    \caption{RPE per iterations of Random Search}
+    \caption{RPE per iterations of Random Search.}
     \label{fast-livo2-rs}
 \end{figure}
 
@@ -364,14 +364,14 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-rs-filter_size_pcd_rpe.pdf}
-    \caption{filter\_size\_pcd scatter plot}
+    \caption{filter\_size\_pcd scatter plot.}
     \label{fast-livo2-random_search-filter_size_pcd}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{images/fast-livo2-rs-outlier_threshold_rpe.pdf}
-    \caption{outlier\_threshold scatter plot}
+    \caption{outlier\_threshold scatter plot.}
     \label{fast-livo2-random_search-outlier_threshold}
 \end{figure}
 
@@ -390,7 +390,7 @@ voxel\_size        & 2.5           & 0.2         & 17.75       & -0.055 & 0.003 
 \multicolumn{1}{|c|}{Random Search}         & 0.029969 & -34.25\%                               \\ \hline
 \multicolumn{1}{|c|}{Simulated Annealing}   & 0.006979 & -84.69\%                               \\ \hline
 \end{tabular}
-\caption{Fast-LIVO2 tuning results}
+\caption{Fast-LIVO2 tuning results.}
 \label{fast-livo2-table}
 \end{table}
 

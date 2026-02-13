@@ -1,6 +1,6 @@
 \section{Context and Motivation}
 
-\paragraph{}\ac{SLAM} is one of the most studied topics in robotics~\cite{becnkis2024survey, lajoie2022towards}. Its purpose is to simultaneously estimate the robot's position and orientation(pose) and map the robot's environment. \ac{SLAM} methods often integrate data from devices like \ac{LiDAR}, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced and recent approaches, such as Visual~\cite{kazerouni2022survey} and \ac{LiDAR} \ac{SLAM}~\cite{li2025review}. These methods are crucial for applications in Robotics, such as autonomous navigation.
+\paragraph{}Simultaneous Localization and Mapping (SLAM) is one of the most studied topics in robotics~\cite{becnkis2024survey, lajoie2022towards}. Its purpose is to simultaneously estimate the robot's position and orientation (pose) and map the robot's environment. \ac{SLAM} methods often integrate data from devices like \ac{LiDAR}, cameras, or ultrasonic sensors with algorithms like Kalman filters and particle filters, or more advanced and recent approaches, such as Visual~\cite{kazerouni2022survey} and \ac{LiDAR} \ac{SLAM}~\cite{li2025review}. These methods are crucial for applications in Robotics, such as autonomous navigation.
 
 \paragraph{}The accuracy of a \ac{SLAM} method is usually evaluated using the \ac{APE} and the \ac{RPE}. The \ac{APE} refers to the absolute difference between the estimated pose and the ground truth, while the \ac{RPE} refers to the difference between consecutive estimated poses and the respective ground truth of consecutive poses. \ac{SLAM}'s efficacy is dependent on various factors, such as sensor quality, available computational resources, loop closure and algorithm type. The algorithm type is particularly important because different scenarios demand different types of \ac{SLAM} methods. On the other hand, different \ac{SLAM} methods have different number of hyperparameters, impacting the size of the parameter space and the difficulty of arriving at the optimal hyperparameter configuration for a given scenario.
 
@@ -18,7 +18,7 @@
 
 \begin{itemize}
 
-    \item Development of an automatic \ac{HPT} framework within \ac{RUSTLE} to better optimize and compare the performance of multiple \ac{SLAM} solutions.
+    \item Development of an automatic Hyperparameter Tuning (HPT) framework within \ac{RUSTLE} to better optimize and compare the performance of multiple \ac{SLAM} solutions.
     
     \item Assessment of the impact of different hyperparameters have on several SLAM methods.
     

@@ -5,7 +5,7 @@
 \begin{figure}[h]
     \centering
     \includegraphics[page=2,width=\linewidth]{images/rustle_diagram.pdf}
-    \caption{\ac{RUSTLE} software architecture}
+    \caption{\ac{RUSTLE} software architecture.}
     \label{rustle_diagram}
 \end{figure}
 
@@ -20,10 +20,10 @@ During execution, the estimated pose data is streamed into the database, which, 
 %% Explicar os vários tipos de testes
 \paragraph{}Tests can be of a few different types, namely:
 \begin{itemize}
-	\item Simple - The rosbag file simply plays from begining to end at normal speed
-	\item Speed - Portions of the dataset are run at different speeds
-	\item Cut - Only specified portions of the dataset are run
-	\item Drop - Simulates sensor dropout, by reducing sensor message rate over a specified section of the dataset
+	\item Simple - The rosbag file simply plays from begining to end at normal speed;
+	\item Speed - Portions of the dataset are run at different speeds;
+	\item Cut - Only specified portions of the dataset are run;
+	\item Drop - Simulates sensor dropout, by reducing sensor message rate over a specified section of the dataset;
 \end{itemize}
 
 \paragraph{}Every tuning configuration on \ac{RUSTLE} will be run as a simple test, with the caveat that the user can choose the portion of the dataset to run. This is to facilitate development and testing. %When used in production, the user should set both the start and duration of the dataset to 0, meaning, the whole dataset will be run.
@@ -66,8 +66,8 @@ During execution, the estimated pose data is streamed into the database, which, 
 \EndFor
 \end{algorithmic}
 \end{algorithm}
-\caption{Grid Search procedure}
-\label{bo_algo}
+\caption{Grid Search procedure.}
+\label{gs_algo}
 \end{figure}
 
 \paragraph{}The halting conditions can be customized via a YAML configuration file. Similarly, the parameter space can be designed in the following way:
@@ -99,8 +99,8 @@ During execution, the estimated pose data is streamed into the database, which, 
 \EndFor
 \end{algorithmic}
 \end{algorithm}
-\caption{Random Search procedure}
-\label{bo_algo}
+\caption{Random Search procedure.}
+\label{rs_algo}
 \end{figure}
 
 \paragraph{}As in Grid Search, in Random Search, both the parameter space and the halting conditions can be specified in a YAML configuration file.
@@ -179,7 +179,7 @@ During execution, the estimated pose data is streamed into the database, which, 
 \begin{figure}[h]
     \centering
     \includegraphics[page=1,width=1\linewidth]{images/fast-livo2.pdf}
-    \caption{Fast-LIVO2 system overview~\cite{fastlivo2_article1}}
+    \caption[Fast-LIVO2 system overview.]{Fast-LIVO2 system overview~\cite{fastlivo2_article1}.}
     \label{fast-livo2 system overview}
 \end{figure}
 
@@ -194,7 +194,7 @@ During execution, the estimated pose data is streamed into the database, which, 
 \begin{figure}[h]
     \centering
     \includegraphics[page=1,width=0.75\linewidth]{images/botanic garden.pdf}
-    \caption{A bird view of the 3D survey map of BotanicGarden~\cite{liu2024botanicgarden}}
+    \caption[A bird view of the 3D survey map of BotanicGarden.]{A bird view of the 3D survey map of BotanicGarden~\cite{liu2024botanicgarden}.}
     \label{botanic garden bird view}
 \end{figure}
 
@@ -219,6 +219,6 @@ Disk   & 1TB SSD + 1TB HDD           \\ \hline
 OS     & Ubuntu 20.04.6 LTS          \\ \hline
 Kernel & 5.15.0-139-generic          \\ \hline
 \end{tabular}
-\caption{Test machine specifications}
+\caption{Test machine specifications.}
 \label{test-machine-specs}
 \end{table}
